@@ -39,7 +39,7 @@
         <h1 class="products__title">Продукты</h1>
         <div class="products-items">
             {% for product in site.products %}
-            <div class="products__item">
+            <div class="products__item {{ product.modifier }}">
                 <span class="products__item-name">{{ product.name }}</span>
                 <div class="products__item-description">{{ product.description }}</div>
             </div>

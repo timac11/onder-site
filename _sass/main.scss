@@ -52,6 +52,7 @@ a {
   }
 
   &-items {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -61,9 +62,29 @@ a {
     width: 50%;
     font: $h2-font;
     max-width: 550px;
-    margin-bottom: 44px;
+    margin: -12px -32px;
+    padding: 32px;
+    cursor: pointer;
 
-    &-name {
+    &._grid:hover {
+      background: $grid-color-opacity;
+      padding: -32px;
+    }
+
+    &._dr:hover {
+      background: $dr-color-opacity;
+    }
+
+    &._registry:hover {
+      background: $registry-color-opacity;
+    }
+
+    &._control:hover {
+      background: $control-color-opacity;
+    }
+
+
+    &-name:hover {
       font-size: $h2-font;
     }
 
@@ -167,7 +188,7 @@ a {
 
 .team {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
   grid-row-gap: 10%;
   grid-column-gap: 10%;
