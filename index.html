@@ -16,113 +16,66 @@
 
 <!--</header>-->
 <main class="main-content" aria-label="Content">
-    <div>
+    <div class="title">
         <img src="assets/svg/onder-logo.svg"
              height="40px"
              width="180px"/>
     </div>
 
     <div class="landing main-content__block">
-        <div class="landing-info">
-            Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике ⚡ промышленности ⚙
+        <div class="landing__info">
+            Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
         </div>
-        <div class="landing-items">
+        <div class="landing__items">
             {% for teamitem in site.teamitems %}
-            <div class="landing-item">
-                <span class="landing-item__title">{{ teamitem.title }}</span>
-                <div class="landing-item__info">
-                    {{ teamitem.info }}
-                </div>
+            <div class="landing__item">
+                {{ teamitem.info }}
             </div>
             {% endfor %}
         </div>
     </div>
 
     <div class="main-content__block">
-        <h1 class="landing-info">Продукты</h1>
-        <div class="product-items">
+        <h1 class="products__title">Продукты</h1>
+        <div class="products-items">
             {% for product in site.products %}
-            <div class="product__item">
-                <span class="product__item-name">{{ product.name }}</span>
-                <div class="product__item-description">{{ product.description }}</div>
+            <div class="products__item">
+                <span class="products__item-name">{{ product.name }}</span>
+                <div class="products__item-description">{{ product.description }}</div>
             </div>
             {% endfor %}
         </div>
     </div>
 
-    <div class="full-product _grid main-content__block">
-        <div class="full-product__block">
-            <span class="full-product__name">ONDER.GRID</span>
-            <div class="full-product__description">для сетевых и сбытовых компаний</div>
-            <p class="full-product__paragraph">
-                Система для расчетов и проведения платежей между потребителями и поставщиками ресурсов на основе
-                смарт-контрактов.
-            </p>
-            <p class="full-product__paragraph">
-                Развитие для энергетической отрасли совместно с Мосэлектро.
-            </p>
-        </div>
-        <div class="full-product__block">
-            <img src="assets/img/onder-grid.png">
-        </div>
-    </div>
+    {% for product in site.products %}
+    <div class="full-product__wrapper {{ product.modifier }}">
+        <div class="full-product">
+            <div class="full-product__block">
+                <span class="full-product__name">{{ product.name }}</span>
+                <div class="full-product__description">{{ product.subtitle }}</div>
+                {% for paragraph in product.paragraphs %}
+                <p class="full-product__paragraph">{{ paragraph.value }}</p>
+                {% endfor %}
 
-    <div class="full-product _dr main-content__block">
-        <div class="full-product__block">
-            <span class="full-product__name">ONDER.DR</span>
-            <div class="full-product__description">для агрегаторов управления спросом</div>
-            <p class="full-product__paragraph">
-                Сервис управления спросом на электроэнергию. Автоматизирует взаимодействие между системным оператором,
-                агрегатором и потребителями электроэнергии
-            </p>
-            <p class="full-product__paragraph">
-                Уменьшает число ошибок при выполнении команд о снижении и снижает затраты на управление спросом.
-            </p>
-        </div>
-        <div class="full-product__block">
-            <img src="assets/img/onder-dr.png">
-        </div>
-    </div>
-
-    <div class="full-product _registry main-content__block">
-        <div class="full-product__block">
-            <span class="full-product__name">ONDER.REGISTRY</span>
-            <p class="full-product__paragraph">
-                Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр.
-            </p>
-            <p class="full-product__paragraph">
-                Реализован на базе технологии распределенных реестров. Служит для выдачи и обращения цифровых активов,
-                которые хранят право на собственность.
-            </p>
-            <p class="full-product__paragraph">
-                Разработали совместно со StartBlock на примере реестра зеленых сертификатов.
-            </p>
-        </div>
-        <div class="full-product__block">
-            <img src="assets/img/onder-registry.png">
-        </div>
-    </div>
-
-    <div class="full-product _control main-content__block">
-        <div class="full-product__block">
-            <span class="full-product__name">ONDER.CONTROL</span>
-            <div class="full-product__description">для инвесторов, заказчиков, застройщиков, генеральных подрядчиков
+                <p class="full-product__paragraph">
+                    Развитие для энергетической отрасли совместно с Мосэлектро.
+                </p>
             </div>
-            <p class="full-product__paragraph">
-                Автоматизированная система контроля строительных и других работ.
-            </p>
-            <p class="full-product__paragraph">
-                Упрощает планирование и контроль выполнения строительных и пуско-наладочных работ, снижает затраты из-за
-                срыва сроков и некачественного выполнения работ. Повышает прозрачность расходов.
-            </p>
-            <p class="full-product__paragraph">
-                Разработали совместно с ИНФОПРО.
-            </p>
+            <div class="full-product__block">
+                <img src="{{ product.img }}">
+            </div>
         </div>
-        <div class="full-product__block">
-            <img src="assets/img/onder-control.png">
+        <div class="full-product__advantages">
+            {% for advantage in product.advantages %}
+            <div class="full-product__advantages-item">
+                {{ advantage.value }}
+            </div>
+            {% endfor %}
         </div>
+        <div class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</div>
     </div>
+    {% endfor %}
+
 
     <div class="main-content__block">
         <h1 class="landing-info">Команда</h1>
