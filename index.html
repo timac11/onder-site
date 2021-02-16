@@ -1,0 +1,150 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>About | Your awesome title</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title"/>
+</head>
+<body>
+<!--<header class="header" role="banner">-->
+
+<!--</header>-->
+<main class="main-content" aria-label="Content">
+    <div>
+        <img src="/assets/svg/onder-logo.svg"
+             height="40px"
+             width="180px"/>
+    </div>
+
+    <div class="landing main-content__block">
+        <div class="landing-info">
+            Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике ⚡ промышленности ⚙
+        </div>
+        <div class="landing-items">
+            {% for teamitem in site.teamitems %}
+            <div class="landing-item">
+                <span class="landing-item__title">{{ teamitem.title }}</span>
+                <div class="landing-item__info">
+                    {{ teamitem.info }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="main-content__block">
+        <h1 class="landing-info">Продукты</h1>
+        <div class="product-items">
+            {% for product in site.products %}
+            <div class="product__item">
+                <span class="product__item-name">{{ product.name }}</span>
+                <div class="product__item-description">{{ product.description }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="full-product _grid main-content__block">
+        <div class="full-product__block">
+            <span class="full-product__name">ONDER.GRID</span>
+            <div class="full-product__description">для сетевых и сбытовых компаний</div>
+            <p class="full-product__paragraph">
+                Система для расчетов и проведения платежей между потребителями и поставщиками ресурсов на основе
+                смарт-контрактов.
+            </p>
+            <p class="full-product__paragraph">
+                Развитие для энергетической отрасли совместно с Мосэлектро.
+            </p>
+        </div>
+        <div class="full-product__block">
+            <img src="/assets/img/onder-grid.png">
+        </div>
+    </div>
+
+    <div class="full-product _dr main-content__block">
+        <div class="full-product__block">
+            <span class="full-product__name">ONDER.DR</span>
+            <div class="full-product__description">для агрегаторов управления спросом</div>
+            <p class="full-product__paragraph">
+                Сервис управления спросом на электроэнергию. Автоматизирует взаимодействие между системным оператором,
+                агрегатором и потребителями электроэнергии
+            </p>
+            <p class="full-product__paragraph">
+                Уменьшает число ошибок при выполнении команд о снижении и снижает затраты на управление спросом.
+            </p>
+        </div>
+        <div class="full-product__block">
+            <img src="/assets/img/onder-dr.png">
+        </div>
+    </div>
+
+    <div class="full-product _registry main-content__block">
+        <div class="full-product__block">
+            <span class="full-product__name">ONDER.REGISTRY</span>
+            <p class="full-product__paragraph">
+                Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр.
+            </p>
+            <p class="full-product__paragraph">
+                Реализован на базе технологии распределенных реестров. Служит для выдачи и обращения цифровых активов,
+                которые хранят право на собственность.
+            </p>
+            <p class="full-product__paragraph">
+                Разработали совместно со StartBlock на примере реестра зеленых сертификатов.
+            </p>
+        </div>
+        <div class="full-product__block">
+            <img src="/assets/img/onder-registry.png">
+        </div>
+    </div>
+
+    <div class="full-product _control main-content__block">
+        <div class="full-product__block">
+            <span class="full-product__name">ONDER.CONTROL</span>
+            <div class="full-product__description">для инвесторов, заказчиков, застройщиков, генеральных подрядчиков
+            </div>
+            <p class="full-product__paragraph">
+                Автоматизированная система контроля строительных и других работ.
+            </p>
+            <p class="full-product__paragraph">
+                Упрощает планирование и контроль выполнения строительных и пуско-наладочных работ, снижает затраты из-за
+                срыва сроков и некачественного выполнения работ. Повышает прозрачность расходов.
+            </p>
+            <p class="full-product__paragraph">
+                Разработали совместно с ИНФОПРО.
+            </p>
+        </div>
+        <div class="full-product__block">
+            <img src="/assets/img/onder-control.png">
+        </div>
+    </div>
+
+    <div class="main-content__block">
+        <h1 class="landing-info">Команда</h1>
+        <div class="team">
+            {% for item in site.team %}
+            <div class="team__item">
+                <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
+                <div>
+                    <div class="team__item-name">{{ item.name }}</div>
+                    <div class="team__item-name">{{ item.lastName }}</div>
+                    <div class="team__item-position">{{ item.position }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</main>
+
+<footer class="site-footer h-card">
+
+</footer>
+</body>
+
+</html>
