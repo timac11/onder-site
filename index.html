@@ -56,10 +56,6 @@
                 {% for paragraph in product.paragraphs %}
                 <p class="full-product__paragraph">{{ paragraph.value }}</p>
                 {% endfor %}
-
-                <p class="full-product__paragraph">
-                    Развитие для энергетической отрасли совместно с Мосэлектро.
-                </p>
             </div>
             <div class="full-product__block">
                 <img src="{{ product.img }}">
@@ -78,7 +74,7 @@
 
 
     <div class="main-content__block">
-        <h1 class="landing-info">Команда</h1>
+        <h1 class="landing__info">Команда</h1>
         <div class="team">
             {% for item in site.team %}
             <div class="team__item">

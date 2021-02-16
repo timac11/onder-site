@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import "fonts";
 
+a {
+  color: #f7612b;
+}
+
 .header {
   height: 80px;
   background: black;
@@ -25,7 +29,7 @@
   margin-top: $block-margin;
 
   &__info {
-    font: $h2-font;
+    font: $h1-font;
     flex: 1 0;
   }
 
@@ -104,7 +108,7 @@
   }
 
   &__name {
-    font: $h1-font;
+    font: $h2-font;
   }
 
   &__description {
@@ -166,10 +170,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   flex-wrap: wrap;
   grid-row-gap: 10%;
-  grid-column-gap: 5%;
+  grid-column-gap: 10%;
 
   &__item {
-    padding: 0 8px;
     font: $paragraph-font;
 
     &-name {
