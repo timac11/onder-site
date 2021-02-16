@@ -2,5 +2,5 @@
 name: Татьяна
 lastName: Щинова
 position: бизнес-аналитика
-img: 'assets/png/tatiana.png'
+img: 'assets/img/tatiana.jpg'
 ---
