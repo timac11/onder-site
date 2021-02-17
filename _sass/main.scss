@@ -15,7 +15,7 @@ a {
 }
 
 .main-content {
-  padding: 24px 0;
+  padding: 32px 0;
   max-width: $max-width;
   margin: auto;
 
@@ -25,6 +25,12 @@ a {
     &._margin {
       margin-right: 64px;
       margin-left: 64px;
+    }
+
+    &._clients {
+      margin: $block-margin / 2;
+      padding: 32px;
+      background: white;
     }
   }
 }
@@ -197,7 +203,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
   grid-row-gap: 64px;
-  grid-column-gap: 10%;
+  grid-column-gap: 72px;
 
   &__item {
     font: $paragraph-font;
@@ -281,5 +287,32 @@ a {
       width: 60%;
       margin-left: 32px;
     }
+  }
+}
+
+.clients {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    grid-row-gap: 32px;
+    grid-column-gap: 32px;
+    margin-top: 40px;
+  }
+
+  &__item {
+    object-fit: scale-down;
+  }
+}
+
+.company-info {
+  &__mail {
+    margin: 32px 0;
+  }
+
+  &__item {
+    max-width: 700px;
+    font-family: $base-font;
+    font-size: $h1-font-size;
   }
 }
