@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
-    <title>About | Your awesome title</title>
+    <title>Onder</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title"/>
 </head>
@@ -106,6 +106,24 @@
             </div>
             {% endfor %}
         </div>
+    </div>
+
+    <div class="main-content__block _margin">
+        <h1 class="landing__info">Партнёры</h1>
+        <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
+        {% for itemPartner in site.partners %}
+        <div class="partners__wrapper">
+            <h1 class="partners__title">{{ itemPartner.name }}</h1>
+            <div class="partners__container">
+                {% for item in itemPartner.items %}
+                <div class="partners__item">
+                    <img class="partners__item-img" src="{{ item.img }}">
+                    <span class="partners__item-text">{{ item.text }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
     </div>
 
 </main>

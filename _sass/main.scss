@@ -240,3 +240,46 @@ a {
     }
   }
 }
+
+.partners {
+  &__wrapper {
+    padding-top: 54px;
+    margin-top: 54px;
+    border-top: 0.5px solid #000000;
+  }
+
+  &__description {
+    font: $paragraph-font;
+  }
+
+  &__title {
+    font: $h2-font;
+    font-weight: normal;
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 50%;
+    display: flex;
+    font: $paragraph-font;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 64px;
+
+    &-img {
+      flex: 0;
+      object-fit: scale-down;
+      margin: auto;
+    }
+
+    &-text {
+      width: 60%;
+      margin-left: 32px;
+    }
+  }
+}
