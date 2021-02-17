@@ -22,7 +22,7 @@
              width="180px"/>
     </div>
 
-    <div class="landing main-content__block">
+    <div class="landing main-content__block _margin">
         <div class="landing__info">
             Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
         </div>
@@ -35,13 +35,15 @@
         </div>
     </div>
 
-    <div class="main-content__block">
+    <div class="main-content__block _margin">
         <h1 class="products__title">Продукты</h1>
         <div class="products-items">
             {% for product in site.products %}
-            <div class="products__item {{ product.modifier }}">
-                <span class="products__item-name">{{ product.name }}</span>
-                <div class="products__item-description">{{ product.description }}</div>
+            <div class="products__item-wrapper">
+                <div class="products__item {{ product.modifier }}">
+                    <span class="products__item-name">{{ product.name }}</span>
+                    <div class="products__item-description">{{ product.description }}</div>
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -72,8 +74,25 @@
     </div>
     {% endfor %}
 
+    <div class="main-content__block _margin">
+        <h1 class="landing__info">Инновационные продукты</h1>
+        <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых децентрализованных энергетических рынков.</p>
+        {% for item in site.innovations %}
+        <div class="innovations">
+            <div class="innovations__item">
+                <div class="innovations__item-title">{{ item.name }}</div>
+                {% for paragraph in item.paragraphs %}
+                <p class="innovations__item">{{ paragraph.value }}</p>
+                {% endfor %}
+            </div>
+            <div class="innovations__item">
+                <img src="{{ item.img }}" />
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-    <div class="main-content__block">
+    <div class="main-content__block _margin">
         <h1 class="landing__info">Команда</h1>
         <div class="team">
             {% for item in site.team %}

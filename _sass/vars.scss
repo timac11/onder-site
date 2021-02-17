@@ -4,7 +4,8 @@ $max-width: 1400px;
 
 // font size
 $base-font: Montserrat;
-$h1-font: bold 40px Montserrat;
+$h1-font-size: 40px;
+$h1-font: bold $h1-font-size Montserrat;
 $h2-font: bold 32px Montserrat;
 $paragraph-font: normal 24px Open Sans;
 

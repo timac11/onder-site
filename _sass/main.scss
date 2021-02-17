@@ -20,7 +20,12 @@ a {
   margin: auto;
 
   &__block {
-    margin: 0 56px 150px;
+    margin: $block-margin 0 0;
+
+    &._margin {
+      margin-right: 64px;
+      margin-left: 64px;
+    }
   }
 }
 
@@ -29,7 +34,7 @@ a {
   margin-top: $block-margin;
 
   &__info {
-    font: $h1-font;
+    font: $h2-font;
     flex: 1 0;
   }
 
@@ -55,11 +60,12 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   &__item {
-    width: 50%;
+    &-wrapper {
+      width: 50%;
+    }
     font: $h2-font;
     max-width: 550px;
     margin: -12px -32px;
@@ -95,7 +101,7 @@ a {
 }
 
 .full-product {
-  padding: 40px 56px;
+  padding: 40px 64px;
   display: flex;
   flex-wrap: nowrap;
   font-family: $base-font;
@@ -190,7 +196,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
-  grid-row-gap: 10%;
+  grid-row-gap: 64px;
   grid-column-gap: 10%;
 
   &__item {
@@ -212,5 +218,25 @@ a {
     max-width: 100%;
     display: block;
     margin-bottom: 12px;
+  }
+}
+
+.innovations {
+  display: flex;
+  margin-top: $block-margin;
+
+  &__description {
+    font: $paragraph-font;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    font: $paragraph-font;
+
+    &-title {
+      font: $h1-font;
+      font-weight: normal;
+    }
   }
 }
