@@ -92,10 +92,10 @@ h2 {
 // }
 
 .products {
-  margin: var(--block-margin-top) 30px 0 30px;
+  margin: var(--block-margin-top) calc(var(--block-margin-right) / 2) 0 calc(var(--block-margin-left) / 2);
 
   &__title {
-    margin-left: var(--block-margin-left);
+    margin-left: calc(var(--block-margin-left) / 2);
   }
 
   &-items {
@@ -103,8 +103,9 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    // justify-content: space-evenly;
-    justify-content: flex-start;
+    justify-content: space-between;
+    // calculated from Figma for 1440px screen
+    max-width: 1292px;
 
     &__heading {
       font: var(--h1-font);
