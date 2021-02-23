@@ -22,13 +22,13 @@
              width="180px"/>
     </div>
 
-    <div class="landing main-content__block _margin">
-        <div class="landing__info">
+    <div class="hero main-content__block _margin">
+        <h1 class="hero__info">
             Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
-        </div>
-        <div class="landing__items">
+        </h1>
+        <div class="hero__items">
             {% for teamitem in site.teamitems %}
-            <div class="landing__item">
+            <div class="hero__item">
                 {{ teamitem.info }}
             </div>
             {% endfor %}
@@ -36,7 +36,7 @@
     </div>
 
     <div class="main-content__block _margin">
-        <h1 class="products__title">Продукты</h1>
+        <h2>Продукты</h2>
         <div class="products-items">
             {% for product in site.products %}
             <div class="products__item-wrapper">
@@ -75,7 +75,7 @@
     {% endfor %}
 
     <div class="main-content__block _margin">
-        <h1 class="landing__info">Инновационные продукты</h1>
+        <h2>Инновационные продукты</h2>
         <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых децентрализованных энергетических рынков.</p>
         {% for item in site.innovations %}
         <div class="innovations">
@@ -93,7 +93,7 @@
     </div>
 
     <div class="main-content__block _margin">
-        <h1 class="landing__info">Команда</h1>
+        <h2>Команда</h2>
         <div class="team">
             {% for item in site.team %}
             <div class="team__item">
@@ -109,11 +109,11 @@
     </div>
 
     <div class="main-content__block _margin">
-        <h1 class="landing__info">Партнёры</h1>
+        <h2>Партнёры</h2>
         <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
         {% for itemPartner in site.partners %}
         <div class="partners__wrapper">
-            <h1 class="partners__title">{{ itemPartner.name }}</h1>
+            <h2>{{ itemPartner.name }}</h2>
             <div class="partners__container">
                 {% for item in itemPartner.items %}
                 <div class="partners__item">

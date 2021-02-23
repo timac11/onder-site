@@ -1,29 +1,36 @@
-// layout
-$block-margin: 80px;
-$max-width: 1400px;
+@import "mixins";
+:root {
+  // layout
+  --block-margin: 80px;
+  --max-width: 1400px;
 
-// font size
-$base-font: Montserrat;
-$h1-font-size: 40px;
-$h1-font: bold $h1-font-size Montserrat;
-$h2-font: bold 32px Montserrat;
-$paragraph-font: normal 24px Open Sans;
+  // font size
+  --base-font: Montserrat;
+  --h1-font-size: 40px;
+  --h1-font: bold var(--h1-font-size) Montserrat;
+  --h2-font: bold 32px Montserrat;
+  --paragraph-font: normal 24px Open Sans;
 
-// color
-$main-font-color: black;
+  // color
+  --main-font-color: black;
 
-$grid-color: rgb(248, 93, 31);
-$grid-color-opacity: rgba(248, 93, 31, 0.3);
-$grid-border: 14px solid $grid-color-opacity;
+  --grid-color: rgb(248, 93, 31);
+  --grid-color-opacity: rgba(248, 93, 31, 0.3);
+  --grid-border: 14px solid --grid-color-opacity;
 
-$dr-color: rgb(26, 165, 184);
-$dr-color-opacity: rgba(26, 165, 184, 0.3);
-$dr-border: 14px solid $dr-color-opacity;
+  --dr-color: rgb(26, 165, 184);
+  --dr-color-opacity: rgba(26, 165, 184, 0.3);
+  --dr-border: 14px solid --dr-color-opacity;
 
-$registry-color: rgb(138, 182, 90);
-$registry-color-opacity: rgba(138, 182, 90, 0.3);
-$registry-border: 14px solid $registry-color-opacity;
+  --registry-color: rgb(138, 182, 90);
+  --registry-color-opacity: rgba(138, 182, 90, 0.3);
+  --registry-border: 14px solid --registry-color-opacity;
 
-$control-color: rgb(244, 197, 46);
-$control-color-opacity: rgba(244, 197, 46, 0.3);
-$control-border: 14px solid $control-color-opacity;
+  --control-color: rgb(244, 197, 46);
+  --control-color-opacity: rgba(244, 197, 46, 0.3);
+  --control-border: 14px solid --control-color-opacity;
+
+  @include mobile {
+    --h2-font: bold 24px Montserrat;
+  }
+}

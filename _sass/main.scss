@@ -1,8 +1,20 @@
 @charset "utf-8";
 @import "fonts";
+@import "mixins";
 
 a {
   color: #f7612b;
+}
+
+h1 {
+  font: var(--h1-font);
+  margin: 0;
+}
+
+h2 {
+  font: var(--h2-font);
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .header {
@@ -16,11 +28,11 @@ a {
 
 .main-content {
   padding: 32px 0;
-  max-width: $max-width;
+  max-width: var(--max-width);
   margin: auto;
 
   &__block {
-    margin: $block-margin 0 0;
+    margin: var(--block-margin) 0 0;
 
     &._margin {
       margin-right: 64px;
@@ -28,38 +40,55 @@ a {
     }
 
     &._clients {
-      margin: $block-margin / 2;
+      margin: var(--block-margin) / 2;
       padding: 32px;
       background: white;
     }
   }
 }
 
-.landing {
+.hero {
   display: flex;
-  margin-top: $block-margin;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: stretch;
+
+  @include tablet_and_smaller {
+    flex-direction: column;
+
+    &__items {
+      margin-top: 24px;
+    }
+  }
+
+  > * {
+    flex-basis: 44%;
+  }
 
   &__info {
-    font: $h2-font;
-    flex: 1 0;
+    font: var(--h2-font);
   }
 
   &__items {
-    flex: 1 0;
     display: flex;
     flex-direction: column;
-    margin-left: 36px;
   }
 
   &__item {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
     margin-bottom: 32px;
   }
 }
 
+// @include tablet {
+//   .hero {
+//     flex-direction: column;
+//   }
+// }
+
 .products {
   &__title {
-    font: $h1-font;
+    font: var(--h1-font);
   }
 
   &-items {
@@ -72,36 +101,35 @@ a {
     &-wrapper {
       width: 50%;
     }
-    font: $h2-font;
-    max-width: 550px;
-    margin: -12px -32px;
-    padding: 32px;
+    font: var(--h2-font);
+    // max-width: 550px;
+    // margin: -12px -32px;
+    // padding: 32px;
     cursor: pointer;
 
     &._grid:hover {
-      background: $grid-color-opacity;
+      background: var(--grid-color-opacity);
       padding: -32px;
     }
 
     &._dr:hover {
-      background: $dr-color-opacity;
+      background: var(--dr-color-opacity);
     }
 
     &._registry:hover {
-      background: $registry-color-opacity;
+      background: var(--registry-color-opacity);
     }
 
     &._control:hover {
-      background: $control-color-opacity;
+      background: var(--control-color-opacity);
     }
 
-
     &-name:hover {
-      font-size: $h2-font;
+      font-size: var(--h2-font);
     }
 
     &-description {
-      font: $paragraph-font;
+      font: var(--paragraph-font);
     }
   }
 }
@@ -110,7 +138,7 @@ a {
   padding: 40px 64px;
   display: flex;
   flex-wrap: nowrap;
-  font-family: $base-font;
+  font-family: var(--base-font);
 
   &__wrapper {
     display: flex;
@@ -120,19 +148,19 @@ a {
     position: relative;
 
     &._grid {
-      border: $grid-border;
+      border: var(--grid-border);
     }
 
     &._dr {
-      border: $dr-border;
+      border: var(--dr-border);
     }
 
     &._registry {
-      border: $registry-border;
+      border: var(--registry-border);
     }
 
     &._control {
-      border: $control-border;
+      border: var(--control-border);
     }
   }
 
@@ -141,7 +169,7 @@ a {
   }
 
   &__name {
-    font: $h2-font;
+    font: var(--h2-font);
   }
 
   &__description {
@@ -150,12 +178,12 @@ a {
   }
 
   &__paragraph {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
     line-height: 33px;
   }
 
   &__advantages {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
     display: flex;
     justify-content: space-between;
     padding: 64px 56px;
@@ -169,31 +197,31 @@ a {
   }
 
   &__button {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
     display: flex;
     flex-direction: row;
     padding: 10px 40px;
     position: absolute;
     bottom: -36px;
     color: white;
-    background: #1AA5B8;
+    background: #1aa5b8;
     border-radius: 68px;
     cursor: pointer;
 
     &._grid {
-      background: $grid-color;
+      background: var(--grid-color);
     }
 
     &._dr {
-      background: $dr-color;
+      background: var(--dr-color);
     }
 
     &._registry {
-      background: $registry-color;
+      background: var(--registry-color);
     }
 
     &._control {
-      background: $control-color;
+      background: var(--control-color);
     }
   }
 }
@@ -206,7 +234,7 @@ a {
   grid-column-gap: 72px;
 
   &__item {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
 
     &-name {
       font-weight: bold;
@@ -214,7 +242,7 @@ a {
 
     &-position {
       margin-top: 8px;
-      font-size: $paragraph-font;
+      font-size: var(--paragraph-font);
     }
   }
 
@@ -229,19 +257,19 @@ a {
 
 .innovations {
   display: flex;
-  margin-top: $block-margin;
+  margin-top: var(--block-margin);
 
   &__description {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    font: $paragraph-font;
+    font: var(--paragraph-font);
 
     &-title {
-      font: $h1-font;
+      font: var(--h1-font);
       font-weight: normal;
     }
   }
@@ -255,11 +283,11 @@ a {
   }
 
   &__description {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
   }
 
   &__title {
-    font: $h2-font;
+    font: var(--h2-font);
     font-weight: normal;
     margin-bottom: 40px;
   }
@@ -272,7 +300,7 @@ a {
   &__item {
     width: 50%;
     display: flex;
-    font: $paragraph-font;
+    font: var(--paragraph-font);
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 64px;
@@ -312,7 +340,7 @@ a {
 
   &__item {
     max-width: 700px;
-    font-family: $base-font;
-    font-size: $h1-font-size;
+    font-family: var(--base-font);
+    font-size: var(--h1-font-size);
   }
 }
