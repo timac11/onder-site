@@ -119,6 +119,7 @@ h2 {
       padding: 32px 32px 40px 32px;
       cursor: pointer;
       font: var(--h2-font);
+      flex-grow: 1;
 
       &._grid:hover {
         background: var(--grid-color-opacity);
