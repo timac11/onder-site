@@ -35,16 +35,16 @@
         </div>
     </div>
 
-    <div class="main-content__block _margin">
-        <h2>Продукты</h2>
+    <div class="products">
+        <h2 class="block-heading products__title">Продукты</h2>
         <div class="products-items">
             {% for product in site.products %}
-            <div class="products__item-wrapper">
-                <div class="products__item {{ product.modifier }}">
-                    <span class="products__item-name">{{ product.name }}</span>
-                    <div class="products__item-description">{{ product.description }}</div>
+                <div class="products-items__item {{ product.modifier }}">
+                    <h3 class="products-items__heading">
+                        Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
+                    </h3>
+                    <div class="products-items__item-description">{{ product.description }}</div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -75,7 +75,7 @@
     {% endfor %}
 
     <div class="main-content__block _margin">
-        <h2>Инновационные продукты</h2>
+        <h2 class="block-heading">Инновационные продукты</h2>
         <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых децентрализованных энергетических рынков.</p>
         {% for item in site.innovations %}
         <div class="innovations">
@@ -93,7 +93,7 @@
     </div>
 
     <div class="main-content__block _margin">
-        <h2>Команда</h2>
+        <h2 class="block-heading">Команда</h2>
         <div class="team">
             {% for item in site.team %}
             <div class="team__item">
@@ -109,7 +109,7 @@
     </div>
 
     <div class="main-content__block _margin">
-        <h2>Партнёры</h2>
+        <h2 class="block-heading">Партнёры</h2>
         <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
         {% for itemPartner in site.partners %}
         <div class="partners__wrapper">
@@ -127,7 +127,7 @@
     </div>
 
     <div class="main-content__block _clients">
-        <span class="landing__info">Клиенты</span>
+        <h2 class="block-heading">Клиенты</h2>
         <div class="clients__container">
             <img class="clients__item" src="assets/png/clients/np.png">
             <img class="clients__item" src="assets/png/clients/rosatom.png">

@@ -1,7 +1,9 @@
 @import "mixins";
 :root {
   // layout
-  --block-margin: 80px;
+  --block-margin-top: 80px;
+  --block-margin-left: 64px;
+  --block-margin-right: 64px;
   --max-width: 1400px;
 
   // font size
