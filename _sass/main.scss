@@ -15,6 +15,10 @@ h2 {
   font: var(--h2-font);
 }
 
+p {
+  font: var(--paragraph-font);
+}
+
 .header {
   height: 80px;
   background: black;
@@ -22,7 +26,7 @@ h2 {
 
 .block-heading {
   font: var(--h1-font);
-  margin: var(--block-margin-top) 0 20px 0;
+  margin: var(--block-margin-top) 0;
   text-transform: uppercase;
 }
 
@@ -31,31 +35,27 @@ h2 {
 }
 
 .main-content {
-  padding: 32px 0;
+  padding: var(--block-padding-top) 0;
   max-width: var(--max-width);
   margin: auto;
 
   &__block {
-    // margin: var(--block-margin-top) 0 0;
 
     &._margin {
-      margin-right: 64px;
-      margin-left: 64px;
+      margin-right: var(--block-margin-right);
+      margin-left: var(--block-margin-left);
     }
 
     &._clients {
-      margin: var(--block-margin-top) / 2;
-      padding: 32px;
-      background: white;
+      margin: calc(var(--block-margin-right) / 2);
+      padding: calc(var(--block-margin-right) / 2);
+      background: #EEEEEE;
     }
   }
 }
 
 .hero {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: stretch;
   margin-top: var(--block-margin-top);
 
   @include tablet_and_smaller {
@@ -66,30 +66,32 @@ h2 {
     }
   }
 
-  > * {
-    flex-basis: 44%;
+  @include tablet {
+    flex-direction: column;
+
+    &__items {
+      margin-top: 24px;
+    }
   }
 
   &__info {
     font: var(--h2-font);
+    font-weight: bold;
+    flex: 1 0;
+    margin-right: 24px;
   }
 
   &__items {
     display: flex;
     flex-direction: column;
+    flex: 1 0;
   }
 
   &__item {
     font: var(--paragraph-font);
-    margin-bottom: 32px;
+    margin-bottom: var(--block-margin-bottom);
   }
 }
-
-// @include tablet {
-//   .hero {
-//     flex-direction: column;
-//   }
-// }
 
 .products {
   margin: var(--block-margin-top) calc(var(--block-margin-right) / 2) 0 calc(var(--block-margin-left) / 2);
@@ -104,8 +106,6 @@ h2 {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
-    // calculated from Figma for 1440px screen
-    max-width: 1292px;
 
     &__heading {
       font: var(--h1-font);
@@ -114,16 +114,15 @@ h2 {
     }
 
     &__item {
-      flex-basis: calc(48% - 64px);
+      //flex-basis: calc(48% - 64px);
       max-width: 550px;
-      padding: 32px 32px 40px 32px;
+      padding: var(--block-margin-top) calc(var(--block-margin-right) / 2) 40px calc(var(--block-margin-left) / 2);
       cursor: pointer;
       font: var(--h2-font);
       flex-grow: 1;
 
       &._grid:hover {
         background: var(--grid-color-opacity);
-        // padding: -32px;
       }
 
       &._dr:hover {
@@ -138,32 +137,31 @@ h2 {
         background: var(--control-color-opacity);
       }
 
-      // &-name {
-      //   font-size: var(--h1-font);
-      // }
-
       &-description {
         font: var(--paragraph-font);
       }
-
-      // &:nth-child(2n) {
-      //   margin-left: 84px;
-      // }
     }
   }
 }
 
 .full-product {
-  padding: 40px 64px;
-  display: flex;
+  padding-left: var(--block-padding-left);
+  padding-top: var(--block-padding-top);
+  padding-bottom: var(--block-padding-bottom);
+  padding-right: var(--block-padding-right);
   flex-wrap: wrap;
   font-family: var(--base-font);
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 150px 0;
+    margin: 32px 0;
     position: relative;
 
     &._grid {
@@ -184,52 +182,72 @@ h2 {
   }
 
   &__block {
-    flex: 1;
+    @include mobile-temp-wide-header {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__title {
     font: var(--h1-font);
     text-transform: uppercase;
+    @include text-align-center;
+  }
+
+  &__description {
+    @include text-align-center;
+    @include mobile-temp-wide-header {
+      margin-bottom: 8px;
+    }
   }
 
   &__name {
-    &_grid {
+    &._grid {
       color: var(--grid-color);
     }
 
-    &_dr {
+    &._dr {
       color: var(--dr-color);
     }
 
-    &_registry {
+    &._registry {
       color: var(--registry-color);
     }
 
-    &_control {
+    &._control {
       color: var(--control-color);
     }
   }
 
-  &__description {
-    font-size: 40px;
-    line-height: 48px;
+  &__image {
+    float: right;
+    width: 50%;
+
+    @include mobile-temp-wide-header {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  &__paragraphs {
+    order: 2;
   }
 
   &__paragraph {
     font: var(--paragraph-font);
-    line-height: 33px;
   }
 
   &__advantages {
     font: var(--paragraph-font);
     display: flex;
     justify-content: space-between;
-    padding: 64px 56px;
+    padding-left: var(--block-padding-left);
+    padding-right: var(--block-padding-right);
+    flex-wrap: wrap;
 
     &-item {
       display: flex;
       flex-direction: column;
-      font-size: 24px;
       margin-right: 62px;
     }
   }
@@ -265,14 +283,44 @@ h2 {
 }
 
 .team {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   flex-wrap: wrap;
-  grid-row-gap: 64px;
-  grid-column-gap: 72px;
 
   &__item {
     font: var(--paragraph-font);
+    width: 90%;
+    padding-right: 16px;
+    margin-bottom: 16px;
+
+    @include mobile {
+      padding-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    @include small-mobile {
+      padding-right: 16px;
+      margin-bottom: 16px;
+    }
+
+    @include tiny {
+      padding-right: 0;
+    }
+
+    &-wrapper {
+      width: 25%;
+
+      @include mobile {
+        width: 33%;
+      }
+
+      @include small-mobile {
+        width: 50%;
+      }
+
+      @include tiny {
+        width: 100%;
+      }
+    }
 
     &-name {
       font-weight: bold;
@@ -286,29 +334,46 @@ h2 {
 
   &__img {
     width: 100%;
-    height: auto;
-    max-width: 100%;
     display: block;
-    margin-bottom: 12px;
   }
 }
 
 .innovations {
-  display: flex;
+  display: block;
   margin-top: var(--block-margin-top);
 
   &__description {
     font: var(--paragraph-font);
   }
 
+  &__image {
+    float: right;
+    width: 50%;
+    object-fit: scale-down;
+
+    @include mobile-temp-wide-header {
+      order: 2;
+      width: 100%;
+    }
+  }
+
   &__item {
-    display: flex;
-    flex-direction: column;
+    display: flow-root;
     font: var(--paragraph-font);
+
+    @include mobile-temp-wide-header {
+      display: flex;
+      flex-direction: column;
+      order: 3;
+    }
 
     &-title {
       font: var(--h1-font);
       font-weight: normal;
+
+      @include mobile-temp-wide-header {
+        order: 1;
+      }
     }
   }
 }
@@ -333,6 +398,11 @@ h2 {
   &__container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: var(--block-margin-top);
+
+    @include mobile-temp-wide-header {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -343,6 +413,13 @@ h2 {
     align-items: center;
     margin-bottom: 64px;
 
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     &-img {
       flex: 0;
       object-fit: scale-down;
@@ -352,22 +429,39 @@ h2 {
     &-text {
       width: 60%;
       margin-left: 32px;
+
+      @include mobile {
+        width: 100%;
+        margin-left: 0;
+        @include text-align-center;
+      }
     }
   }
 }
 
 .clients {
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
     flex-wrap: wrap;
-    grid-row-gap: 32px;
-    grid-column-gap: 32px;
-    margin-top: 40px;
   }
 
   &__item {
+    width: 25%;
     object-fit: scale-down;
+
+    @include mobile {
+      width: 50%;
+    }
+
+    @include tiny {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: scale-down;
+    display: block;
   }
 }
 

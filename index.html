@@ -39,12 +39,12 @@
         <h2 class="block-heading products__title">Продукты</h2>
         <div class="products-items">
             {% for product in site.products %}
-                <div class="products-items__item {{ product.modifier }}">
-                    <h3 class="products-items__heading">
-                        Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
-                    </h3>
-                    <div class="products-items__item-description">{{ product.description }}</div>
-                </div>
+            <div class="products-items__item {{ product.modifier }}">
+                <h1 class="products-items__heading">
+                    Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
+                </h1>
+                <h2 class="products-items__item-description">{{ product.description }}</h2>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -53,24 +53,21 @@
     <div id="{{ product.name }}" class="full-product__wrapper {{ product.modifier }}">
         <div class="full-product">
             <div class="full-product__block">
-                <h3 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span></h3>
-                <div class="full-product__description">{{ product.subtitle }}</div>
-            </div>
-            <div class="full-product__block">
-                <img src="{{ product.img }}">
-            </div>
-            <div class="full-product__block">
-                
-                {% for paragraph in product.paragraphs %}
-                <p class="full-product__paragraph">{{ paragraph.value }}</p>
-                {% endfor %}
+                <img class="full-product__image _desktop" src="{{ product.img }}">
+                <h1 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span></h1>
+                <h2 class="full-product__description">{{ product.subtitle }}</h2>
+                <div class="full-product__paragraphs">
+                    {% for paragraph in product.paragraphs %}
+                    <p class="full-product__paragraph">{{ paragraph.value }}</p>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         <div class="full-product__advantages">
             {% for advantage in product.advantages %}
-            <div class="full-product__advantages-item">
+            <p class="full-product__advantages-item">
                 {{ advantage.value }}
-            </div>
+            </p>
             {% endfor %}
         </div>
         <div class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</div>
@@ -79,18 +76,15 @@
 
     <div class="main-content__block _margin">
         <h2 class="block-heading">Инновационные продукты</h2>
-        <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых децентрализованных энергетических рынков.</p>
+        <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых
+            децентрализованных энергетических рынков.</p>
         {% for item in site.innovations %}
-        <div class="innovations">
-            <div class="innovations__item">
-                <div class="innovations__item-title">{{ item.name }}</div>
-                {% for paragraph in item.paragraphs %}
-                <p class="innovations__item">{{ paragraph.value }}</p>
-                {% endfor %}
-            </div>
-            <div class="innovations__item">
-                <img src="{{ item.img }}" />
-            </div>
+        <div class="innovations__item">
+            <img class="innovations__image" src="{{ item.img }}"/>
+            <div class="innovations__item-title">{{ item.name }}</div>
+            {% for paragraph in item.paragraphs %}
+            <p class="innovations__item">{{ paragraph.value }}</p>
+            {% endfor %}
         </div>
         {% endfor %}
     </div>
@@ -99,12 +93,14 @@
         <h2 class="block-heading">Команда</h2>
         <div class="team">
             {% for item in site.team %}
-            <div class="team__item">
-                <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
-                <div>
-                    <div class="team__item-name">{{ item.name }}</div>
-                    <div class="team__item-name">{{ item.lastName }}</div>
-                    <div class="team__item-position">{{ item.position }}</div>
+            <div class="team__item-wrapper">
+                <div class="team__item">
+                    <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
+                    <div>
+                        <div class="team__item-name">{{ item.name }}</div>
+                        <div class="team__item-name">{{ item.lastName }}</div>
+                        <div class="team__item-position">{{ item.position }}</div>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -113,7 +109,8 @@
 
     <div class="main-content__block _margin">
         <h2 class="block-heading">Партнёры</h2>
-        <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
+        <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем
+            узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
         {% for itemPartner in site.partners %}
         <div class="partners__wrapper">
             <h2>{{ itemPartner.name }}</h2>
@@ -129,7 +126,7 @@
         {% endfor %}
     </div>
 
-    <div class="main-content__block _clients">
+    <div class="main-content__block _margin _clients">
         <h2 class="block-heading">Клиенты</h2>
         <div class="clients__container">
             <img class="clients__item" src="assets/png/clients/np.png">
@@ -142,13 +139,13 @@
     </div>
 
     <div class="main-content__block _margin">
-        <div class="company-info__item">
-            Будем рады рассказать про наши  продукты подробнее!
-        </div>
+        <h2 class="company-info__item">
+            Будем рады рассказать про наши продукты подробнее!
+        </h2>
         <img src="assets/png/hello-onder.png" class="company-info__mail">
-        <div class="company-info__item">
+        <h2 class="company-info__item">
             +7 919 688-81-44
-        </div>
+        </h2>
     </div>
 
 </main>
