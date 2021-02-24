@@ -35,7 +35,6 @@ p {
   transition: all 0.2s ease-in;
   z-index: 10;
 
-  
 
   &__container {
     display: flex;
@@ -56,26 +55,31 @@ p {
   }
 
   .short-logo {
-    height: 0;
+    width: auto;
+    height: auto;
   }
 
   .full-logo {
-    height: auto;
+    width: 0;
+    height: 0;
   }
 
   &_detached {
     background-color: var(--main-white-color);
 
     nav {
+      width: 0;
       visibility: hidden;
     }
 
     .short-logo {
       height: 0;
+      width: 0;
     }
 
 
     .full-logo {
+      width: auto;
       height: auto;
     }
   }
