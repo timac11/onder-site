@@ -4,7 +4,7 @@
   --block-margin-top: 80px;
   --block-margin-left: 64px;
   --block-margin-right: 64px;
-  --max-width: 1400px;
+  --max-width: 1440px;
 
   // font size
   --base-font: Montserrat;
@@ -18,19 +18,19 @@
 
   --grid-color: rgb(248, 93, 31);
   --grid-color-opacity: rgba(248, 93, 31, 0.3);
-  --grid-border: 14px solid --grid-color-opacity;
+  --grid-border: 14px solid var(--grid-color-opacity);
 
   --dr-color: rgb(26, 165, 184);
   --dr-color-opacity: rgba(26, 165, 184, 0.3);
-  --dr-border: 14px solid --dr-color-opacity;
+  --dr-border: 14px solid var(--dr-color-opacity);
 
   --registry-color: rgb(138, 182, 90);
   --registry-color-opacity: rgba(138, 182, 90, 0.3);
-  --registry-border: 14px solid --registry-color-opacity;
+  --registry-border: 14px solid var(--registry-color-opacity);
 
   --control-color: rgb(244, 197, 46);
   --control-color-opacity: rgba(244, 197, 46, 0.3);
-  --control-border: 14px solid --control-color-opacity;
+  --control-border: 14px solid var(--control-color-opacity);
 
   @include mobile {
     --h2-font: bold 24px Montserrat;

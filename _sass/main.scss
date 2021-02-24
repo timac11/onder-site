@@ -32,7 +32,7 @@ h2 {
 
 .main-content {
   padding: 32px 0;
-  // max-width: var(--max-width);
+  max-width: var(--max-width);
   margin: auto;
 
   &__block {
@@ -156,7 +156,7 @@ h2 {
 .full-product {
   padding: 40px 64px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   font-family: var(--base-font);
 
   &__wrapper {
@@ -184,11 +184,30 @@ h2 {
   }
 
   &__block {
-    flex-grow: 1;
+    flex: 1;
+  }
+
+  &__title {
+    font: var(--h1-font);
+    text-transform: uppercase;
   }
 
   &__name {
-    font: var(--h2-font);
+    &_grid {
+      color: var(--grid-color);
+    }
+
+    &_dr {
+      color: var(--dr-color);
+    }
+
+    &_registry {
+      color: var(--registry-color);
+    }
+
+    &_control {
+      color: var(--control-color);
+    }
   }
 
   &__description {
