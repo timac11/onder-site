@@ -9,6 +9,9 @@
   --block-padding-top: var(--block-margin-top);
   --block-padding-bottom: var(--block-margin-bottom);
   --block-padding-right: var(--block-margin-right);
+  --paragraph-margins: 16px 0 0 0;
+  --header-height: 80px;
+  --header-paddings: 0 46px 16px 64px;
   --max-width: 1440px;
 
   // font size
@@ -17,9 +20,11 @@
   --h1-font: bold var(--h1-font-size) Montserrat;
   --h2-font: normal 32px Montserrat;
   --paragraph-font: normal 24px Open Sans;
+  --navigation-font: normal 16px Open Sans;
 
   // color
   --main-font-color: black;
+  --main-white-color: white;
 
   --grid-color: rgb(248, 93, 31);
   --grid-color-opacity: rgba(248, 93, 31, 0.3);

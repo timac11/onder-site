@@ -3,8 +3,13 @@
 @import "mixins";
 @import "reset";
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #f7612b;
+  text-decoration: none;
 }
 
 h1 {
@@ -20,8 +25,60 @@ p {
 }
 
 .header {
-  height: 80px;
+  position: sticky;
+  top: 0px;
   background: black;
+  height: var(--header-height);
+  justify-content: center;
+  display: block;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in;
+  z-index: 10;
+
+  
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    padding: var(--header-paddings);
+    max-width: 1440px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  &__navigation {
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+
+  .short-logo {
+    height: 0;
+  }
+
+  .full-logo {
+    height: auto;
+  }
+
+  &_detached {
+    background-color: var(--main-white-color);
+
+    nav {
+      visibility: hidden;
+    }
+
+    .short-logo {
+      height: 0;
+    }
+
+
+    .full-logo {
+      height: auto;
+    }
+  }
 }
 
 .block-heading {
@@ -31,7 +88,36 @@ p {
 }
 
 .title {
-  padding: 0 56px;
+  padding: 0 var(--block-padding-left);
+}
+
+.markdown-company-name {
+  color: orange;
+}
+
+.navigation {
+  display: flex;
+  background: var(--main-white-color);
+  height: 28px;
+  border-radius: 40px;
+  padding: 0 8px;
+
+  > a {
+    padding: 3px 8px;
+    color: var(--main-font-color);
+    font: var(--navigation-font);
+  }
+
+  &__item {
+    text-decoration: none;
+
+    @include desktop-s-and-less {
+        &_phone,
+        &_email {
+          display: none;
+        }
+      }
+  }
 }
 
 .main-content {
@@ -202,19 +288,19 @@ p {
   }
 
   &__name {
-    &._grid {
+    &_grid {
       color: var(--grid-color);
     }
 
-    &._dr {
+    &_dr {
       color: var(--dr-color);
     }
 
-    &._registry {
+    &_registry {
       color: var(--registry-color);
     }
 
-    &._control {
+    &_control {
       color: var(--control-color);
     }
   }
@@ -279,6 +365,40 @@ p {
     &._control {
       background: var(--control-color);
     }
+  }
+}
+
+.consulting {
+  &__title {
+    font: var(--h2-font);
+    margin-top: 32px;
+  }
+  &__subtitle {
+    margin: 0;
+  }
+  &__wrapper {
+    display: flex;
+    
+    @include tablet_and_smaller {
+      flex-direction: column;
+    }
+
+    > * {
+      flex: 1 0;
+
+      &:nth-child(odd) {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__description {
+    margin: var(--paragraph-margins);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
   }
 }
 

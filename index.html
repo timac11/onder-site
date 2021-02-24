@@ -12,17 +12,37 @@
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title"/>
 </head>
 <body>
-<!--<header class="header" role="banner">-->
+<header id="header" class="header" role="banner">
+    <div class="header__container">
+        <div>
+            <img class="short-logo" src="{{ site.baseurl }}/assets/png/logo/black-logo.png">
+            <img class="full-logo" src="assets/svg/onder-logo.svg"
+            height="40px"
+            width="180px"/>
+        </div>
+        <div class="header__navigation">
+            <nav class="navigation">
+                {% for item in site.navigation %}
+                <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                {% endfor %}
+            </nav>
+            <div class="navigation">
+                <a class="navigation__item">Новости</a>
+                <a class="navigation__item">Блог</a>
+                <a class="navigation__item_email">{{ site.email }}</a>
+                <a class="navigation__item_phone">{{ site.phone }}</a>
+            </div>
+        </div>
 
-<!--</header>-->
-<main class="main-content" aria-label="Content">
-    <div class="title">
-        <img src="assets/svg/onder-logo.svg"
-             height="40px"
-             width="180px"/>
     </div>
 
-    <div class="hero main-content__block _margin">
+</header>
+<main class="main-content" aria-label="Content">
+    <div class="title">
+
+    </div>
+
+    <section class="hero main-content__block _margin">
         <h1 class="hero__info">
             Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
         </h1>
@@ -33,9 +53,9 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 
-    <div class="products">
+    <section id="products" class="products">
         <h2 class="block-heading products__title">Продукты</h2>
         <div class="products-items">
             {% for product in site.products %}
@@ -47,10 +67,10 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 
     {% for product in site.products %}
-    <div id="{{ product.name }}" class="full-product__wrapper {{ product.modifier }}">
+    <section id="{{ product.name }}" class="full-product__wrapper {{ product.modifier }}">
         <div class="full-product">
             <div class="full-product__block">
                 <img class="full-product__image _desktop" src="{{ product.img }}">
@@ -71,10 +91,10 @@
             {% endfor %}
         </div>
         <div class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</div>
-    </div>
+    </section>
     {% endfor %}
 
-    <div class="main-content__block _margin">
+    <section id="innovations" class="main-content__block _margin">
         <h2 class="block-heading">Инновационные продукты</h2>
         <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых
             децентрализованных энергетических рынков.</p>
@@ -87,9 +107,24 @@
             {% endfor %}
         </div>
         {% endfor %}
-    </div>
+    </section>
 
-    <div class="main-content__block _margin">
+    <section id="consulting" class="main-content__block _margin consulting">
+        <h2 class="block-heading">Технологический консалтинг</h2>
+        <p class="consulting__subtitle">Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли</p>
+        <div class="consulting__wrapper">
+            {% for consultingItem in site.consulting %}
+            <div class="consulting__info">
+                <h4 class="consulting__title">{{ consultingItem.title }}</h4>
+                {% for paragraph in consultingItem.paragraphs %}
+                <p class="consulting__description">{{ paragraph.value }}</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="main-content__block _margin">
         <h2 class="block-heading">Команда</h2>
         <div class="team">
             {% for item in site.team %}
@@ -105,9 +140,9 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 
-    <div class="main-content__block _margin">
+    <section id="partners" class="main-content__block _margin">
         <h2 class="block-heading">Партнёры</h2>
         <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем
             узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
@@ -124,7 +159,7 @@
             </div>
         </div>
         {% endfor %}
-    </div>
+    </section>
 
     <div class="main-content__block _margin _clients">
         <h2 class="block-heading">Клиенты</h2>
@@ -149,6 +184,7 @@
     </div>
 
 </main>
+<script src="{{site.baseurl}}/assets/js/scroller.js"></script>
 </body>
 
 </html>

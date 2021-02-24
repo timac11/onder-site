@@ -1,0 +1,4 @@
+---
+name: Продукты
+anchor: products
+---
