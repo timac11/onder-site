@@ -27,7 +27,6 @@ p {
 .menu {
   background-color: transparent;
   display: none;
-  color: white;
   width: 24px;
   height: 24px;
   outline: none;
@@ -42,14 +41,13 @@ p {
 .header {
   position: sticky;
   top: 0px;
-  background: black;
+  background-color: var(--main-white-color);
   height: var(--header-height);
   justify-content: center;
   display: block;
   box-sizing: border-box;
   transition: all 0.5s ease-in;
   z-index: 10;
-
 
   &__container {
     display: flex;
@@ -67,55 +65,83 @@ p {
     justify-content: space-between;
     flex-grow: 1;
     margin-left: 16px;
+  }
 
-    @include mobile {
-      justify-content: center;
-    }
+  .header__navigation {
+    justify-content: flex-end;
+  }
+
+  nav {
+    width: 0;
+    display: none;
   }
 
   .short-logo {
+    height: 0;
+    width: 0;
+  }
+
+  .full-logo {
     width: auto;
     height: auto;
   }
 
-  .full-logo {
-    width: 0;
-    height: 0;
+  .navigation {
+    > * {
+      display: block;
+    }
+  }
+
+  @include mobile {
+    .menu {
+      &_black {
+        display: block;
+      }
+      &_white {
+        display: none;
+      }
+    }
   }
 
   &_detached {
-    background-color: var(--main-white-color);
-
-    .header__navigation {
-      justify-content: flex-end;
-    }
-
-    nav {
-      width: 0;
-      display: none;
-    }
+    background: black;
 
     .short-logo {
-      height: 0;
-      width: 0;
-    }
-
-
-    .full-logo {
       width: auto;
       height: auto;
     }
 
-    .navigation {
-      > * {
-        display: block;
+    .full-logo {
+      width: 0;
+      height: 0;
+    }
+
+    .header__navigation {
+      justify-content: space-between;
+
+      @include mobile {
+        justify-content: center;
+      }
+    }
+
+    nav {
+      display: flex;
+      width: auto;
+    }
+
+    .navigation__item {
+      @include desktop-s-and-less {
+        &_phone,
+        &_email {
+          display: none;
+        }
       }
     }
 
     @include mobile {
       .menu {
         &_black {
-          display: block;
+          display: none;
         }
         &_white {
           display: none;
@@ -123,6 +149,13 @@ p {
       }
     }
 
+    @include small-mobile {
+      .menu {
+        &_white {
+          display: block;
+        }
+      }
+    }
   }
 
   @include mobile {
@@ -167,13 +200,6 @@ p {
 
   &__item {
     text-decoration: none;
-
-    @include desktop-s-and-less {
-        &_phone,
-        &_email {
-          display: none;
-        }
-      }
   }
 }
 
@@ -183,7 +209,6 @@ p {
   margin: auto;
 
   &__block {
-
     &._margin {
       margin-right: var(--block-margin-right);
       margin-left: var(--block-margin-left);
@@ -192,7 +217,7 @@ p {
     &._clients {
       margin: calc(var(--block-margin-right) / 2);
       padding: calc(var(--block-margin-right) / 2);
-      background: #EEEEEE;
+      background: #eeeeee;
     }
   }
 }
@@ -435,7 +460,7 @@ p {
   }
   &__wrapper {
     display: flex;
-    
+
     @include tablet_and_smaller {
       flex-direction: column;
     }
