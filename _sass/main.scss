@@ -25,17 +25,17 @@ p {
 }
 
 .menu {
-  display: none;
-  background-image: url('/assets/svg/menu-white.svg');
-  // background-size: contain;
   background-color: transparent;
-  // font: var(--paragraph-font);
+  display: none;
+  color: white;
   width: 24px;
   height: 24px;
   outline: none;
 
   @include small-mobile {
-    display: block;
+    &_white {
+      display: block;
+    }
   }
 }
 
@@ -114,8 +114,12 @@ p {
 
     @include mobile {
       .menu {
-        display: block;
-        background-image: url('/assets/svg/menu.svg');
+        &_black {
+          display: block;
+        }
+        &_white {
+          display: none;
+        }
       }
     }
 
