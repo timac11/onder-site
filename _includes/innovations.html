@@ -1,0 +1,16 @@
+<section id="innovations" class="main-content__block _margin">
+    <h2 class="block-heading">Инновационные продукты</h2>
+    <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых
+        децентрализованных энергетических рынков.</p>
+    <div>
+        {% for item in site.innovations %}
+        <div class="innovations__item-wrapper">
+            <img class="innovations__image" src="{{ item.img }}"/>
+            <div class="innovations__item-title">{{ item.name }}</div>
+            {% for paragraph in item.paragraphs %}
+            <p class="innovations__item">{{ paragraph.value }}</p>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section>

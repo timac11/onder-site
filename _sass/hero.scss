@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+.hero {
+  display: flex;
+  margin-top: 52px;
+
+  @include tablet_and_smaller {
+    flex-direction: column;
+
+    &__items {
+      margin-top: 24px;
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+
+    &__items {
+      margin-top: 24px;
+    }
+  }
+
+  &__info {
+    font: var(--h2-font);
+    font-weight: bold;
+    flex: 1 0;
+    margin-right: 36px;
+    line-height: 41px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+  }
+
+  &__item {
+    font: var(--paragraph-font);
+    margin-bottom: var(--block-margin-bottom);
+    line-height: 32px;
+  }
+}

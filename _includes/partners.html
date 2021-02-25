@@ -1,0 +1,18 @@
+<section id="partners" class="main-content__block _margin partners">
+    <h2 class="block-heading">Партнёры</h2>
+    <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем
+        узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
+    {% for itemPartner in site.partners %}
+    <div class="partners__wrapper">
+        <h2>{{ itemPartner.name }}</h2>
+        <div class="partners__container">
+            {% for item in itemPartner.items %}
+            <div class="partners__item">
+                <img class="partners__item-img" src="{{ item.img }}">
+                <span class="partners__item-text">{{ item.text }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</section>

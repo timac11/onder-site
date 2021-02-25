@@ -1,0 +1,12 @@
+<section class="hero main-content__block _margin">
+    <h1 class="hero__info">
+        Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
+    </h1>
+    <div class="hero__items">
+        {% for teamitem in site.teamitems %}
+        <div class="hero__item">
+            {{ teamitem.info }}
+        </div>
+        {% endfor %}
+    </div>
+</section>

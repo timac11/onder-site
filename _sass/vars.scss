@@ -3,8 +3,8 @@
   // layout
   --block-margin-left: 64px;
   --block-margin-right: 64px;
-  --block-margin-top: 32px;
-  --block-margin-bottom: 32px;
+  --block-margin-top: 20px;
+  --block-margin-bottom: 20px;
   --block-padding-left: var(--block-margin-left);
   --block-padding-top: var(--block-margin-top);
   --block-padding-bottom: var(--block-margin-bottom);
@@ -44,8 +44,8 @@
 
   @include mobile {
     // fonts
-    --h2-font: normal 22px Montserrat;
-    --h1-font: bold 28px Montserrat;
+    --h2-font: normal 24px Montserrat;
+    --h1-font: bold 24px Montserrat;
     --paragraph-font: normal 16px Open Sans;
     --h1-font-size: 28px;
 

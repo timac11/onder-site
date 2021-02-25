@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+
+.innovations {
+  display: block;
+  margin-top: var(--block-margin-top);
+
+  &__description {
+    font: var(--paragraph-font);
+    margin: 0;
+  }
+
+  &__image {
+    float: right;
+    width: 50%;
+    object-fit: scale-down;
+
+    @include mobile-temp-wide-header {
+      order: 0;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    font: var(--paragraph-font);
+
+    &-wrapper {
+      display: flow-root;
+      margin-top: 120px;
+
+      &:first-child {
+        margin-top: 80px;
+      }
+    }
+
+    @include mobile-temp-wide-header {
+      display: flex;
+      flex-direction: column;
+      order: 3;
+    }
+
+    &-title {
+      font: var(--h1-font);
+      font-weight: normal;
+
+      @include mobile-temp-wide-header {
+        order: 1;
+      }
+    }
+  }
+}

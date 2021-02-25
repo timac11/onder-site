@@ -1,0 +1,17 @@
+<section class="main-content__block _margin">
+    <h2 class="block-heading">Команда</h2>
+    <div class="team">
+        {% for item in site.team %}
+        <div class="team__item-wrapper">
+            <div class="team__item">
+                <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
+                <div>
+                    <div class="team__item-name">{{ item.name }}</div>
+                    <div class="team__item-name">{{ item.lastName }}</div>
+                    <div class="team__item-position">{{ item.position }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

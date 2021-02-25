@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+.full-product {
+  padding: 28px 42px;
+  flex-wrap: wrap;
+  font-family: var(--base-font);
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px 8px 150px;
+    position: relative;
+
+    &._grid {
+      border: var(--grid-border);
+    }
+
+    &._dr {
+      border: var(--dr-border);
+    }
+
+    &._registry {
+      border: var(--registry-border);
+    }
+
+    &._control {
+      border: var(--control-border);
+    }
+  }
+
+  &__block {
+    @include mobile-temp-wide-header {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font: var(--h1-font);
+    text-transform: uppercase;
+    @include text-align-center;
+  }
+
+  &__description {
+    @include text-align-center;
+    @include mobile-temp-wide-header {
+      margin-bottom: 8px;
+    }
+    font-weight: normal;
+    line-height: 48px;
+  }
+
+  &__name {
+    &_grid {
+      color: var(--grid-color);
+    }
+
+    &_dr {
+      color: var(--dr-color);
+    }
+
+    &_registry {
+      color: var(--registry-color);
+    }
+
+    &_control {
+      color: var(--control-color);
+    }
+  }
+
+  &__image {
+    float: right;
+    width: 48%;
+
+    @include mobile-temp-wide-header {
+      order: 0;
+      width: 100%;
+    }
+  }
+
+  &__paragraphs {
+    order: 2;
+  }
+
+  &__paragraph {
+    font: var(--paragraph-font);
+    line-height: 32px;
+  }
+
+  &__advantages {
+    font: var(--paragraph-font);
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--block-padding-left);
+    padding-right: var(--block-padding-right);
+    flex-wrap: wrap;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      margin-right: 62px;
+    }
+  }
+
+  &__button {
+    font-size: 31px;
+    font-family: "Open Sans";
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 56px;
+    position: absolute;
+    bottom: -36px;
+    color: white;
+    background: #1aa5b8;
+    border-radius: 68px;
+    cursor: pointer;
+
+    &._grid {
+      background: var(--grid-color);
+    }
+
+    &._dr {
+      background: var(--dr-color);
+    }
+
+    &._registry {
+      background: var(--registry-color);
+    }
+
+    &._control {
+      background: var(--control-color);
+    }
+  }
+}

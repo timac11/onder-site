@@ -60,6 +60,6 @@
 
 @mixin text-align-center {
   @include mobile-temp-wide-header {
-    text-align: center;
+    //text-align: center;
   }
 }

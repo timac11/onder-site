@@ -1,0 +1,14 @@
+<section id="consulting" class="main-content__block _margin consulting">
+    <h2 class="block-heading">Технологический консалтинг</h2>
+    <p class="consulting__subtitle">Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли</p>
+    <div class="consulting__wrapper">
+        {% for consultingItem in site.consulting %}
+        <div class="consulting__info">
+            <h4 class="consulting__title">{{ consultingItem.title }}</h4>
+            {% for paragraph in consultingItem.paragraphs %}
+            <p class="consulting__description">{{ paragraph.value }}</p>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section>

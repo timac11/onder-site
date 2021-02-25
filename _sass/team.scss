@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    font: var(--paragraph-font);
+    margin-bottom: 16px;
+
+    @include mobile {
+      padding-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    @include small-mobile {
+      padding-right: 16px;
+      margin-bottom: 16px;
+    }
+
+    @include tiny {
+      padding-right: 0;
+    }
+
+    &-wrapper {
+      flex-basis: 21%;
+
+      @include mobile {
+        flex-basis: 33%;
+      }
+
+      @include small-mobile {
+        flex-basis: 49%;
+      }
+    }
+
+    &-name {
+      font-weight: bold;
+    }
+
+    &-position {
+      margin-top: 8px;
+      font-size: var(--paragraph-font);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+}

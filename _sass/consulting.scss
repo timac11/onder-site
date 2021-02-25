@@ -1,0 +1,42 @@
+@charset "utf-8";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+.consulting {
+  margin: 256px 0;
+
+  &__title {
+    font: var(--h2-font);
+    margin-top: 32px;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include tablet_and_smaller {
+      flex-direction: column;
+    }
+
+    > * {
+      flex: 1 0;
+
+      &:nth-child(odd) {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__description {
+    margin: var(--paragraph-margins);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+}

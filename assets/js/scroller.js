@@ -1,27 +1,27 @@
 document.addEventListener("DOMContentLoaded", init);
 
-window.onscroll = function() {
-    fixedHeader();
+window.onscroll = function () {
+  fixedHeader();
 }
 
 function init() {
-    fixedHeader();
+  fixedHeader();
 }
 
 function fixedHeader() {
-    const pos = window.pageYOffset;
-    const header = document.getElementById("header");
+  const pos = window.pageYOffset;
+  const header = document.getElementById("header");
 
-    if (pos>10)
-        header.classList.add("header_detached");
+  if (pos > 10) {
+    header.classList.add("header_detached");
+  } else {
+    header.classList.remove("header_detached");
+  }
 
-    else
-        header.classList.remove("header_detached");
+  //const offset_for_hide = document.getElementsByClassName("footer")[0].offsetTop-50
 
-        const offset_for_hide = document.getElementsByClassName("footer")[0].offsetTop-50
-
-    if (pos > offset_for_hide)
-        header.classList.add("is-hidden");
-    else
-        header.classList.remove("is-hidden");
+  // if (pos > offset_for_hide)
+  //   header.classList.add("is-hidden");
+  // else
+  //   header.classList.remove("is-hidden");
 }

@@ -1,0 +1,27 @@
+{% for product in site.products %}
+<section id="{{ product.name }}" class="full-product__wrapper {{ product.modifier }}">
+    <div class="full-product">
+        <div class="full-product__block">
+            <img class="full-product__image _desktop" src="{{ product.img }}">
+            <h1 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span></h1>
+            <h1 class="full-product__description">{{ product.subtitle }}</h1>
+            <div class="full-product__paragraphs">
+                {% for paragraph in product.paragraphs %}
+                <p class="full-product__paragraph">{{ paragraph.value }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="full-product__advantages">
+        {% for advantage in product.advantages %}
+        <div>
+            <img src="{{ advantage.img }}">
+            <p class="full-product__advantages-item">
+                {{ advantage.value }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</div>
+</section>
+{% endfor %}

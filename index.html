@@ -7,178 +7,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
-    <title>ONDER — разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности</title>
+    <title>ONDER — разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title"/>
 </head>
 <body>
-<header id="header" class="header" role="banner">
-    <div class="header__container">
-        <div>
-            <img class="short-logo" src="assets/png/logo/black-onder-logo.png">
-            <img class="full-logo" src="assets/svg/onder-logo.svg"
-            height="40px"
-            width="180px"/>
-        </div>
-        <div class="header__navigation">
-            <nav id="navbar" class="navigation">
-                {% for item in site.navigation %}
-                <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
-                {% endfor %}
-            </nav>
-            <div class="navigation">
-                <a class="navigation__item">Новости</a>
-                <a class="navigation__item">Блог</a>
-                <a class="navigation__item_email">{{ site.email }}</a>
-                <a class="navigation__item_phone">{{ site.phone }}</a>
-            </div>
-        </div>
-        <button class="menu menu_white">
-            <img src="assets/svg/menu-white.svg">
-        </button>
-        <button class="menu menu_black">
-            <img src="assets/svg/menu.svg">
-        </button>
-    </div>
 
-</header>
+{% include header.html %}
+
 <main class="main-content" aria-label="Content">
-    <div class="title">
 
-    </div>
+    {% include hero.html %}
+    {% include products.html %}
+    {% include full_products.html %}
+    {% include innovations.html %}
+    {% include consulting.html %}
+    {% include team.html %}
+    {% include partners.html %}
+    {% include clients.html %}
 
-    <section class="hero main-content__block _margin">
-        <h1 class="hero__info">
-            Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
-        </h1>
-        <div class="hero__items">
-            {% for teamitem in site.teamitems %}
-            <div class="hero__item">
-                {{ teamitem.info }}
-            </div>
-            {% endfor %}
-        </div>
-    </section>
 
-    <section id="products" class="products">
-        <h2 class="block-heading products__title">Продукты</h2>
-        <div class="products-items">
-            {% for product in site.products %}
-            <div class="products-items__item {{ product.modifier }}">
-                <h1 class="products-items__heading">
-                    Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
-                </h1>
-                <h2 class="products-items__item-description">{{ product.description }}</h2>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    {% for product in site.products %}
-    <section id="{{ product.name }}" class="full-product__wrapper {{ product.modifier }}">
-        <div class="full-product">
-            <div class="full-product__block">
-                <img class="full-product__image _desktop" src="{{ product.img }}">
-                <h1 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span></h1>
-                <h2 class="full-product__description">{{ product.subtitle }}</h2>
-                <div class="full-product__paragraphs">
-                    {% for paragraph in product.paragraphs %}
-                    <p class="full-product__paragraph">{{ paragraph.value }}</p>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <div class="full-product__advantages">
-            {% for advantage in product.advantages %}
-            <p class="full-product__advantages-item">
-                {{ advantage.value }}
-            </p>
-            {% endfor %}
-        </div>
-        <div class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</div>
-    </section>
-    {% endfor %}
-
-    <section id="innovations" class="main-content__block _margin">
-        <h2 class="block-heading">Инновационные продукты</h2>
-        <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых
-            децентрализованных энергетических рынков.</p>
-        {% for item in site.innovations %}
-        <div class="innovations__item">
-            <img class="innovations__image" src="{{ item.img }}"/>
-            <div class="innovations__item-title">{{ item.name }}</div>
-            {% for paragraph in item.paragraphs %}
-            <p class="innovations__item">{{ paragraph.value }}</p>
-            {% endfor %}
-        </div>
-        {% endfor %}
-    </section>
-
-    <section id="consulting" class="main-content__block _margin consulting">
-        <h2 class="block-heading">Технологический консалтинг</h2>
-        <p class="consulting__subtitle">Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли</p>
-        <div class="consulting__wrapper">
-            {% for consultingItem in site.consulting %}
-            <div class="consulting__info">
-                <h4 class="consulting__title">{{ consultingItem.title }}</h4>
-                {% for paragraph in consultingItem.paragraphs %}
-                <p class="consulting__description">{{ paragraph.value }}</p>
-                {% endfor %}
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section class="main-content__block _margin">
-        <h2 class="block-heading">Команда</h2>
-        <div class="team">
-            {% for item in site.team %}
-            <div class="team__item-wrapper">
-                <div class="team__item">
-                    <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
-                    <div>
-                        <div class="team__item-name">{{ item.name }}</div>
-                        <div class="team__item-name">{{ item.lastName }}</div>
-                        <div class="team__item-position">{{ item.position }}</div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section id="partners" class="main-content__block _margin">
-        <h2 class="block-heading">Партнёры</h2>
-        <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем
-            узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
-        {% for itemPartner in site.partners %}
-        <div class="partners__wrapper">
-            <h2>{{ itemPartner.name }}</h2>
-            <div class="partners__container">
-                {% for item in itemPartner.items %}
-                <div class="partners__item">
-                    <img class="partners__item-img" src="{{ item.img }}">
-                    <span class="partners__item-text">{{ item.text }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endfor %}
-    </section>
-
-    <div class="main-content__block _margin _clients">
-        <h2 class="block-heading">Клиенты</h2>
-        <div class="clients__container">
-            <img class="clients__item" src="assets/png/clients/np.png">
-            <img class="clients__item" src="assets/png/clients/rosatom.png">
-            <img class="clients__item" src="assets/png/clients/interrao.png">
-            <img class="clients__item" src="assets/png/clients/set.png">
-            <img class="clients__item" src="assets/png/clients/rus_energo.jpg">
-            <img class="clients__item" src="assets/png/clients/rtsoft.png">
-        </div>
-    </div>
-
-    <div class="main-content__block _margin">
+    <div class="main-content__block _margin company-info">
         <h2 class="company-info__item">
             Будем рады рассказать про наши продукты подробнее!
         </h2>

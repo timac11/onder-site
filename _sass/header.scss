@@ -1,0 +1,137 @@
+@charset "utf-8";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-white-color);
+  height: var(--header-height);
+  justify-content: center;
+  display: block;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    padding: var(--header-paddings);
+    max-width: 1440px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  &__navigation {
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+
+  .header__navigation {
+    justify-content: flex-end;
+  }
+
+  nav {
+    width: 0;
+    display: none;
+  }
+
+  .short-logo {
+    height: 0;
+    width: 0;
+  }
+
+  .full-logo {
+    width: auto;
+    height: auto;
+  }
+
+  .navigation {
+    > * {
+      display: block;
+    }
+  }
+
+  @include mobile {
+    .menu {
+      &_black {
+        display: block;
+      }
+      &_white {
+        display: none;
+      }
+    }
+  }
+
+  &_detached {
+    background: black;
+
+    .short-logo {
+      width: auto;
+      height: auto;
+    }
+
+    .full-logo {
+      width: 0;
+      height: 0;
+    }
+
+    .header__navigation {
+      justify-content: space-between;
+
+      @include mobile {
+        justify-content: center;
+      }
+    }
+
+    nav {
+      display: flex;
+      width: auto;
+    }
+
+    .navigation__item {
+      @include desktop-s-and-less {
+        &_phone,
+        &_email {
+          display: none;
+        }
+      }
+    }
+
+    @include mobile {
+      .menu {
+        &_black {
+          display: none;
+        }
+        &_white {
+          display: none;
+        }
+      }
+    }
+
+    @include small-mobile {
+      .menu {
+        &_white {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    div.navigation {
+      display: none;
+    }
+  }
+
+  @include small-mobile {
+    .navigation {
+      display: none;
+    }
+  }
+}
