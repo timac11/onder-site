@@ -42,11 +42,11 @@
   }
 
   .short-logo {
-    height: 0;
-    width: 0;
+    display: none;
   }
 
   .full-logo {
+    display: block;
     width: auto;
     height: auto;
   }
@@ -72,13 +72,13 @@
     background: transparent;
 
     .short-logo {
+      display: block;
       width: auto;
       height: auto;
     }
 
     .full-logo {
-      width: 0;
-      height: 0;
+      display: none;
     }
 
     .header__navigation {
