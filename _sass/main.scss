@@ -24,6 +24,21 @@ p {
   font: var(--paragraph-font);
 }
 
+.menu {
+  display: none;
+  background-image: url('/assets/svg/menu-white.svg');
+  // background-size: contain;
+  background-color: transparent;
+  // font: var(--paragraph-font);
+  width: 24px;
+  height: 24px;
+  outline: none;
+
+  @include small-mobile {
+    display: block;
+  }
+}
+
 .header {
   position: sticky;
   top: 0px;
@@ -52,6 +67,10 @@ p {
     justify-content: space-between;
     flex-grow: 1;
     margin-left: 16px;
+
+    @include mobile {
+      justify-content: center;
+    }
   }
 
   .short-logo {
@@ -67,9 +86,13 @@ p {
   &_detached {
     background-color: var(--main-white-color);
 
+    .header__navigation {
+      justify-content: flex-end;
+    }
+
     nav {
       width: 0;
-      visibility: hidden;
+      display: none;
     }
 
     .short-logo {
@@ -81,6 +104,32 @@ p {
     .full-logo {
       width: auto;
       height: auto;
+    }
+
+    .navigation {
+      > * {
+        display: block;
+      }
+    }
+
+    @include mobile {
+      .menu {
+        display: block;
+        background-image: url('/assets/svg/menu.svg');
+      }
+    }
+
+  }
+
+  @include mobile {
+    div.navigation {
+      display: none;
+    }
+  }
+
+  @include small-mobile {
+    .navigation {
+      display: none;
     }
   }
 }
