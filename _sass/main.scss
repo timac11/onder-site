@@ -26,7 +26,7 @@ p {
 
 .menu {
   display: none;
-  background-image: url('/assets/svg/menu-white.svg');
+  background-image: url('assets/svg/menu-white.svg');
   // background-size: contain;
   background-color: transparent;
   // font: var(--paragraph-font);
@@ -115,7 +115,7 @@ p {
     @include mobile {
       .menu {
         display: block;
-        background-image: url('/assets/svg/menu.svg');
+        background-image: url('assets/svg/menu.svg');
       }
     }
 
