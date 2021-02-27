@@ -10,37 +10,37 @@
   }
 }
 
-@mixin tablet_and_smaller {
+@mixin m-tablet-and-smaller {
   @media screen and (max-width: 768px) {
     @content;
   }
 }
 
-@mixin tablet {
+@mixin l-tablet {
   @media (min-width: 769px) and (max-width: 1023px) {
     @content;
   }
 }
 
-@mixin mobile {
+@mixin m-tablet {
   @media (max-width: 768px) {
     @content;
   }
 }
 
-@mixin small-mobile {
+@mixin s-tablet {
   @media (max-width: 600px) {
     @content
   }
 }
 
-@mixin tiny {
+@mixin mobile {
   @media (max-width: 500px) {
     @content
   }
 }
 
-@mixin mobile-temp-wide-header {
+@mixin m-tablet-temp-wide-header {
   @media (max-width: 959px) {
     @content;
   }
@@ -59,7 +59,7 @@
 }
 
 @mixin text-align-center {
-  @include mobile-temp-wide-header {
+  @include m-tablet-temp-wide-header {
     //text-align: center;
   }
 }

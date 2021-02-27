@@ -22,7 +22,7 @@ h2 {
 
 p {
   font: var(--paragraph-font);
-  line-height: 32px;
+  line-height: var(--paragraph-line-height);
   font-weight: 400;
 }
 
@@ -33,7 +33,7 @@ p {
   height: 24px;
   outline: none;
 
-  @include small-mobile {
+  @include s-tablet {
     &_white {
       display: block;
     }
@@ -54,24 +54,6 @@ p {
   color: orange;
 }
 
-.navigation {
-  display: flex;
-  background: var(--main-white-color);
-  height: 28px;
-  border-radius: 40px;
-  padding: 0 8px;
-
-  > a {
-    padding: 3px 8px;
-    color: var(--main-font-color);
-    font: var(--navigation-font);
-  }
-
-  &__item {
-    text-decoration: none;
-  }
-}
-
 .main-content {
   padding: var(--block-padding-top) 0;
   max-width: var(--max-width);
@@ -89,12 +71,17 @@ p {
   margin-top: 180px;
 
   &__mail {
-    margin: 32px 0;
+    max-width: 80%;
+    margin: 1.5rem 0;
   }
 
   &__item {
     max-width: 700px;
     font-family: var(--base-font);
     font-size: var(--h1-font-size);
+  }
+
+  @include m-tablet {
+
   }
 }

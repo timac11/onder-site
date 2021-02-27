@@ -15,6 +15,7 @@
 
   &__description {
     font: var(--paragraph-font);
+    line-height: var(--paragraph-line-height);
   }
 
   &__title {
@@ -28,7 +29,7 @@
     flex-wrap: wrap;
     margin-top: var(--block-margin-top);
 
-    @include mobile-temp-wide-header {
+    @include m-tablet-temp-wide-header {
       flex-direction: column;
     }
   }
@@ -37,11 +38,12 @@
     width: 50%;
     display: flex;
     font: var(--paragraph-font);
+    line-height: var(--paragraph-line-height);
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 64px;
 
-    @include mobile {
+    @include m-tablet {
       width: 100%;
       flex-direction: column;
       justify-content: center;
@@ -58,7 +60,7 @@
       width: 60%;
       margin-left: 32px;
 
-      @include mobile {
+      @include m-tablet {
         width: 100%;
         margin-left: 0;
         @include text-align-center;

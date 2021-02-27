@@ -6,7 +6,7 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: var(--main-white-color);
+  background-color: rgba(255, 255, 255, 0.5);
   height: var(--header-height);
   justify-content: center;
   display: block;
@@ -57,19 +57,14 @@
     }
   }
 
-  @include mobile {
+  @include m-tablet {
     .menu {
-      &_black {
-        display: block;
-      }
-      &_white {
-        display: none;
-      }
+      display: block;
     }
   }
 
   &_detached {
-    background: transparent;
+    // background: transparent;
 
     .short-logo {
       display: block;
@@ -84,7 +79,7 @@
     .header__navigation {
       justify-content: space-between;
 
-      @include mobile {
+      @include m-tablet {
         justify-content: center;
       }
     }
@@ -103,35 +98,52 @@
       }
     }
 
-    @include mobile {
+    @include m-tablet {
       .menu {
-        &_black {
-          display: none;
-        }
-        &_white {
-          display: none;
-        }
+        display: none;
       }
     }
 
-    @include small-mobile {
+    @include s-tablet {
       .menu {
-        &_white {
-          display: block;
-        }
+        display: block;
+      }
+      .short-logo {
+        display: none;
+        width: auto;
+        height: auto;
       }
     }
   }
 
-  @include mobile {
+  @include m-tablet {
     div.navigation {
       display: none;
     }
   }
 
-  @include small-mobile {
+  @include s-tablet {
     .navigation {
       display: none;
     }
+  }
+}
+
+
+.navigation {
+  display: flex;
+  background: transparent;
+  height: 28px;
+  border-radius: 40px;
+  padding: 0 8px;
+
+  > a {
+    padding: 3px 8px;
+    color: var(--main-font-color);
+    font: var(--navigation-font);
+  }
+
+  &__item {
+    text-decoration: none;
   }
 }

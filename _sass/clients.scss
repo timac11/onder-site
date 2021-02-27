@@ -19,11 +19,11 @@
     width: 25%;
     object-fit: scale-down;
 
-    @include mobile {
+    @include m-tablet {
       width: 50%;
     }
 
-    @include tiny {
+    @include mobile {
       width: 100%;
     }
   }

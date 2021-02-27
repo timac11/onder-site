@@ -19,7 +19,9 @@
   --h1-font-size: 40px;
   --h1-font: bold var(--h1-font-size) Montserrat;
   --h2-font: normal 32px Montserrat;
+  --h2-line-height: 41px;
   --paragraph-font: normal 24px Open Sans;
+  --paragraph-line-height: 32px;
   --navigation-font: normal 16px Open Sans;
 
   // color
@@ -42,11 +44,13 @@
   --control-color-opacity: rgba(244, 197, 46, 0.3);
   --control-border: 14px solid var(--control-color-opacity);
 
-  @include mobile {
+  @include m-tablet {
     // fonts
     --h2-font: normal 24px Montserrat;
+    --h2-line-height: 30px;
     --h1-font: bold 24px Montserrat;
     --paragraph-font: normal 16px Open Sans;
+    --paragraph-line-height: 21px;
     --h1-font-size: 28px;
 
     //layout
@@ -60,5 +64,9 @@
     --dr-border: 7px solid var(--dr-color-opacity);
     --registry-border: 7px solid var(--registry-color-opacity);
     --control-border: 7px solid var(--control-color-opacity);
+  }
+
+  @include s-tablet {
+    --header-paddings: 0 16px 16px 16px;
   }
 }

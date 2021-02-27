@@ -11,30 +11,31 @@
 
   &__item {
     font: var(--paragraph-font);
+    line-height: var(--paragraph-line-height);
     margin-bottom: 16px;
 
-    @include mobile {
+    @include m-tablet {
       padding-right: 8px;
       margin-bottom: 8px;
     }
 
-    @include small-mobile {
+    @include s-tablet {
       padding-right: 16px;
       margin-bottom: 16px;
     }
 
-    @include tiny {
+    @include mobile {
       padding-right: 0;
     }
 
     &-wrapper {
       flex-basis: 21%;
 
-      @include mobile {
+      @include m-tablet {
         flex-basis: 33%;
       }
 
-      @include small-mobile {
+      @include s-tablet {
         flex-basis: 49%;
       }
     }
@@ -46,6 +47,7 @@
     &-position {
       margin-top: 8px;
       font-size: var(--paragraph-font);
+      line-height: var(--paragraph-line-height);
     }
   }
 

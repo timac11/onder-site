@@ -10,6 +10,7 @@
 
   &__description {
     font: var(--paragraph-font);
+    line-height: var(--paragraph-line-height);
     margin: 0;
   }
 
@@ -18,7 +19,7 @@
     width: 50%;
     object-fit: scale-down;
 
-    @include mobile-temp-wide-header {
+    @include m-tablet-temp-wide-header {
       order: 0;
       width: 100%;
     }
@@ -26,6 +27,7 @@
 
   &__item {
     font: var(--paragraph-font);
+    line-height: var(--paragraph-line-height);
 
     &-wrapper {
       display: flow-root;
@@ -36,7 +38,7 @@
       }
     }
 
-    @include mobile-temp-wide-header {
+    @include m-tablet-temp-wide-header {
       display: flex;
       flex-direction: column;
       order: 3;
@@ -46,7 +48,7 @@
       font: var(--h1-font);
       font-weight: normal;
 
-      @include mobile-temp-wide-header {
+      @include m-tablet-temp-wide-header {
         order: 1;
       }
     }

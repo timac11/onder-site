@@ -7,7 +7,7 @@
   display: flex;
   margin-top: 52px;
 
-  @include tablet_and_smaller {
+  @include m-tablet-and-smaller {
     flex-direction: column;
 
     &__items {
@@ -15,7 +15,7 @@
     }
   }
 
-  @include tablet {
+  @include l-tablet {
     flex-direction: column;
 
     &__items {
@@ -28,7 +28,7 @@
     font-weight: bold;
     flex: 1 0;
     margin-right: 36px;
-    line-height: 41px;
+    line-height: var(--h2-line-height);
   }
 
   &__items {
@@ -40,6 +40,6 @@
   &__item {
     font: var(--paragraph-font);
     margin-bottom: var(--block-margin-bottom);
-    line-height: 32px;
+    line-height: var(--paragraph-line-height);
   }
 }

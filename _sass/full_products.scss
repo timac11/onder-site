@@ -8,11 +8,6 @@
   flex-wrap: wrap;
   font-family: var(--base-font);
 
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -37,11 +32,14 @@
     }
   }
 
-  &__block {
-    @include mobile-temp-wide-header {
-      display: flex;
-      flex-direction: column;
-    }
+
+
+  &__text {
+    margin-right: 49px;
+
+    // @include desktop-s-and-less {
+    //   margin-right: 16px;
+    // }
   }
 
   &__title {
@@ -52,8 +50,11 @@
 
   &__description {
     @include text-align-center;
-    @include mobile-temp-wide-header {
-      margin-bottom: 8px;
+    // @include m-tablet-temp-wide-header {
+    //   margin-bottom: 8px;
+    // }
+    @include m-tablet {
+      line-height: 30px;
     }
     font-weight: normal;
     line-height: 48px;
@@ -79,25 +80,26 @@
 
   &__image {
     float: right;
-    width: 48%;
+    max-width: 50%;
+    padding-left: 49px;
 
-    @include mobile-temp-wide-header {
-      order: 0;
-      width: 100%;
+    @include m-tablet-temp-wide-header {
+      max-width: 100%;
     }
-  }
-
-  &__paragraphs {
-    order: 2;
   }
 
   &__paragraph {
     font: var(--paragraph-font);
-    line-height: 32px;
+    line-height: var(--paragraph-line-height);
+    margin-top: 24px;
+    @include m-tablet {
+      margin-top: 16px;
+    }
   }
 
   &__advantages {
     font: var(--paragraph-font);
+    line-height: var(--paragraph-line-height);
     display: flex;
     justify-content: space-between;
     padding-left: var(--block-padding-left);
@@ -139,6 +141,30 @@
 
     &._control {
       background: var(--control-color);
+    }
+  }
+
+  @include m-tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    &__button {
+      font: var(--paragraph-font);
+    }
+  }
+
+  @include desktop-s-and-smaller {
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__image {
+      max-width: 100%;
+      padding-left: 0;
+      margin-bottom: 16px;
     }
   }
 }

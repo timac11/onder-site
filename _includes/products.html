@@ -3,9 +3,9 @@
     <div class="products-items">
         {% for product in site.products %}
         <div class="products-items__item {{ product.modifier }}">
-            <h1 class="products-items__heading">
+            <h2 class="products-items__heading">
                 Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
-            </h1>
+            </h2>
             <h2 class="products-items__item-description">{{ product.description }}</h2>
         </div>
         {% endfor %}
