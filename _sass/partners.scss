@@ -3,7 +3,6 @@
 @import "mixins";
 @import "reset";
 
-
 .partners {
   margin-top: 150px;
 
@@ -41,7 +40,7 @@
     line-height: var(--paragraph-line-height);
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0.25em;
+    padding: 1em;
 
     box-sizing: border-box;
 
@@ -50,11 +49,11 @@
       flex: 0;
       object-fit: scale-down;
       margin: auto;
+      max-height: 80px;
     }
 
     &-text {
       display: block;
-      width: 60%;
       margin-left: 32px;
     }
   }
@@ -86,9 +85,8 @@
     }
   }
 
-
   @include m-tablet {
-    width: 100%;
+    // width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -102,5 +100,26 @@
     &__container {
       margin-top: 32px;
     }
+  }
+
+  @include mobile {
+    &__item {
+      flex-direction: column;
+
+      &-text {
+        margin: 0;
+        margin-top: 12px;
+        text-align: left;
+        font-size: 12px;
+      }
+
+      &-img {
+        max-height: 40px;
+      }
+    }
+  }
+
+  &__partner {
+    height: 40px;
   }
 }

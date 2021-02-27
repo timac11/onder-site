@@ -32,8 +32,6 @@
     }
   }
 
-
-
   &__text {
     margin-right: 49px;
   }
@@ -94,6 +92,7 @@
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 var(--block-padding-right) 80px var(--block-padding-left);
 
