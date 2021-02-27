@@ -36,10 +36,6 @@
 
   &__text {
     margin-right: 49px;
-
-    // @include desktop-s-and-less {
-    //   margin-right: 16px;
-    // }
   }
 
   &__title {
@@ -50,9 +46,6 @@
 
   &__description {
     @include text-align-center;
-    // @include m-tablet-temp-wide-header {
-    //   margin-bottom: 8px;
-    // }
     @include m-tablet {
       line-height: 30px;
     }
@@ -102,14 +95,13 @@
     line-height: var(--paragraph-line-height);
     display: flex;
     justify-content: space-between;
-    padding-left: var(--block-padding-left);
-    padding-right: var(--block-padding-right);
-    flex-wrap: wrap;
+    padding: 0 var(--block-padding-right) 80px var(--block-padding-left);
 
     &-item {
       display: flex;
+      flex: 1 0 25%;
       flex-direction: column;
-      margin-right: 62px;
+      // margin-right: 62px;
     }
   }
 
@@ -151,6 +143,7 @@
 
     &__button {
       font: var(--paragraph-font);
+      bottom: -24px;
     }
   }
 

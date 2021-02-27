@@ -50,8 +50,17 @@ p {
   padding: 0 var(--block-padding-left);
 }
 
-.markdown-company-name {
-  color: orange;
+.markdown{
+  &__company-name {
+    display: inline;
+    color: #F85D1F;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__emphasized-text {
+    text-decoration: underline;
+  }
 }
 
 .main-content {

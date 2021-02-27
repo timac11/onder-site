@@ -16,9 +16,9 @@
     </div>
     <div class="full-product__advantages">
         {% for advantage in product.advantages %}
-        <div>
+        <div class="full-product__advantages-item">
             <img src="{{ advantage.img }}">
-            <p class="full-product__advantages-item">
+            <p>
                 {{ advantage.value }}
             </p>
         </div>

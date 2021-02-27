@@ -18,16 +18,20 @@
     float: right;
     width: 50%;
     object-fit: scale-down;
+    padding-left: 55px;
 
     @include m-tablet-temp-wide-header {
       order: 0;
       width: 100%;
+      padding-left: 0;
+      padding-bottom: 16px;
     }
   }
 
   &__item {
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
+    margin-top: 16px;
 
     &-wrapper {
       display: flow-root;
@@ -35,13 +39,17 @@
 
       &:first-child {
         margin-top: 80px;
+
+        @include m-tablet {
+          margin-top: 40px;
+        }
       }
     }
 
     @include m-tablet-temp-wide-header {
-      display: flex;
-      flex-direction: column;
-      order: 3;
+      // display: flex;
+      // flex-direction: column;
+      // order: 3;
     }
 
     &-title {

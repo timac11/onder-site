@@ -35,20 +35,13 @@
   }
 
   &__item {
-    width: 50%;
+    flex-basis: 50%;
     display: flex;
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 64px;
-
-    @include m-tablet {
-      width: 100%;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
 
     &-img {
       flex: 0;
@@ -59,12 +52,32 @@
     &-text {
       width: 60%;
       margin-left: 32px;
+    }
+  }
 
-      @include m-tablet {
-        width: 100%;
-        margin-left: 0;
-        @include text-align-center;
+  @include desktop-s-and-less {
+    &__item {
+      flex-direction: column;
+
+      &-text {
+        margin: 0;
+        margin-top: 12px;
+        text-align: center;
       }
+    }
+  }
+
+
+  @include m-tablet {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      width: 100%;
+      margin-left: 0;
+      @include text-align-center;
     }
   }
 }
