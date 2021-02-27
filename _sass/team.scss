@@ -3,7 +3,6 @@
 @import "mixins";
 @import "reset";
 
-
 .team {
   display: flex;
   flex-wrap: wrap;
@@ -29,19 +28,16 @@
     // }
 
     &-wrapper {
-      flex-basis: 21%;
+      flex-basis: 25%;
+      width: 25%;
 
-      @include m-tablet {
-        flex-basis: 33%;
-      }
-
-      @include s-tablet {
-        flex-basis: 49%;
-      }
+      // @include s-tablet {
+      //   flex-basis: 49%;
+      // }
     }
 
     &-name {
-      font-weight: bold;
+      font-weight: 700;
     }
 
     &-position {
@@ -49,10 +45,33 @@
       font-size: var(--paragraph-font);
       line-height: var(--paragraph-line-height);
     }
+
+    &:nth-child(4n) {
+      padding-left: 0;
+    }
   }
 
   &__img {
     width: 100%;
     display: block;
+    margin-bottom: 0.5em;
+  }
+
+  @include desktop-s-and-smaller {
+    &__item {
+      &-wrapper {
+        flex-basis: 33%;
+        width: 33%;
+      }
+    }
+  }
+
+  @include m-tablet {
+    &__item {
+      &-wrapper {
+        flex-basis: 50%;
+        width: 50%;
+      }
+    }
   }
 }
