@@ -8,7 +8,9 @@
         <div class="partners__container">
             {% for item in itemPartner.items %}
             <div class="partners__item">
-                <img class="partners__item-img" src="{{ item.img }}">
+                <figure class="partners__partner">
+                    <img class="partners__item-img" src="{{ item.img }}">
+                </figure>
                 <span class="partners__item-text">{{ item.text }}</span>
             </div>
             {% endfor %}
