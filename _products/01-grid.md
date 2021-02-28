@@ -5,6 +5,7 @@ description: Система для расчетов и проведения пл
 modifier: _grid
 img: assets/img/onder-grid.png
 buttonText: Открыть сайт ONDER.GRID
+anchor: grid
 paragraphs:
   - value: Система для расчетов и проведения платежей между потребителями и поставщиками ресурсов на основе смарт-контрактов
   - value: Развитие для энергетической отрасли совместно с <a href="/" class="markdown__company-name">Мосэлектро</a>.

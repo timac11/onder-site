@@ -1,5 +1,6 @@
 {% for product in site.products %}
 <section id="{{ product.name }}" class="full-product__wrapper {{ product.modifier }}">
+    <a id="{{ product.anchor }}" class="anchor"></a>
     <div class="full-product">
         <div class="full-product__block">
             <img class="full-product__image _desktop" src="{{ product.img }}">
@@ -22,7 +23,7 @@
                     <img src="{{ advantage.img }}">
                 </figure>
                 <p class="full-product__advantage-info">
-                    {{ advantage.value }}
+                    {% include typograph.html content=advantage.value %}
                 </p>
             </div>
             {% endfor %}

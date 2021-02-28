@@ -3,12 +3,13 @@
     <h1 class="block-heading products__title">Продукты</h1>
     <div class="products-items">
         {% for product in site.products %}
-        <div class="products-items__item {{ product.modifier }}">
+        <div class="products-items__item {{ product.modifier }}" onclick="updateLocationHash('{{ product.anchor }}')">
             <h2 class="products-items__heading">
                 Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
             </h2>
             <h2 class="products-items__item-description">
-                {% include typograph.html content=product.description %}</h2>
+                {% include typograph.html content=product.description %}
+            </h2>
         </div>
         {% endfor %}
     </div>
