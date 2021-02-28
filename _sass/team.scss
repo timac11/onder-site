@@ -44,7 +44,7 @@
     }
   }
 
-  @include m-tablet {
+  @include s-tablet {
     &__item {
       &-wrapper {
         flex-basis: 50%;

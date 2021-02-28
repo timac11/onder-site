@@ -50,10 +50,10 @@ p {
   padding: 0 var(--block-padding-left);
 }
 
-.markdown{
+.markdown {
   &__company-name {
     display: inline;
-    color: #F85D1F;
+    color: #f85d1f;
     text-decoration: underline;
     cursor: pointer;
   }
@@ -89,8 +89,11 @@ p {
     font-family: var(--base-font);
     font-size: var(--h1-font-size);
   }
+}
 
-  @include m-tablet {
-
-  }
+.anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * var(--header-height));
+  visibility: hidden;
 }
