@@ -1,8 +1,6 @@
 @charset "utf-8";
 @import "fonts";
 @import "mixins";
-@import "reset";
-
 
 .products {
   margin: var(--block-margin-top) calc(var(--block-margin-right) / 2) 0 calc(var(--block-margin-left) / 2);

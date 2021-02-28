@@ -82,6 +82,10 @@ p {
   &__mail {
     max-width: 80%;
     margin: 1.5rem 0;
+    background: linear-gradient(270deg, #F85D1F 50%, #F4C52E 69.86%, #8AB65A 89.22%, #1AA5B8 105.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #F85D1F;
   }
 
   &__item {

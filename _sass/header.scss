@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "fonts";
 @import "mixins";
-@import "reset";
 
 .header {
   position: sticky;
@@ -189,7 +188,7 @@
 
 .navigation {
   display: flex;
-  background: transparent;
+  background: var(--main-white-color);
   height: 28px;
   border-radius: 40px;
   padding: 0 8px;

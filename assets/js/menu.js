@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var menuButton = document.querySelector(".menu button");
+  const menuButton = document.querySelector(".menu button");
   menuButton.onclick = handleClick;
 
-  var menuElements = document.querySelectorAll(".menu__list > li");
+  const menuElements = document.querySelectorAll(".menu__list > li");
   menuElements.forEach(function (element) {
     element.onclick = handleClick;
   });
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function handleClick() {
-  var element = document.querySelector(".menu__list");
+  const element = document.querySelector(".menu__list");
   if (element.classList.contains("menu__list_visible")) {
     close();
   } else {
@@ -21,7 +21,7 @@ function handleClick() {
 
 function initClickOutside() {
   document.addEventListener("click", function (event) {
-    var element = document.querySelector("header");
+    const element = document.querySelector("header");
     if (event.target !== element && !element.contains(event.target)) {
       close();
     }
