@@ -35,7 +35,7 @@
     margin-bottom: 0.5em;
   }
 
-  @include desktop-s-and-smaller {
+  @include l-tablet-and-less {
     &__item {
       &-wrapper {
         flex-basis: 33%;

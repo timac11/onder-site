@@ -4,7 +4,7 @@
   }
 }
 
-@mixin desktop-s-and-smaller {
+@mixin l-tablet-and-less {
   @media (max-width: 1024px) {
     @content;
   }
@@ -30,13 +30,13 @@
 
 @mixin s-tablet {
   @media (max-width: 600px) {
-    @content
+    @content;
   }
 }
 
 @mixin mobile {
   @media (max-width: 500px) {
-    @content
+    @content;
   }
 }
 

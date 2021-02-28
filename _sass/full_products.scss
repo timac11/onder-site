@@ -36,6 +36,19 @@
     margin-right: 49px;
   }
 
+  // &__image {
+  //   width: 1em;
+  //   height: 1em;
+  // }
+
+  &__image-container {
+    height: 3.5em;
+    > img {
+      width: 2.67em;
+      height: 2.67em;
+    }
+  }
+
   &__title {
     font: var(--h1-font);
     text-transform: uppercase;
@@ -89,18 +102,22 @@
   }
 
   &__advantages {
-    font: var(--paragraph-font);
-    line-height: var(--paragraph-line-height);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 var(--block-padding-right) 80px var(--block-padding-left);
+    width: 100%;
+    &-wrapper {
+      font: var(--paragraph-font);
+      line-height: var(--paragraph-line-height);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 var(--block-padding-right) 80px 42px;
+    }
 
     &-item {
-      display: flex;
-      flex: 1 0 25%;
-      flex-direction: column;
-      // margin-right: 62px;
+      // display: flex;
+      flex: 1 0 22%;
+      // flex-direction: column;
+      padding-right: 2em;
+      box-sizing: border-box;
     }
   }
 
@@ -135,18 +152,15 @@
     }
   }
 
-  @include m-tablet {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-
-    &__button {
-      font: var(--paragraph-font);
-      bottom: -24px;
+  @include desktop-s-and-less {
+    &__advantages {
+      &-item {
+        padding-right: 1em;
+      }
     }
   }
 
-  @include desktop-s-and-smaller {
+  @include l-tablet-and-less {
     &__block {
       display: flex;
       flex-direction: column;
@@ -157,6 +171,45 @@
       max-width: 100%;
       padding-left: 0;
       margin-bottom: 16px;
+    }
+
+    &__advantages {
+      box-sizing: border-box;
+      &-wrapper {
+        flex-direction: column;
+      }
+      &-item {
+        padding-bottom: 1em;
+      }
+    }
+
+    &__advantage-info {
+      width: 70%;
+    }
+  }
+
+  @include m-tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    &__button {
+      font: var(--paragraph-font);
+      bottom: -24px;
+    }
+
+    &__advantages {
+      padding-left: 16px;
+      padding-bottom: 30px;
+      &-wrapper {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @include mobile {
+    &__advantage-info {
+      width: 100%;
     }
   }
 }

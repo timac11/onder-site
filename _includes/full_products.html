@@ -15,14 +15,18 @@
         </div>
     </div>
     <div class="full-product__advantages">
-        {% for advantage in product.advantages %}
-        <div class="full-product__advantages-item">
-            <img src="{{ advantage.img }}">
-            <p>
-                {{ advantage.value }}
-            </p>
+        <div class="full-product__advantages-wrapper">
+            {% for advantage in product.advantages %}
+            <div class="full-product__advantages-item">
+                <figure class="full-product__image-container">
+                    <img src="{{ advantage.img }}">
+                </figure>
+                <p class="full-product__advantage-info">
+                    {{ advantage.value }}
+                </p>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
     <div class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</div>
 </section>

@@ -32,7 +32,7 @@
     display: block;
   }
 
-  @include desktop-s-and-smaller {
+  @include l-tablet-and-less {
     &__container {
       margin: 0 -1em;
     }
