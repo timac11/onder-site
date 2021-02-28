@@ -9,7 +9,7 @@
         <div class="header__navigation">
             <nav id="navbar" class="navigation">
                 {% for item in site.navigation %}
-                <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                    <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
                 {% endfor %}
             </nav>
             <div class="navigation">
@@ -19,9 +19,18 @@
                 <a class="navigation__item_phone">{{ site.phone }}</a>
             </div>
         </div>
-        <button class="menu menu_black">
-            <img src="assets/svg/colorful-menu.svg">
-        </button>
+        <div class="menu">
+            <button>
+                <img src="assets/svg/colorful-menu.svg">
+            </button>
+            <ul class="menu__list menu__list_hidden">
+                {% for item in site.navigation %}
+                <li>
+                    <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
 </header>

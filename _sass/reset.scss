@@ -5,8 +5,12 @@ h4,
 body,
 figure,
 button,
+ul,
+li,
 p {
   margin: 0;
   padding: 0;
   border: none;
+  outline: none;
+  list-style: none;
 }

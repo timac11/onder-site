@@ -6,7 +6,7 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--header-background-color);
   height: var(--header-height);
   justify-content: center;
   display: block;
@@ -53,12 +53,6 @@
 
   .navigation {
     > * {
-      display: block;
-    }
-  }
-
-  @include m-tablet {
-    .menu {
       display: block;
     }
   }
@@ -129,6 +123,65 @@
   }
 }
 
+.menu {
+  display: none;
+
+  @include m-tablet {
+    display: block;
+
+    &__list {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 80px;
+      width: 100vw;
+      background-color: var(--header-background-color);
+
+      &_hidden {
+        visibility: hidden;
+      }
+
+      &_visible {
+        visibility: visible;
+        animation: menuScale 0.2s 1;
+        animation-fill-mode: forwards;
+      }
+
+      > li {
+        font: var(--navigation-font);
+        padding: 0.5em;
+        text-align: center;
+
+        &:nth-child(4n) {
+          background-color: var(--control-color-opacity);
+        }
+        &:nth-child(4n + 1) {
+          background-color: var(--grid-color-opacity);
+        }
+        &:nth-child(4n + 2) {
+          background-color: var(--dr-color-opacity);
+        }
+        &:nth-child(4n + 3) {
+          background-color: var(--registry-color-opacity);
+        }
+        > a {
+          color: var(--main-font-color);
+        }
+      }
+    }
+  }
+}
+
+@keyframes menuScale {
+  from {
+    transform: scale(0);
+    transition-timing-function: ease-in;
+  }
+  to {
+    transform: scale(1);
+    transition-timing-function: ease-out;
+  }
+}
 
 .navigation {
   display: flex;
