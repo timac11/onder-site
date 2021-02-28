@@ -14,8 +14,8 @@
             </nav>
             <div class="navigation">
                 <a class="navigation__item">Новости</a>
-                <a class="navigation__item">Блог</a>
-                <a class="navigation__item_email">{{ site.email }}</a>
+                <a href="{{ site.blog }}" target="_blank" class="navigation__item">Блог</a>
+                <a href="mailto:{{ site.email }}" class="navigation__item_email">{{ site.email }}</a>
                 <a class="navigation__item_phone">{{ site.phone }}</a>
             </div>
         </div>
