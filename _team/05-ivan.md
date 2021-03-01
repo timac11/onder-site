@@ -2,5 +2,5 @@
 name: Иван
 lastName: Дианов
 position: Дизайн
-img: 'assets/img/ivan.jpg'
+img: 'assets/img/team/ivan.jpg'
 ---
