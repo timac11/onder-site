@@ -1,5 +1,5 @@
 @mixin desktop {
-  @media (min-width: 769px) and (max-width: 1440px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     @content;
   }
 }
@@ -64,8 +64,26 @@
   }
 }
 
-@mixin text-align-center {
-  @include m-tablet-temp-wide-header {
-    //text-align: center;
+@mixin margin-s {
+  @include desktop {
+    margin: 0.5vw;
+  }
+}
+
+@mixin margin-l {
+  @include desktop {
+    margin: 1vw;
+  }
+}
+
+@mixin margin-xl {
+  @include desktop {
+    margin: 2vw ;
+  }
+}
+
+@mixin margin-large {
+  @include desktop {
+    margin: 10vw ;
   }
 }

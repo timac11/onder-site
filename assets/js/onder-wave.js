@@ -1,13 +1,17 @@
 let pointsPerLine = 200
 let linesNumber = 32
-let mouse = {x: 0, y: 0, xPrev:0, yPrev:0, dist:0}
+let mouse = {x: 0, y: 0, xPrev: 0, yPrev: 0, dist: 0}
 //let state = {mouseXPrev: mouse.x, mouseYPrev: mouse.y, mouseDist: 0}
 
 
 var canvas = document.querySelector('canvas#wave-top');
-let width = canvas.getBoundingClientRect().width
+let width = document.body.getBoundingClientRect().width;
+canvas.height = width * 0.33;
+canvas.width = width;
+width = canvas.getBoundingClientRect().width
 let height = canvas.getBoundingClientRect().height
-var pixelRatio = devicePixelRatio*2;//4.;//Math.min(devicePixelRatio, .5);
+var pixelRatio = devicePixelRatio * 2;//4.;//Math.min(devicePixelRatio, .5);
+
 let regl = createREGL({
   extensions: [],
   optionalExtensions: ['OES_texture_float'],
@@ -18,7 +22,6 @@ let regl = createREGL({
     preserveDrawingBuffer: true
   }
 });
-
 
 
 drawSprites = regl({
@@ -152,7 +155,6 @@ gl_Position = vec4(uv, 0, 1);
 `,
 
 
-
   frag: `
 precision highp float;
 varying vec2 uv;
@@ -169,7 +171,7 @@ void main () {
   `,
 
   attributes: {
-    id: Array(linesNumber*pointsPerLine).fill(0).map((d,i)=>i),
+    id: Array(linesNumber * pointsPerLine).fill(0).map((d, i) => i),
   },
 
   uniforms: {
@@ -188,9 +190,9 @@ void main () {
 
 let frame = regl.frame(({tick, drawingBufferWidth, drawingBufferHeight, pixelRatio}) => {
 
-  let movement = Math.hypot(mouse.x-mouse.xPrev, mouse.y-mouse.yPrev)
-  movement = Math.min(Math.hypot(mouse.x-mouse.xPrev, mouse.y-mouse.yPrev), 100.)
-  mouse.dist+=movement*.01;
+  let movement = Math.hypot(mouse.x - mouse.xPrev, mouse.y - mouse.yPrev)
+  movement = Math.min(Math.hypot(mouse.x - mouse.xPrev, mouse.y - mouse.yPrev), 100.)
+  mouse.dist += movement * .01;
   mouse.xPrev = mouse.x
   mouse.yPrev = mouse.y
 
@@ -201,10 +203,10 @@ let frame = regl.frame(({tick, drawingBufferWidth, drawingBufferHeight, pixelRat
 
   drawSprites({
     count: linesNumber * pointsPerLine,
-    time: (new Date()/1000)%(3600*24),
-    u_mouse: [mouse.x/width, mouse.y/500],
+    time: (new Date() / 1000) % (3600 * 24),
+    u_mouse: [mouse.x / width, mouse.y / 500],
     mouseDist: mouse.dist,
-  })    
+  })
 
 })
 
@@ -212,4 +214,10 @@ let frame = regl.frame(({tick, drawingBufferWidth, drawingBufferHeight, pixelRat
 document.addEventListener('mousemove', e => {
   mouse.x = e.offsetX;
   mouse.y = e.offsetY;
+});
+
+window.addEventListener('resize', e => {
+  let width = document.body.getBoundingClientRect().width;
+  canvas.height = width * 0.66;
+  canvas.width = width;
 });
