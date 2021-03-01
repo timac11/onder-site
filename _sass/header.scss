@@ -127,15 +127,7 @@
 
     &_detached {
       div.navigation {
-        display: block;
-
-        [class$="phone"] {
-          display: block;
-        }
-
-        *:not([class$="phone"]) {
-          display: none;
-        }
+        display: none;
       }
     }
   }
