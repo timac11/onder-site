@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 32px 8px 150px;
+    margin: 32px 8px calc(var(--floor-margin)/2);
     position: relative;
 
     &._grid {
@@ -84,7 +84,7 @@
     max-width: 50%;
     padding-left: 49px;
 
-    @include m-tablet-temp-wide-header {
+    @include m-tablet-and-smaller {
       max-width: 100%;
     }
   }
@@ -93,6 +93,7 @@
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
     margin-top: 24px;
+
     @include m-tablet {
       margin-top: 16px;
     }
@@ -110,9 +111,7 @@
     }
 
     &-item {
-      // display: flex;
       flex: 1 0 22%;
-      // flex-direction: column;
       padding-right: 2em;
       box-sizing: border-box;
     }
@@ -157,7 +156,7 @@
     }
   }
 
-  @include l-tablet-and-less {
+  @include m-tablet-and-smaller {
     &__block {
       display: flex;
       flex-direction: column;

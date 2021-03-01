@@ -3,7 +3,7 @@
 @import "mixins";
 
 .partners {
-  margin-top: 150px;
+  margin-top: var(--floor-margin);
 
   &__wrapper {
     padding-top: 54px;
