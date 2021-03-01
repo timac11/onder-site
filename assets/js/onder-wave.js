@@ -1,16 +1,18 @@
 var mouse = {x: 0, y: 0, xPrev: 0, yPrev: 0, dist: 0}
 var canvas = document.querySelector('canvas#wave-top');
 
+const updateCanvasSize = function () {
+  canvas.width = document.body.getBoundingClientRect().width;
+  canvas.height = canvas.width < 500 ? canvas.width * 1.5 : canvas.width * 0.66;
+}
+
 const initCanvas = function () {
   let pointsPerLine = 200
   let linesNumber = 32
 
+  updateCanvasSize();
 
-  let width = document.body.getBoundingClientRect().width;
-  canvas.height = width * 0.66;
-  canvas.width = width;
-
-  width = canvas.getBoundingClientRect().width
+  const width = canvas.getBoundingClientRect().width
   var pixelRatio = devicePixelRatio * 2;//4.;//Math.min(devicePixelRatio, .5);
 
   let regl = createREGL({
@@ -220,10 +222,4 @@ document.addEventListener('mousemove', e => {
   mouse.y = e.offsetY;
 });
 
-window.addEventListener('resize', e => {
-  var canvas = document.querySelector('canvas#wave-top');
-
-  let width = document.body.getBoundingClientRect().width;
-  canvas.height = width * 0.66;
-  canvas.width = width;
-});
+window.addEventListener('resize', updateCanvasSize);
