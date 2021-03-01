@@ -8,7 +8,7 @@ buttonText: <a href="/" class="_white" target="_blank">Открыть сайт O
 anchor: grid
 paragraphs:
   - value: Система для расчетов и проведения платежей между потребителями и поставщиками ресурсов на основе смарт-контрактов
-  - value: Развитие для энергетической отрасли совместно с <a href="/" class="markdown__company-name">Мосэлектро</a>.
+  - value: Развитие для энергетической отрасли совместно с <a href="/">Мосэлектро</a>.
 advantages:
   - value: Обеспечивает достоверность данных о потреблении
     img: "assets/img/turtle.jpg"
