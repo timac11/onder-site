@@ -10,6 +10,10 @@ html {
 a {
   color: #f7612b;
   text-decoration: none;
+
+  &._white {
+    color: white;
+  }
 }
 
 h1 {

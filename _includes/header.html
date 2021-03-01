@@ -1,15 +1,19 @@
 <header id="header" class="header" role="banner">
     <div class="header__container">
         <div>
-            <img class="short-logo" src="assets/png/logo/black-onder-logo.png">
-            <img class="full-logo" src="assets/svg/onder-logo.svg"
-                 height="40px"
-                 width="180px"/>
+            <a href="/">
+                <img class="short-logo" src="assets/png/logo/black-onder-logo.png">
+            </a>
+            <a href="/">
+                <img class="full-logo" src="assets/svg/onder-logo.svg"
+                     height="40px"
+                     width="180px"/>
+            </a>
         </div>
         <div class="header__navigation">
             <nav id="navbar" class="navigation">
                 {% for item in site.navigation %}
-                    <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
                 {% endfor %}
             </nav>
             <div class="navigation">

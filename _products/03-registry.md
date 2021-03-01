@@ -4,7 +4,7 @@ description: Реестр прав собственности на электр�
 subtitle: ""
 modifier: _registry
 img: assets/img/onder-registry.png
-buttonText: Запросить демо
+buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Запросить демо</a>
 anchor: registry
 paragraphs:
   - value: Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр.
