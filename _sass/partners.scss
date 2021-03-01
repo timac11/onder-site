@@ -147,4 +147,13 @@
       height: 60px;
     }
   }
+
+  @include m-desktop-and-wider {
+    &__item {
+      &-text {
+        max-width: 50%;
+        margin-right: 20%;
+      }
+    }
+  }
 }
