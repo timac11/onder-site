@@ -121,7 +121,7 @@
   }
 
   &__button {
-    font-size: 31px;
+    font-size: 32px;
     font-family: "Open Sans";
     font-weight: normal;
     display: flex;
@@ -194,6 +194,7 @@
 
     &__button {
       font: var(--paragraph-font);
+      padding: 8px 32px;
       bottom: -24px;
     }
 
