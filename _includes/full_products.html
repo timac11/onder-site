@@ -9,7 +9,7 @@
                 <h1 class="full-product__description">{{ product.subtitle }}</h1>
                 <div class="full-product__paragraphs">
                     {% for paragraph in product.paragraphs %}
-                    <p class="full-product__paragraph">{{ paragraph.value }}</p>
+                    <p class="full-product__paragraph">{% include typograph.html content=paragraph.value %}</p>
                     {% endfor %}
                 </div>
             </div>

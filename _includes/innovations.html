@@ -9,7 +9,7 @@
             <img class="innovations__image" src="{{ item.img }}"/>
             <div class="innovations__item-title">{{ item.name }}</div>
             {% for paragraph in item.paragraphs %}
-            <p class="innovations__item">{{ paragraph.value }}</p>
+            <p class="innovations__item">{% include typograph.html content=paragraph.value %}</p>
             {% endfor %}
         </div>
         {% endfor %}
