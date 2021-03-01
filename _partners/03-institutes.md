@@ -2,7 +2,7 @@
 name: Институты
 items: 
  - text: Московский физико-технический институт
-   img: 'assets/png/institute/mipt.png'   
+   img: 'assets/img/institutes/mipt.svg'   
  - text: Наньянский технологический университет
-   img: 'assets/png/institute/nanyan.png'          
+   img: 'assets/img/institutes/nanyang.svg'          
 ---

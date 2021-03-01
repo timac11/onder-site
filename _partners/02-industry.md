@@ -2,17 +2,17 @@
 name: Индустрия и финансы
 items: 
  - text: Финансирование инновационных проектов
-   img: 'assets/png/industry/innovation-found.png'
+   img: 'assets/img/partners/fond-sodeystviya-innovatsiyam.svg'
  - text: Развитие интеллектуальной энергетики
-   img: 'assets/png/industry/energynet.png'
+   img: 'assets/img/partners/energynet.svg'
  - text: Производство электрооборудования
-   img: 'assets/png/industry/moselektro.png'
+   img: 'assets/img/partners/moselektro.svg'
  - text: Проект Интернет энергии 
-   img: 'assets/png/industry/idea.png'
+   img: 'assets/img/partners/idea.svg'
  - text: Венчурное инвестирование
-   img: 'assets/png/industry/pulsar.png'   
+   img: 'assets/img/partners/pulsar.svg'   
  - text: Оптимизация энергопотребления
-   img: 'assets/png/industry/less.svg'   
+   img: 'assets/img/partners/less.svg'   
  - text: Производство накопителей
-   img: 'assets/png/industry/volts.png'      
+   img: 'assets/img/partners/volts.svg'      
 ---
