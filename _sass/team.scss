@@ -21,10 +21,28 @@
       font-weight: 700;
     }
 
-    &-position {
+    &-description {
       margin-top: 8px;
       font-size: var(--paragraph-font);
       line-height: var(--paragraph-line-height);
+    }
+
+    &-vacancy-img {
+      width: 100%;
+      display: flex;
+      margin-bottom: 0.5em;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+  
+
+      > img:first-child {
+        width: 100%;
+      }
+      
+      > img:not(:first-child) {
+        position: absolute;
+      }
     }
   }
 

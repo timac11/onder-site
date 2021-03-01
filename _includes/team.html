@@ -8,10 +8,26 @@
                 <div>
                     <div class="team__item-name">{{ item.name }}</div>
                     <div class="team__item-name">{{ item.lastName }}</div>
-                    <div class="team__item-position">{{ item.position }}</div>
+                    <div class="team__item-description">{{ item.position }}</div>
                 </div>
             </div>
         </div>
+        {% endfor %}
+        {% for item in site.vacancies %}
+            <div class="team__item-wrapper">
+                <div class="team__item">
+                    <a href="{{ item.vacancyLink }}">
+                        <figure class="team__item-vacancy-img">
+                            <img src="/assets/img/rectangle.svg">
+                            <img src="/assets/img/plus.svg">
+                        </figure>
+                    </a>
+                    <div>
+                        <div class="team__item-name">{{ item.vacancy }}</div>
+                        <div class="team__item-description">Вакансия</div>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </div>
 </section>
