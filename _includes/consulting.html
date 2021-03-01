@@ -7,7 +7,9 @@
         <div class="consulting__info">
             <h4 class="consulting__title">{{ consultingItem.title }}</h4>
             {% for paragraph in consultingItem.paragraphs %}
-            <p class="consulting__description">{{ paragraph.value }}</p>
+            <p class="consulting__description">
+                {% include typograph.html content=paragraph.value %}
+            </p>
             {% endfor %}
         </div>
         {% endfor %}
