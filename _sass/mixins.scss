@@ -4,6 +4,12 @@
   }
 }
 
+@mixin m-desktop-and-wider {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
+
 @mixin l-tablet-and-less {
   @media (max-width: 1024px) {
     @content;
