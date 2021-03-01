@@ -4,8 +4,8 @@
 
 .products {
   margin: var(--block-margin-top) calc(var(--block-margin-right) / 2) 0 calc(var(--block-margin-left) / 2);
-  margin-top: 440px;
-  margin-bottom: 208px;
+  margin-top: calc(var(--floor-margin)*2);
+  margin-bottom: var(--floor-margin);
 
   &__title {
     margin-left: calc(var(--block-margin-left)/2);

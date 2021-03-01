@@ -3,7 +3,7 @@
 @import "mixins";
 
 .clients {
-  margin-top: 150px;
+  margin-top: var(--floor-margin);
   margin-right: calc(var(--block-margin-right) / 2);
   margin-left: calc(var(--block-margin-left) / 2);
   padding: 1.5em 2em;

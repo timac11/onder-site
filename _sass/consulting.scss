@@ -3,7 +3,7 @@
 @import "mixins";
 
 .consulting {
-  margin: 256px 0;
+  margin: var(--floor-margin) 0;
 
   &__title {
     font: var(--h2-font);
