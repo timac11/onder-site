@@ -1,0 +1,26 @@
+.footer {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-top: 13em;
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 2rem;
+        > a {
+            color: var(--main-font-color);
+            font: var(--paragraph-font);
+        }
+    }
+
+    &__content {
+        height: var(--header-height);
+        padding: 0 var(--block-padding-left);
+    }
+
+    @include m-tablet {
+        margin-top: 8em;
+    }
+}
