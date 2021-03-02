@@ -3,7 +3,7 @@ name: GRID
 subtitle: для сетевых и сбытовых компаний
 description: Система для расчетов и проведения платежей между потребителями и поставщиками ресурсов на основе смарт-контрактов
 modifier: _grid
-img: assets/img/onder-grid.png
+img: assets/img/products/grid.png
 buttonText: <a href="/" class="_white" target="_blank">Открыть сайт ONDER.GRID</a>
 anchor: grid
 lang: ru

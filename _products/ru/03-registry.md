@@ -3,7 +3,7 @@ name: REGISTRY
 description: Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр
 subtitle: ""
 modifier: _registry
-img: assets/img/onder-registry.png
+img: assets/img/products/registry.png
 buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Запросить демо</a>
 anchor: registry
 lang: ru

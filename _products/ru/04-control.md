@@ -3,7 +3,7 @@ name: CONTROL
 description: Автоматизированная система контроля строительных работ
 subtitle: для инвесторов, заказчиков, застройщиков, генеральных подрядчиков
 modifier: _control
-img: assets/img/onder-control.png
+img: assets/img/products/control.png
 buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Запросить демо</a>
 anchor: control
 lang: ru
