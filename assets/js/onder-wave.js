@@ -138,7 +138,7 @@ float radius = radiusMax; //mix(radiusMax, radiusMax-.2, ringIndexNorm);
 float n = snoise(vec3(
   angle*.9, 
   ringIndexNorm*1. - u_time*0.06 - mouseDist, 
-  mouseDist * .1))*.4+.5;
+  mouseDist * .02))*.4+.5;
 radius -= n * amp;
 
 color = mix(0., 1., n-.1);
