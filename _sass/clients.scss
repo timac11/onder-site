@@ -41,9 +41,9 @@
   @include m-tablet {
     margin: 128px 0 0 0;
     &__item {
-      flex-basis: 39%;
-      max-width: 39%;
-      margin-right: 11%;
+      flex-basis: 38%;
+      max-width: 38%;
+      margin-right: 12%;
     }
   }
 
@@ -51,8 +51,9 @@
     &__item {
       width: 48%;
       flex-basis: 48%;
-      padding: 12px;
       box-sizing: border-box;
+      margin-bottom: 3em;
+      padding: 0;
     }
   }
 }
