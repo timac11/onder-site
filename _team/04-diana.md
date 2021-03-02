@@ -4,5 +4,5 @@ lastName: Исламова
 position: Маркетинг и развитие
 img: 'assets/img/team/diana.jpg'
 messenger: "facebook"
-href: "/#"
+href: "https://www.facebook.com/diana.islamova.904"
 ---

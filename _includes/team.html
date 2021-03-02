@@ -7,11 +7,7 @@
             <div class="team__item-name">{{ item.name }}</div>
             <div class="team__item-name">{{ item.lastName }}</div>
             <div class="team__item-description">{{ item.position }}</div>
-            {% if item.messenger == "tg" %}
-            <a href="{{ item.href }}" target="_blank"><img class="team__item-messenger" src="assets/svg/telegram.svg"></a>
-            {% elsif item.messenger == "facebook" %}
-            <a href="{{ item.href }}" target="_blank"><img class="team__item-messenger" src="assets/svg/facebook.svg"></a>
-            {% endif %}
+            <a href="{{ item.href }}" target="_blank"><img class="team__item-messenger" src="assets/svg/{{ item.messenger }}.svg"></a>
         </div>
         {% endfor %}
         {% for item in site.vacancies %}
