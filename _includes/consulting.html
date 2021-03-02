@@ -17,7 +17,7 @@
     <div class="consulting__wrapper">
         {% for consultingItem in consulting %}
         <div class="consulting__info">
-            <h4 class="consulting__title">{{ consultingItem.title }}</h4>
+            <h2 class="consulting__title">{{ consultingItem.title }}</h2>
             {% for paragraph in consultingItem.paragraphs %}
             <p class="consulting__description">
                 {% include typograph.html content=paragraph.value %}
