@@ -96,6 +96,18 @@
         height: auto;
       }
     }
+
+    @include desktop-s-and-less {
+      .navigation__item {
+        &_email {
+          display: none;
+        }
+      }
+
+      div.navigation {
+        display: none;
+      }
+    }
   }
 
   @include m-tablet {
@@ -169,8 +181,6 @@
       &_visible {
         transform: translateX(0);
       }
-
-      
     }
 
     &__list {
