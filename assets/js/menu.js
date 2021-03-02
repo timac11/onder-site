@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuButton = document.querySelector(".menu button");
+  const menuButton = document.querySelector(".menu__open-button");
   menuButton.onclick = handleClick;
+
+  const closeButton = document.querySelector(".menu__close-button");
+  closeButton.onclick = handleClick;
 
   const menuElements = document.querySelectorAll(".menu__list > li");
   menuElements.forEach(function (element) {
@@ -11,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function handleClick() {
-  const element = document.querySelector(".menu__list");
-  if (element.classList.contains("menu__list_visible")) {
+  const element = document.querySelector(".menu__wrapper");
+  if (element.classList.contains("menu__wrapper_visible")) {
     close();
   } else {
     open();
@@ -29,9 +32,9 @@ function initClickOutside() {
 }
 
 function open() {
-  document.querySelector(".menu__list").classList.replace("menu__list_hidden", "menu__list_visible");
+  document.querySelector(".menu__wrapper").classList.replace("menu__wrapper_hidden", "menu__wrapper_visible");
 }
 
 function close() {
-  document.querySelector(".menu__list").classList.replace("menu__list_visible", "menu__list_hidden");
+  document.querySelector(".menu__wrapper").classList.replace("menu__wrapper_visible", "menu__wrapper_hidden");
 }
