@@ -11,7 +11,7 @@
 }
 
 @mixin l-tablet-and-less {
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     @content;
   }
 }
@@ -61,29 +61,5 @@
 @mixin desktop-s-and-less {
   @media (max-width: 1200px) {
     @content;
-  }
-}
-
-@mixin margin-s {
-  @include desktop {
-    margin: 0.5vw;
-  }
-}
-
-@mixin margin-l {
-  @include desktop {
-    margin: 1vw;
-  }
-}
-
-@mixin margin-xl {
-  @include desktop {
-    margin: 2vw ;
-  }
-}
-
-@mixin margin-large {
-  @include desktop {
-    margin: 10vw ;
   }
 }
