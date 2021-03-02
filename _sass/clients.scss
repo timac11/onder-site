@@ -40,6 +40,8 @@
 
   @include m-tablet {
     margin: 128px 0 0 0;
+    padding: 0.5em calc(var(--block-margin-left));
+
     &__item {
       flex-basis: 38%;
       max-width: 38%;
@@ -52,7 +54,7 @@
       width: 48%;
       flex-basis: 48%;
       box-sizing: border-box;
-      margin-bottom: 3em;
+      margin-bottom: 1em;
       padding: 0;
     }
   }
