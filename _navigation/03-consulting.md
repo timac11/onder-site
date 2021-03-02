@@ -1,4 +1,0 @@
----
-name: Консалтинг
-anchor: consulting
----

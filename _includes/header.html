@@ -1,26 +1,49 @@
+{% assign news = "News" %}
+{% assign blog = "Blog"%}
+{% assign lang = page.lang %}
+{% assign redirect = "/" %}
+{% assign redirectName = "Ru" %}
+{% assign main = "/en.html" %}
+
+{% if lang == "ru" %}
+{% assign news = "Новости" %}
+{% assign blog = "Блог" %}
+{% assign redirect = "/en.html" %}
+{% assign main = "/" %}
+{% assign redirectName = "En" %}
+{% endif %}
+
+{% assign navigation = site.navigation | where: "lang", page.lang  %}
+
 <header id="header" class="header" role="banner">
     <div class="header__container">
         <div>
-            <a href="/">
+            <a href="{{main}}">
                 <img class="short-logo" src="assets/img/logo/black-onder-logo.svg">
             </a>
-            <a href="/">
+            <a href="{{main}}">
                 <img class="full-logo" src="assets/img/logo/onder-logo.svg"
                      height="40px"
                      width="180px"/>
             </a>
+
         </div>
         <div class="header__navigation">
             <nav id="navbar" class="navigation">
-                {% for item in site.navigation %}
+                {% for item in navigation %}
                 <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
                 {% endfor %}
             </nav>
             <div class="navigation">
-                <a class="navigation__item">Новости</a>
-                <a href="{{ site.blog }}" target="_blank" class="navigation__item">Блог</a>
+                <a class="navigation__item">{{news}}</a>
+                <a href="{{ site.blog }}" target="_blank" class="navigation__item">{{blog}}</a>
                 <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
                 <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
+                {% if lang == "ru" %}
+                    <a href="/en.html" class="navigation__item">En</a>
+                {% else %}
+                    <a href="/" class="navigation__item">Ru</a>
+                {% endif %}
             </div>
         </div>
         <div class="menu">
@@ -35,19 +58,19 @@
                     </li>
                     {% endfor %}
                     <li>
-                        <a class="navigation__item">Новости</a>
+                        <a class="navigation__item">{{news}}</a>
                     </li>
                     <li>
-                        <a href="{{ site.blog }}" target="_blank" class="navigation__item">Блог</a>
-    
+                        <a href="{{ site.blog }}" target="_blank" class="navigation__item">{{blog}}</a>
                     </li>
                     <li>
                         <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
-    
                     </li>
                     <li>
                         <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
-    
+                    </li>
+                    <li>
+                        <a href="{{redirect}}" class="navigation__item">{{redirectName}}</a>
                     </li>
                 </ul>
                 <button class="menu__close-button">

@@ -1,9 +1,19 @@
+{% assign lang = page.lang %}
+
+{% assign title = "We develop and implement digital solutions, accompany transformations in the energy industry" %}
+
+{% if lang == "ru" %}
+{% assign title = "Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности" %}
+{% endif %}
+
+{% assign teamitems = site.teamitems | where: "lang", page.lang  %}
+
 <section class="hero main-content__block _margin">
     <h1 class="hero__info">
-        Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности
+        {{title}}
     </h1>
     <div class="hero__items">
-        {% for teamitem in site.teamitems %}
+        {% for teamitem in teamitems %}
         <div class="hero__item">
             {% include typograph.html content=teamitem.info %}
         </div>

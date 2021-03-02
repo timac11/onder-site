@@ -1,13 +1,26 @@
+{% assign lang = page.lang %}
+
+{% assign title = "Partners" %}
+{% assign subtitle = "When implementing complex projects, we work with experts from the industry, we attract highly specialized developers and conduct tests at institutes' proving grounds."%}
+
+{% if lang == "ru" %}
+{% assign title = "Партнёры" %}
+{% assign subtitle = "При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем узкоспециализированных разработчиков и проводим испытания на полигонах институтов." %}
+{% endif %}
+
+{% assign partners = site.partners | where: "lang", lang  %}
+
 <section class="main-content__block _margin partners">
     <a id="partners" class="anchor"></a>
-    <h2 class="block-heading">Партнёры</h2>
-    <p class="partners__description">При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем
-        узкоспециализированных разработчиков и проводим испытания на полигонах институтов.</p>
-    {% for itemPartner in site.partners %}
+    <h2 class="block-heading">{{title}}</h2>
+    <p class="partners__description">
+        {{subtitle}}
+    </p>
+    {% for partner in partners %}
     <div class="partners__wrapper">
-        <h2>{{ itemPartner.name }}</h2>
+        <h2>{{ partner.name }}</h2>
         <div class="partners__container">
-            {% for item in itemPartner.items %}
+            {% for item in partner.items %}
             <div class="partners__item">
                 <figure class="partners__partner">
                     <img class="partners__item-img" src="{{ item.img }}">

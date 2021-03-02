@@ -1,7 +1,20 @@
+{% assign lang = page.lang %}
+
+{% assign title = "Team" %}
+{% assign vacancy = "Vacancy" %}
+
+{% if lang == "ru" %}
+{% assign title = "Команда" %}
+{% assign vacancy = "Вакансия" %}
+{% endif %}
+
+{% assign team = site.team | where: "lang", lang  %}
+{% assign vacancies = site.vacancies | where: "lang", lang  %}
+
 <section class="main-content__block _margin">
-    <h2 class="block-heading">Команда</h2>
+    <h2 class="block-heading">{{title}}</h2>
     <div class="team">
-        {% for item in site.team %}
+        {% for item in team %}
         <div class="team__item">
             <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
             <div class="team__item-name">{{ item.name }}</div>
@@ -10,7 +23,7 @@
             <a href="{{ item.href }}" target="_blank"><img class="team__item-messenger" src="assets/svg/{{ item.messenger }}.svg"></a>
         </div>
         {% endfor %}
-        {% for item in site.vacancies %}
+        {% for item in vacancies %}
         <div class="team__item">
             <a href="{{ item.link }}">
                 <figure class="team__item-vacancy-img">
@@ -19,7 +32,7 @@
                 </figure>
             </a>
             <div class="team__item-name">{{ item.vacancy }}</div>
-            <div class="team__item-description">Вакансия</div>
+            <div class="team__item-description">{{vacancy}}</div>
         </div>
         {% endfor %}
     </div>

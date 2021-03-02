@@ -1,13 +1,24 @@
+{% assign vacancies = "Vacancies" %}
+{% assign docs = "Documents"%}
+
+{% if lang == "ru" %}
+{% assign vacancies = "Вакансии" %}
+{% assign docs = "Документы" %}
+{% endif %}
+
 <footer class="footer">
     <div class="footer__content">
         <ul class="footer__items">
-            {% for item in site.footer %}
             <li class="footer__item">
-                <a href="{{ item.link }}">
-                    {{ item.title }}
+                <a href="/#">
+                    {{ vacancies }}
                 </a>
-            </li>    
-            {% endfor %}
+            </li>
+            <li class="footer__item">
+                <a href="/#">
+                    {{ docs }}
+                </a>
+            </li>
             </ul>
     </div>
 
