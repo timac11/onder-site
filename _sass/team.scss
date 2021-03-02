@@ -12,19 +12,19 @@
   &__item {
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
-
-    &-wrapper {
-      width: 100%;
-    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
     &-name {
       font-weight: 700;
     }
 
     &-description {
-      margin-top: 8px;
+      margin: 0.5em 0;
       font-size: var(--paragraph-font);
       line-height: var(--paragraph-line-height);
+      flex: 1;
     }
 
     &-vacancy-img {
@@ -34,14 +34,22 @@
       position: relative;
       justify-content: center;
       align-items: center;
-  
+
 
       > img:first-child {
         width: 100%;
       }
-      
+
       > img:not(:first-child) {
         position: absolute;
+      }
+    }
+
+    &-messenger {
+      width: 28px;
+
+      @include s-tablet {
+        width: 16px;
       }
     }
   }
@@ -51,6 +59,7 @@
     display: block;
     margin-bottom: 0.5em;
   }
+
 
   @include desktop-s-and-less {
     grid-column-gap: 6em;
