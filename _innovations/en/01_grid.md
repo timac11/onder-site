@@ -1,6 +1,6 @@
 ---
 name: Microgrid trading system
-img: 'assets/img/reids.png'
+img: 'assets/img/innovations/reids.jpg'
 lang: en
 paragraphs:
     - value: Обеспечивает торговлю между участниками локального энергорынка без посредников на острове Семакау в Сингапуре

@@ -1,6 +1,6 @@
 ---
 name: Система торговли в микрогридах
-img: 'assets/img/reids.png'
+img: 'assets/img/innovations/reids.jpg'
 lang: ru
 paragraphs:
     - value: Обеспечивает торговлю между участниками локального энергорынка без посредников на острове Семакау в Сингапуре

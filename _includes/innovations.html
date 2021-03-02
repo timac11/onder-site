@@ -12,12 +12,12 @@
 
 <section class="main-content__block _margin innovations">
     <a id="innovations" class="anchor"></a>
-    <h2 class="block-heading">{{title}}</h2>
+    <h1 class="block-heading">{{title}}</h1>
     <p class="innovations__description">{% include typograph.html content=subtitle %}</p>
     {% for item in innovations %}
     <div class="innovations__item-wrapper">
         <div class="innovations__item-text">
-            <h2 class="innovations__item-title">{{ item.name }}</h2>
+            <h1 class="innovations__item-title">{{ item.name }}</h1>
             {% for paragraph in item.paragraphs %}
             <p class="innovations__item">{% include typograph.html content=paragraph.value %}</p>
             {% endfor %}

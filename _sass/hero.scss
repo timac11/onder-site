@@ -4,7 +4,7 @@
 
 .hero {
   display: flex;
-  margin-top: 52px;
+  margin-top: 70px;
 
   @include m-tablet-and-smaller {
     flex-direction: column;

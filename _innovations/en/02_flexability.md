@@ -1,6 +1,6 @@
 ---
 name: Платформа управления гибкостью
-img: 'assets/img/dr.png'
+img: 'assets/img/innovations/flexibility-platform.jpg'
 lang: en
 paragraphs:
     - value: С помощью платформы потребители смогут экономить, снижая потребление в часы пик, продавая энергию от микрогенерации и накопителей.

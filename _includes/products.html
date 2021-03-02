@@ -12,12 +12,12 @@
     <div class="products-items">
         {% for product in products %}
         <div class="products-items__item {{ product.modifier }}" onclick="updateLocationHash('{{ product.anchor }}')">
-            <h2 class="products-items__heading">
+            <h1 class="products-items__heading">
                 Onder.<strong class="products-items__item-name">{{ product.name }}</strong>
-            </h2>
-            <h2 class="products-items__item-description">
+            </h1>
+            <h1 class="products-items__item-description">
                 {% include typograph.html content=product.description %}
-            </h2>
+            </h1>
         </div>
         {% endfor %}
     </div>
