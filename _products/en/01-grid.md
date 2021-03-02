@@ -4,7 +4,7 @@ subtitle: for network and sales companies
 description: A system for settlements and payments between consumers and suppliers of resources based on smart contracts
 modifier: _grid
 img: assets/img/products/grid.png
-buttonText: <a href="/" class="_white" target="_blank">Открыть сайт ONDER.GRID</a>
+buttonText: <a href="#" class="_white" target="_blank">Открыть сайт ONDER.GRID</a>
 anchor: grid
 lang: en
 paragraphs:

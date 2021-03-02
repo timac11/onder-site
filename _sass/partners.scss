@@ -26,10 +26,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 41px;
-
-    @include m-tablet-temp-wide-header {
-      // flex-direction: column;
-    }
   }
 
   &__item {
@@ -149,7 +145,7 @@
   @include m-desktop-and-wider {
     &__item {
       &-text {
-        max-width: 70%;
+        max-width: 60%;
         margin-right: 10%;
       }
     }

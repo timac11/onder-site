@@ -1,23 +1,21 @@
+{% assign lang = page.lang %}
+
+{% assign title = "Clients" %}
+
+{% if lang == "ru" %}
+{% assign title = "Клиенты" %}
+{% endif %}
+
+{% assign clients = site.clients | where: "lang", lang  %}
+
+
 <div class="main-content__block clients">
     <h2 class="block-heading">Клиенты</h2>
     <div class="clients__container">
-        <figure class="clients__item">
-            <img class="clients__img" src="assets/img/clients/sovet-rynka.svg">
-        </figure>
-        <figure class="clients__item">
-            <img class="clients__img" src="assets/img/clients/atomenergopromsbyt.svg">
-        </figure>
-        <figure class="clients__item">
-            <img class="clients__img" src="assets/img/clients/interrao.png">
-        </figure>
-        <figure class="clients__item">
-            <img class="clients__img" src="assets/img/clients/setevaya.png">
-        </figure>
-        <figure class="clients__item">
-            <img class="clients__img" src="assets/img/clients/rusenergosbyt.png">
-        </figure>
-        <figure class="clients__item">
-            <img class="clients__img" src="assets/img/clients/rtsoft.svg">
-        </figure>
+        {% for client in clients %}
+        <a href="{{ client.href }}" class="clients__item">
+            <img class="clients__img" src="{{ client.src }}" alt="{{ client.name }}">
+        </a>
+        {% endfor %}
     </div>
 </div>
