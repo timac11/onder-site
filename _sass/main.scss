@@ -71,7 +71,7 @@ p {
 }
 
 .company-info {
-  margin-top: 180px;
+  margin-top:  var(--floor-margin);
 
   &__mail {
     max-width: 80%;
