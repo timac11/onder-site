@@ -130,7 +130,7 @@ if (m<=1. || m >= pointsPerLine-2.) {
 float angle = mod(i, pointsPerLine) / (pointsPerLine-1.) * .5 * 3.1415 + .5*3.1415;
 float ringIndex = floor(i/pointsPerLine);
 float ringIndexNorm = ringIndex / linesNumber;
-float lineWidth = mix(.015, .002, ringIndexNorm);
+float lineWidth = mix(.008, .001, ringIndexNorm);
 float amp = .8; //mix(.5, .2, ringIndexNorm);
 float radiusMax = 1.9;
 float radius = radiusMax; //mix(radiusMax, radiusMax-.2, ringIndexNorm);
