@@ -13,7 +13,9 @@
 <section class="main-content__block _margin consulting">
     <a id="consulting" class="anchor"></a>
     <h2 class="block-heading">{{title}}</h2>
-    <p class="consulting__subtitle">{{subtitle}}</p>
+    <p class="consulting__subtitle">
+        {% include typograph.html content=subtitle %}
+    </p>
     <div class="consulting__wrapper">
         {% for consultingItem in consulting %}
         <div class="consulting__info">

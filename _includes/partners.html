@@ -14,7 +14,7 @@
     <a id="partners" class="anchor"></a>
     <h2 class="block-heading">{{title}}</h2>
     <p class="partners__description">
-        {{subtitle}}
+        {% include typograph.html content=subtitle %}
     </p>
     {% for partner in partners %}
     <div class="partners__wrapper">
@@ -25,7 +25,7 @@
                 <figure class="partners__partner">
                     <img class="partners__item-img" src="{{ item.img }}">
                 </figure>
-                <span class="partners__item-text">{{ item.text }}</span>
+                <span class="partners__item-text">{% include typograph.html content=item.text %}</span>
             </div>
             {% endfor %}
         </div>

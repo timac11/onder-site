@@ -8,7 +8,7 @@
             <img class="full-product__image _desktop" src="{{ product.img }}">
             <div class="full-product__text">
                 <h1 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span></h1>
-                <h2 class="full-product__description">{{ product.subtitle }}</h2>
+                <h2 class="full-product__description">{% include typograph.html content=product.subtitle %}</h2>
                 <div class="full-product__paragraphs">
                     {% for paragraph in product.paragraphs %}
                     <p class="full-product__paragraph">{% include typograph.html content=paragraph.value %}</p>
