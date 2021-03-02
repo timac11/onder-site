@@ -34,20 +34,6 @@ p {
   font-weight: 400;
 }
 
-.menu {
-  background-color: transparent;
-  display: none;
-  width: 24px;
-  height: 24px;
-  outline: none;
-
-  @include s-tablet {
-    &_white {
-      display: block;
-    }
-  }
-}
-
 .block-heading {
   font: var(--h1-font);
   margin: 16px 0;

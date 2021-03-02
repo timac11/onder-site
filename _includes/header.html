@@ -24,16 +24,37 @@
             </div>
         </div>
         <div class="menu">
-            <button>
+            <button class="menu__open-button">
                 <img src="assets/img/colorful-menu.svg">
             </button>
-            <ul class="menu__list menu__list_hidden">
-                {% for item in site.navigation %}
-                <li>
-                    <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
-                </li>
-                {% endfor %}
-            </ul>
+            <div class="menu__wrapper menu__wrapper_hidden">
+                <ul class="menu__list">
+                    {% for item in site.navigation %}
+                    <li>
+                        <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                    </li>
+                    {% endfor %}
+                    <li>
+                        <a class="navigation__item">Новости</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.blog }}" target="_blank" class="navigation__item">Блог</a>
+    
+                    </li>
+                    <li>
+                        <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
+    
+                    </li>
+                    <li>
+                        <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
+    
+                    </li>
+                </ul>
+                <button class="menu__close-button">
+                    <img src="assets/img/close-icon.svg">
+                </button>
+            </div>
+            
         </div>
     </div>
 
