@@ -13,7 +13,7 @@ const initCanvas = function () {
   updateCanvasSize();
 
   const width = canvas.getBoundingClientRect().width
-  var pixelRatio = devicePixelRatio * 2;//4.;//Math.min(devicePixelRatio, .5);
+  var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
 
   let regl = createREGL({
     extensions: [],
@@ -136,8 +136,8 @@ float radiusMax = 1.9;
 float radius = radiusMax; //mix(radiusMax, radiusMax-.2, ringIndexNorm);
 
 float n = snoise(vec3(
-  angle*.9, 
-  ringIndexNorm*1. - u_time*0.06 - mouseDist, 
+  angle*1.3, 
+  ringIndexNorm*1. - u_time*0.06 - mouseDist * .04, 
   mouseDist * .02))*.4+.5;
 radius -= n * amp;
 
