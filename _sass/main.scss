@@ -11,6 +11,10 @@ a {
   color: #f7612b;
   text-decoration: none;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   &._white {
     color: white;
   }
@@ -71,15 +75,15 @@ p {
 }
 
 .company-info {
-  margin-top:  var(--floor-margin);
+  margin-top: var(--floor-margin);
 
   &__mail {
     max-width: 80%;
     margin: 1.5rem 0;
-    background: linear-gradient(270deg, #F85D1F 50%, #F4C52E 69.86%, #8AB65A 89.22%, #1AA5B8 105.48%);
+    background: linear-gradient(270deg, #f85d1f 50%, #f4c52e 69.86%, #8ab65a 89.22%, #1aa5b8 105.48%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #F85D1F;
+    color: #f85d1f;
   }
 
   &__item {
