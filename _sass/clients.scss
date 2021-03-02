@@ -7,19 +7,18 @@
   margin-right: calc(var(--block-margin-right) / 2);
   margin-left: calc(var(--block-margin-left) / 2);
   padding: 1.5em 2em;
-  padding-bottom: 3em;
   background: #eeeeee;
 
   &__container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1em;
   }
 
   &__item {
-    width: 25%;
-    flex-basis: 25%;
-    padding: 1em;
+    max-width: 21%;
+    flex-basis: 21%;
+    margin-right: 4%;
+    margin-bottom: 3em;
     object-fit: scale-down;
     box-sizing: border-box;
   }
@@ -32,20 +31,20 @@
   }
 
   @include l-tablet-and-less {
-    &__container {
-      margin: 0 -1em;
-    }
 
     &__item {
-      flex-basis: 33%;
-      padding: 1em;
+      flex-basis: 29%;
+      max-width: 29%;
+      // padding: 1em;
     }
   }
 
   @include m-tablet {
     margin: 128px 0 0 0;
     &__item {
-      flex-basis: 48%;
+      flex-basis: 39%;
+      max-width: 39%;
+      margin-right: 11%;
     }
   }
 
