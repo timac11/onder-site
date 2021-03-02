@@ -1,17 +1,28 @@
+{% assign lang = page.lang %}
+
+{% assign title = "Innovative products" %}
+{% assign subtitle = "We are developing products for agility and microgrid markets - new decentralized energy markets."%}
+
+{% if lang == "ru" %}
+{% assign title = "Инновационные продукты" %}
+{% assign subtitle = "Мы развиваем продукты для рынков гибкости и микрогридов — новых децентрализованных энергетических рынков." %}
+{% endif %}
+
+{% assign innovations = site.innovations | where: "lang", lang  %}
+
 <section class="main-content__block _margin innovations">
     <a id="innovations" class="anchor"></a>
-    <h2 class="block-heading">Инновационные продукты</h2>
-    <p class="innovations__description">Мы развиваем продукты для рынков гибкости и микрогридов — новых
-        децентрализованных энергетических рынков.</p>
-    <div>
-        {% for item in site.innovations %}
-        <div class="innovations__item-wrapper">
-            <img class="innovations__image" src="{{ item.img }}"/>
-            <div class="innovations__item-title">{{ item.name }}</div>
+    <h2 class="block-heading">{{title}}</h2>
+    <p class="innovations__description">{{subtitle}}</p>
+    {% for item in innovations %}
+    <div class="innovations__item-wrapper">
+        <div class="innovations__item-text">
+            <h2 class="innovations__item-title">{{ item.name }}</h2>
             {% for paragraph in item.paragraphs %}
             <p class="innovations__item">{% include typograph.html content=paragraph.value %}</p>
             {% endfor %}
         </div>
-        {% endfor %}
+        <img class="innovations__image" src="{{ item.img }}"/>
     </div>
+    {% endfor %}
 </section>

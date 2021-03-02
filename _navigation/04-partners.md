@@ -1,4 +1,0 @@
----
-name: Партнёры
-anchor: partners
----

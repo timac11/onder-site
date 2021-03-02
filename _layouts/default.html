@@ -1,0 +1,56 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title"/>
+</head>
+<body>
+
+{% include header.html %}
+
+<canvas id='wave-top' class="wave-top"></canvas>
+
+<main class="main-content" aria-label="Content">
+
+    {% include hero.html %}
+    {% include products.html %}
+    {% include full_products.html %}
+    {% include innovations.html %}
+    {% include consulting.html %}
+    {% include team.html %}
+    {% include partners.html %}
+    {% include clients.html %}
+
+
+    <div class="main-content__block _margin company-info">
+        <h2 class="company-info__item">
+            {{ page.footerText }}
+        </h2>
+        <h1 class="company-info__mail">
+            <a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
+        </h1>
+        <h2 class="company-info__item">
+            <a class="_black" href="tel:{{ site.phone }}" target="_blank">
+                {{ site.phone }}
+            </a>
+        </h2>
+    </div>
+</main>
+
+{% include footer.html %}
+
+<script src="assets/js/scroller.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/regl.min.js"></script>
+<script src="assets/js/onder-wave.js"></script>
+</body>
+
+</html>

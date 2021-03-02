@@ -1,9 +1,21 @@
+{% assign lang = page.lang %}
+
+{% assign title = "Tech Consulting" %}
+{% assign subtitle = "We work with companies in the energy, oil, gas and construction industries"%}
+
+{% if lang == "ru" %}
+{% assign title = "Технологический консалтинг" %}
+{% assign subtitle = "Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли" %}
+{% endif %}
+
+{% assign consulting = site.consulting | where: "lang", lang  %}
+
 <section class="main-content__block _margin consulting">
     <a id="consulting" class="anchor"></a>
-    <h2 class="block-heading">Технологический консалтинг</h2>
-    <p class="consulting__subtitle">Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли</p>
+    <h2 class="block-heading">{{title}}</h2>
+    <p class="consulting__subtitle">{{subtitle}}</p>
     <div class="consulting__wrapper">
-        {% for consultingItem in site.consulting %}
+        {% for consultingItem in consulting %}
         <div class="consulting__info">
             <h4 class="consulting__title">{{ consultingItem.title }}</h4>
             {% for paragraph in consultingItem.paragraphs %}

@@ -1,4 +1,0 @@
----
-name: Инновации
-anchor: innovations
----
