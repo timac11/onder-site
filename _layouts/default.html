@@ -34,9 +34,11 @@
         <h1 class="company-info__item">
             {{ page.footerText }}
         </h1>
-        <h1 class="company-info__mail">
-            <a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
-        </h1>
+        <a href="mailto:{{ site.email }}" target="_blank">
+            <h1 class="company-info__mail">
+                {{ site.email }}
+            </h1>
+        </a>
         <h2 class="company-info__item">
             <a class="_black" href="tel:{{ site.phone }}" target="_blank">
                 {{ site.phone }}

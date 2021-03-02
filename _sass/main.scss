@@ -88,6 +88,10 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #f85d1f;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__item {
