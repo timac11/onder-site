@@ -23,7 +23,9 @@
             {% for item in partner.items %}
             <div class="partners__item">
                 <figure class="partners__partner">
-                    <img class="partners__item-img" src="{{ item.img }}">
+                    <a href="{{ item.href }}" target="_blank">
+                        <img class="partners__item-img" src="{{ item.img }}">
+                    </a>
                 </figure>
                 <span class="partners__item-text">{% include typograph.html content=item.text %}</span>
             </div>
