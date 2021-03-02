@@ -73,7 +73,7 @@
   &__image {
     float: right;
     max-width: 50%;
-    padding-left: 49px;
+    padding-left: 2em;
 
     @include m-tablet-and-smaller {
       max-width: 100%;
@@ -92,6 +92,7 @@
 
   &__advantages {
     width: 100%;
+
     &-wrapper {
       font: var(--paragraph-font);
       line-height: var(--paragraph-line-height);
