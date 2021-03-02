@@ -9,7 +9,7 @@
   &__description {
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
-    margin: 0;
+    margin-bottom: 80px;
   }
 
   &__image {
@@ -40,7 +40,7 @@
 
     &-wrapper {
       display: flex;
-      margin-top: 120px;
+      margin-bottom: calc(var(--floor-margin)/2);
 
       &:first-child {
         margin-top: 80px;
@@ -57,7 +57,6 @@
 
 
     &-title {
-      font: var(--h1-font);
       font-weight: normal;
 
       @include m-tablet-temp-wide-header {

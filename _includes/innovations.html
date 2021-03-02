@@ -6,7 +6,7 @@
     {% for item in site.innovations %}
     <div class="innovations__item-wrapper">
         <div class="innovations__item-text">
-            <div class="innovations__item-title">{{ item.name }}</div>
+            <h2 class="innovations__item-title">{{ item.name }}</h2>
             {% for paragraph in item.paragraphs %}
             <p class="innovations__item">{% include typograph.html content=paragraph.value %}</p>
             {% endfor %}
