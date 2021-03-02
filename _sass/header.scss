@@ -48,7 +48,6 @@
   }
 
   &_detached {
-
     .short-logo {
       display: block;
       width: auto;
@@ -175,7 +174,7 @@
       transition: transform 0.2s ease-in-out;
 
       &_hidden {
-        transform: translateX(100vw) ;
+        transform: translateX(100vw);
       }
 
       &_visible {
@@ -192,10 +191,6 @@
           display: block;
           color: var(--main-font-color);
           padding: 0.5em 1.5em;
-        }
-
-        &:hover {
-          background-color: var(--main-hover-color);
         }
       }
     }

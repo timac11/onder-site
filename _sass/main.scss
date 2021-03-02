@@ -42,6 +42,10 @@ p {
   font: var(--h1-font);
   margin: 0.5em 0;
   text-transform: uppercase;
+
+  &_large-margin {
+    margin-bottom: 1.5em;
+  }
 }
 
 .title {
