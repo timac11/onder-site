@@ -29,11 +29,9 @@
         {% endfor %}
         {% for item in vacancies %}
         <div class="team__item">
-            <a href="{{ item.link }}">
-                <figure class="team__item-vacancy-img">
-                    <img src="assets/img/rectangle.svg">
-                    <img src="assets/img/plus.svg">
-                </figure>
+            <a class="team__item-vacancy-img" href="{{ item.link }}">
+                <img src="assets/img/rectangle.svg">
+                <img src="assets/img/plus.svg">
             </a>
             <div class="team__item-name">{{ item.vacancy }}</div>
             <div class="team__item-description">{{vacancy}}</div>
