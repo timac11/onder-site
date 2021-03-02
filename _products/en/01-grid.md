@@ -9,7 +9,7 @@ anchor: grid
 lang: en
 paragraphs:
   - value: A system for settlements and payments between consumers and suppliers of resources based on smart contracts
-  - value: Развитие для энергетической отрасли совместно с <a href="/">Мосэлектро</a>.
+  - value: Развитие для энергетической отрасли совместно с <a href="http://moselectro.ru/" target="_blank">Мосэлектро</a>.
 advantages:
   - value: Обеспечивает достоверность данных о потреблении
     img: "assets/img/turtle.jpg"
