@@ -3,18 +3,18 @@
 @import "mixins";
 
 .team {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 8em;
+  grid-row-gap: 6em;
 
   &__item {
     font: var(--paragraph-font);
     line-height: var(--paragraph-line-height);
-    padding: 1rem;
 
     &-wrapper {
-      flex-basis: 25%;
-      width: 25%;
+      width: 100%;
     }
 
     &-name {
@@ -52,21 +52,23 @@
     margin-bottom: 0.5em;
   }
 
+  @include desktop-s-and-less {
+    grid-column-gap: 6em;
+    grid-row-gap: 4em;
+  }
+
   @include l-tablet-and-less {
-    &__item {
-      &-wrapper {
-        flex-basis: 33%;
-        width: 33%;
-      }
-    }
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4em;
+    grid-row-gap: 3em;
   }
 
   @include s-tablet {
-    &__item {
-      &-wrapper {
-        flex-basis: 50%;
-        width: 50%;
-      }
-    }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    margin-right: 2em;
   }
 }
