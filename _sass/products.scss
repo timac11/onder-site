@@ -7,6 +7,10 @@
   margin-top: calc(var(--floor-margin)*2);
   margin-bottom: var(--floor-margin);
 
+  @include l-tablet {
+    margin-top: calc(var(--floor-margin));
+  }
+
   &__title {
     margin-left: calc(var(--block-margin-left)/2);
   }

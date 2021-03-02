@@ -78,6 +78,11 @@
     @include m-tablet-and-smaller {
       max-width: 100%;
     }
+
+    @include m-tablet-temp-wide-header {
+      padding-left: 0;
+      max-width: 40%;
+    }
   }
 
   &__paragraph {
