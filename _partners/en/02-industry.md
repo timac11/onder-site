@@ -16,7 +16,7 @@ items:
     href: "https://idea-go.tech/"
   - text: Венчурное инвестирование
     img: "assets/img/partners/pulsar.svg"
-    href: "#"
+    href: "http://accelerator.pulsar.vc/"
   - text: Оптимизация энергопотребления
     img: "assets/img/partners/less.svg"
     href: "http://les.systems/"
