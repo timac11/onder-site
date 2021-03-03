@@ -1,6 +1,6 @@
 ---
 name: Атомпромэнергосбыт
 src: "assets/img/clients/atomenergopromsbyt.svg"
-href: "#"
+href: "https://apsbt.ru/ru/"
 lang: ru
 ---

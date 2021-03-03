@@ -22,7 +22,7 @@
         <div class="partners__container">
             {% for item in partner.items %}
             <div class="partners__item">
-                <a class="partners__partner" href="{{ item.href }}">
+                <a class="partners__partner" href="{{ item.href }}" target="_blank">
                     <img class="partners__item-img" src="{{ item.img }}">
                 </a>
                 <span class="partners__item-text">{% include typograph.html content=item.text %}</span>
