@@ -13,7 +13,7 @@ const initCanvas = function () {
   updateCanvasSize();
 
   const width = canvas.getBoundingClientRect().width
-  var pixelRatio = 1//devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
+  var pixelRatio = 1/devicePixelRatio//devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
 
   let regl = createREGL({
     extensions: [],
