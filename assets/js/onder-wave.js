@@ -13,13 +13,13 @@ const initCanvas = function () {
   updateCanvasSize();
 
   const width = canvas.getBoundingClientRect().width
-  var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
+  //var pixelRatio = 1.//devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
 
   let regl = createREGL({
     extensions: [],
     optionalExtensions: ['OES_texture_float'],
     canvas,
-    pixelRatio: pixelRatio,
+    //pixelRatio: pixelRatio,
     attributes: {
       antialias: false,
       preserveDrawingBuffer: true
