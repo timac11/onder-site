@@ -54,12 +54,12 @@
   --header-background-color: transparent;
 
   @include desktop-s-and-less {
-    --h2-font: normal 3.0vw Montserrat;
-    --h1-font: bold 3.0vw Montserrat;
+    --h2-font: normal 3vw Montserrat;
+    --h1-font: bold 3vw Montserrat;
     --paragraph-font-size: 2vw;
     --paragraph-font: normal var(--paragraph-font-size) Open Sans;
     --paragraph-line-height: 2.6vw;
-    --h2-line-height: 2.7vw;
+    --h2-line-height: 3.7vw;
     --h1-line-height: 3vw;
     --h1-font-size: 2.2vw;
   }

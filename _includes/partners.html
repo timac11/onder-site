@@ -12,13 +12,13 @@
 
 <section class="main-content__block _margin partners">
     <a id="partners" class="anchor"></a>
-    <h1 class="block-heading">{{title}}</h1>
+    <h2 class="block-heading">{{title}}</h1>
     <p class="partners__description">
         {% include typograph.html content=subtitle %}
     </p>
     {% for partner in partners %}
     <div class="partners__wrapper">
-        <h1 class="partners__title">{{ partner.name }}</h1>
+        <h3 class="partners__title">{{ partner.name }}</h3>
         <div class="partners__container">
             {% for item in partner.items %}
             <div class="partners__item">

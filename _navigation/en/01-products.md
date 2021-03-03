@@ -1,5 +1,5 @@
 ---
-name: Продукты
+name: Products
 anchor: products
 lang: en
 ---
