@@ -3,7 +3,7 @@
 @import "mixins";
 
 .full-product {
-  padding: 28px 42px;
+  padding: 2em 3em;
   flex-wrap: wrap;
   font-family: var(--base-font);
   width: 100%;
@@ -47,11 +47,8 @@
   }
 
   &__description {
-    @include m-tablet {
-      line-height: 30px;
-    }
     font-weight: normal;
-    line-height: 48px;
+    line-height: var(--h1-line-height);
   }
 
   &__name {
@@ -106,7 +103,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 0 var(--block-padding-right) 80px 42px;
+      padding: 0 3em 4em;
     }
 
     &-item {
@@ -117,8 +114,6 @@
   }
 
   &__button {
-    font-size: 32px;
-    font-family: "Open Sans";
     font-weight: normal;
     display: flex;
     flex-direction: row;
