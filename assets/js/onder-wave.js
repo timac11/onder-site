@@ -2,8 +2,8 @@ var mouse = {x: 0, y: 0, xPrev: 0, yPrev: 0, dist: 0}
 var canvas = document.querySelector('canvas#wave-top');
 
 const updateCanvasSize = function () {
-  canvas.width = document.body.getBoundingClientRect().width;
-  canvas.height = canvas.width < 500 ? canvas.width * 1.5 : canvas.width * 0.66;
+  canvas.width = devicePixelRatio * document.body.getBoundingClientRect().width;
+  canvas.height = devicePixelRatio * (canvas.width < 500 ? canvas.width * 1.5 : canvas.width * 0.66);
 }
 
 const initCanvas = function () {
