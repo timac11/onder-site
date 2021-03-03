@@ -27,18 +27,13 @@
       flex: 1;
     }
 
-    &-vacancy-img {
+    &-vacancy {
       width: 100%;
       display: flex;
       margin-bottom: 0.5em;
       position: relative;
       justify-content: center;
       align-items: center;
-
-      &-link {
-        display: block;
-      }
-
 
       > img:first-child {
         width: 100%;
@@ -63,7 +58,6 @@
     display: block;
     margin-bottom: 0.5em;
   }
-
 
   @include desktop-s-and-less {
     grid-column-gap: 6em;
