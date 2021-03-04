@@ -240,8 +240,8 @@ let vertexMainFooter = `
   gl_Position = vec4(uv, 0, 1);
   }
   `
-  let reglHero = makeReglEverything('#wave-top', vertexMainHero)
-  let reglFooter = makeReglEverything('#wave-bottom', vertexMainFooter)
+  document.getElementById("wave-top") && makeReglEverything('#wave-top', vertexMainHero)
+  document.getElementById('wave-bottom') && makeReglEverything('#wave-bottom', vertexMainFooter)
   
 
 }
