@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+{% include head.html %}
+<body>
+
+{% include header.html %}
+
+
+<main class="main-content" aria-label="Content">
+    <section class="main-content__block _margin">
+        <h2 class="block-heading block-heading_large-margin">{{page.newsTitle}}</h2>
+        <div class="news">
+            {% for postItem in page.posts %}
+            <div class="news__new">
+                <h2>{{ postItem.year }}</h2>
+                <ul>
+                    {% for new in postItem.items %}
+                    <li class="news__item">
+                        <div class="news__sep"></div>
+                        <p>{{ new.value }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% include company_info.html %}
+</main>
+
+{% include footer.html %}
+
+
+<script src="assets/js/scroller.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/util.js"></script>
+</body>
+</html>

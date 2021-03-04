@@ -2,6 +2,8 @@
     max-width: var(--max-width);
     margin: auto;
     margin-top: 13em;
+    position: relative;
+    bottom: 0;
 
     &__items {
         display: flex;
