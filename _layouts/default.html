@@ -16,7 +16,6 @@
 
 {% include header.html %}
 
-<canvas id='wave-top' class="wave-top"></canvas>
 
 <main class="main-content" aria-label="Content">
 
@@ -31,9 +30,9 @@
 
 
     <div class="main-content__block _margin company-info">
-        <h1 class="company-info__item">
+        <h2 class="company-info__item">
             {{ page.footerText }}
-        </h1>
+        </h2>
         <a href="mailto:{{ site.email }}" target="_blank">
             <h1 class="company-info__mail">
                 {{ site.email }}
@@ -48,6 +47,11 @@
 </main>
 
 {% include footer.html %}
+
+<!--<canvas id='wave-top' class="wave wave-top"></canvas>-->
+<!--<canvas id='wave-bottom' class="wave wave-bottom"></canvas>-->
+<div id='wave-top' class="wave wave-top"></div>
+<div id='wave-bottom' class="wave wave-bottom"></div>
 
 <script src="assets/js/scroller.js"></script>
 <script src="assets/js/menu.js"></script>

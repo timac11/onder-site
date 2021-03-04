@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  position: relative;
 }
 
 a {
@@ -12,7 +13,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   &._white {
@@ -95,7 +96,7 @@ p {
   }
 
   &__item {
-    max-width: 760px;
+    max-width: 20em;
     font-family: var(--base-font);
     font-weight: normal;
     font-size: var(--h1-font-size);

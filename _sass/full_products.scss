@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 32px 8px calc(var(--floor-margin)/2);
+    margin: 32px 8px calc(var(--floor-margin) / 2);
     position: relative;
 
     &._grid {
@@ -47,8 +47,9 @@
   }
 
   &__description {
-    font-weight: normal;
     line-height: var(--h1-line-height);
+    font: var(--h1-font);
+    font-weight: normal;
   }
 
   &__name {
@@ -123,22 +124,45 @@
     color: white;
     background: #1aa5b8;
     border-radius: 68px;
+    font: var(--h2-font);
     cursor: pointer;
 
     &._grid {
       background: var(--grid-color);
+
+      &:hover {
+        background: var(--grid-color-light);
+      }
     }
 
     &._dr {
       background: var(--dr-color);
+
+      &:hover {
+        background: var(--dr-color-light);
+      }
     }
 
     &._registry {
       background: var(--registry-color);
+
+      &:hover {
+        background: var(--registry-color-light);
+      }
     }
 
     &._control {
       background: var(--control-color);
+
+      &:hover {
+        background: var(--control-color-light);
+      }
+    }
+
+    > a {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

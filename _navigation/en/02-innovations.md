@@ -1,5 +1,5 @@
 ---
-name: Инновации
+name: Innovations
 anchor: innovations
 lang: en
 ---

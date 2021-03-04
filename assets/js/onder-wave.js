@@ -1,38 +1,45 @@
 var mouse = {x: 0, y: 0, xPrev: 0, yPrev: 0, dist: 0}
-var canvas = document.querySelector('canvas#wave-top');
+//var canvas = document.querySelector('canvas#wave-top');
 
 const updateCanvasSize = function () {
-  canvas.width = document.body.getBoundingClientRect().width;
-  canvas.height = canvas.width < 500 ? canvas.width * 1.5 : canvas.width * 0.66;
+  //document.querySelectorAll('canvas.wave').forEach(c => {
+    //canvas.width = devicePixelRatio * c.getBoundingClientRect().width
+    //canvas.height = devicePixelRatio * c.getBoundingClientRect().height
+  //});
 }
 
 const initCanvas = function () {
   let pointsPerLine = 200
   let linesNumber = 32
+  const width = document.body.getBoundingClientRect().width
+  //var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
 
   updateCanvasSize();
 
-  const width = canvas.getBoundingClientRect().width
-  var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
-
   let regl = createREGL({
-    extensions: [],
-    optionalExtensions: ['OES_texture_float'],
-    canvas,
-    pixelRatio: pixelRatio,
-    attributes: {
-      antialias: false,
-      preserveDrawingBuffer: true
-    }
+    container: document.querySelector('#wave-top'),
+    pixelRatio: 1,
   });
+
+  let regl2 = createREGL({
+    container: document.querySelector('#wave-bottom'),
+    pixelRatio: 1,
+  });
+  regl2.frame(({tick, drawingBufferWidth, drawingBufferHeight, pixelRatio}) => {
+    regl2.clear({
+      color: [1, 1, 1, 1],
+      depth: 1
+    })
+  })
 
 
   drawSprites = regl({
     vert: `
 precision highp float;
-attribute float id ;
+attribute float id;
 varying vec2 uv;
 varying float color;
+varying float opacity;
 uniform float pointsPerLine;
 uniform float linesNumber;
 uniform float u_time;
@@ -131,18 +138,20 @@ float angle = mod(i, pointsPerLine) / (pointsPerLine-1.) * .5 * 3.1415 + .5*3.14
 float ringIndex = floor(i/pointsPerLine);
 float ringIndexNorm = ringIndex / linesNumber;
 float lineWidth = mix(.008, .001, ringIndexNorm);
-float amp = .8; //mix(.5, .2, ringIndexNorm);
+float amp = 1.; //mix(.5, .2, ringIndexNorm);
 float radiusMax = 1.9;
 float radius = radiusMax; //mix(radiusMax, radiusMax-.2, ringIndexNorm);
 
 float n = snoise(vec3(
-  angle*1.3, 
-  ringIndexNorm*1. - u_time*0.06 - mouseDist * .04, 
-  mouseDist * .02))*.4+.5;
+  angle * 1.3, 
+  ringIndexNorm * .5 - u_time * .1 - mouseDist * .04, 
+  mouseDist * .02)) * .4 + .5;
 radius -= n * amp;
 
-color = mix(0., 1., n-.1);
+color = mix(0., 1., n*2.-.8);
 color = clamp(color, 0., 1.);
+opacity = pow(ringIndex / linesNumber, .8);
+
 
 bool isBottomPoint = mod(i, 2.) == 0.;
 if(isBottomPoint) {
@@ -162,14 +171,17 @@ gl_Position = vec4(uv, 0, 1);
 precision highp float;
 varying vec2 uv;
 varying float color;
+varying float opacity;
 void main () {
   vec3 teal = vec3(0.,165.,186.)/256.;
   vec3 yellow = vec3(247.,198.,4.)/256.;
   vec3 red = vec3(255.,0.,0.)/256.;
   gl_FragColor.rgb = mix(yellow, red, fract(color*2.)) * step(1./2., color);
   gl_FragColor.rgb += mix(teal, yellow, fract(color*2.)) * (1.-step(1./2., color));
-
   gl_FragColor.a = 1.;
+
+  gl_FragColor = mix(gl_FragColor, vec4(1), opacity);
+
 }
   `,
 
