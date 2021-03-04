@@ -57,7 +57,7 @@
             <div class="menu__wrapper menu__wrapper_hidden">
                 <ul class="menu__list">
                     {% for item in navigation %}
-                    <li>
+                    <li class="menu__anchor-wrapper">
                         <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
                     </li>
                     {% endfor %}

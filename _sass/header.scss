@@ -198,6 +198,18 @@
     }
   }
 
+  @include desktop-s-and-less {
+    &__anchor-wrapper {
+      display: none;
+    }
+  }
+
+  @include s-tablet {
+    &__anchor-wrapper {
+      display: block;
+    }
+  }
+
   button {
     background: transparent;
   }
