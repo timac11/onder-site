@@ -4,6 +4,8 @@
 {% assign title = "Продукты" %}
 {% endif %}
 
+{% assign products = site.products | where: "lang", page.lang  %}
+
 <section class="products">
     <a id="products" class="anchor"></a>
     <h2 class="block-heading products__title">{{title}}</h2>
