@@ -2,9 +2,10 @@ var mouse = {x: 0, y: 0, xPrev: 0, yPrev: 0, dist: 0}
 var canvas = document.querySelector('canvas#wave-top');
 
 const updateCanvasSize = function () {
-  //canvas.width = devicePixelRatio * document.body.getBoundingClientRect().width;
-  //canvas.height = devicePixelRatio * (canvas.width < 500 ? canvas.width * 1.5 : canvas.width * 0.66);
-  canvas.height = canvas.width = devicePixelRatio * canvas.getBoundingClientRect().width
+  document.querySelectorAll('canvas.wave').forEach(c => {
+    canvas.width = devicePixelRatio * c.getBoundingClientRect().width
+    canvas.height = devicePixelRatio * c.getBoundingClientRect().height
+  });
 }
 
 const initCanvas = function () {
@@ -14,13 +15,13 @@ const initCanvas = function () {
   updateCanvasSize();
 
   const width = canvas.getBoundingClientRect().width
-  var pixelRatio = 1//devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
+  //var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
 
   let regl = createREGL({
     extensions: [],
     optionalExtensions: ['OES_texture_float'],
     canvas,
-    pixelRatio: pixelRatio,
+    pixelRatio: 1,
     attributes: {
       antialias: false,
       preserveDrawingBuffer: true
