@@ -1,5 +1,5 @@
 ---
-name: Консалтинг
+name: Consulting
 anchor: consulting
 lang: en
 ---

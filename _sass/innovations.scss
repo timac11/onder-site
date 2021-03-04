@@ -37,10 +37,9 @@
       }
     }
 
-
     &-wrapper {
       display: flex;
-      margin-bottom: calc(var(--floor-margin)/2);
+      margin-bottom: calc(var(--floor-margin) / 2);
 
       &:first-child {
         margin-top: 80px;
@@ -55,8 +54,8 @@
       }
     }
 
-
     &-title {
+      font: var(--h1-font);
       font-weight: normal;
 
       @include m-tablet-temp-wide-header {

@@ -12,14 +12,14 @@
 
 <section class="main-content__block _margin consulting">
     <a id="consulting" class="anchor"></a>
-    <h1 class="block-heading">{{title}}</h1>
+    <h2 class="block-heading">{{title}}</h2>
     <p class="consulting__subtitle">
         {% include typograph.html content=subtitle %}
     </p>
     <div class="consulting__wrapper">
         {% for consultingItem in consulting %}
         <div class="consulting__info">
-            <h1 class="consulting__title">{{ consultingItem.title }}</h1>
+            <h3 class="consulting__title">{{ consultingItem.title }}</h3>
             {% for paragraph in consultingItem.paragraphs %}
             <p class="consulting__description">
                 {% include typograph.html content=paragraph.value %}
