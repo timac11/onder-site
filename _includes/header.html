@@ -63,9 +63,9 @@
                     {% endfor %}
                     <li>
                         {% if lang == "ru" %}
-                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
+                        <a class="navigation__item" href="/news">{{news}}</a>
                         {% else %}
-                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
+                        <a class="navigation__item" href="/en-news">{{news}}</a>
                         {% endif %}
                     </li>
                     <li>
@@ -78,7 +78,13 @@
                         <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
                     </li>
                     <li>
-                        <a href="{{redirect}}" class="navigation__item">{{redirectName}}</a>
+                    <li>
+                        {% if lang == "ru" %}
+                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
+                        {% else %}
+                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
+                        {% endif %}
+                    </li>
                     </li>
                 </ul>
                 <button class="menu__close-button">
