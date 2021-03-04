@@ -26,9 +26,7 @@
   &__navigation {
     display: flex;
     visibility: visible;
-    justify-content: space-between;
     flex-grow: 1;
-    margin-left: 16px;
     justify-content: flex-end;
   }
 
@@ -106,6 +104,10 @@
       div.navigation {
         display: none;
       }
+
+      div.menu {
+        display: block;
+      }
     }
   }
 
@@ -161,37 +163,37 @@
 
   @include m-tablet {
     display: block;
+  }
 
-    &__wrapper {
-      display: block;
-      position: fixed;
-      right: 0;
-      top: 0;
-      background-color: var(--main-white-color);
-      z-index: 1001;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 0.75em 0;
-      transition: transform 0.2s ease-in-out;
+  &__wrapper {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--main-white-color);
+    z-index: 1001;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.75em 0;
+    transition: transform 0.2s ease-in-out;
 
-      &_hidden {
-        transform: translateX(100vw);
-      }
-
-      &_visible {
-        transform: translateX(0);
-      }
+    &_hidden {
+      transform: translateX(100vw);
     }
 
-    &__list {
-      > li {
-        font: var(--navigation-font);
-        text-align: left;
+    &_visible {
+      transform: translateX(0);
+    }
+  }
 
-        > a {
-          display: block;
-          color: var(--main-font-color);
-          padding: 0.5em 1.5em;
-        }
+  &__list {
+    > li {
+      font: var(--navigation-font);
+      text-align: left;
+
+      > a {
+        display: block;
+        color: var(--main-font-color);
+        padding: 0.5em 1.5em;
       }
     }
   }
