@@ -12,9 +12,9 @@ paragraphs:
   - value: Развитие для энергетической отрасли совместно с <a href="http://moselectro.ru/" target="_blank">Мосэлектро</a>.
 advantages:
   - value: Обеспечивает достоверность данных о потреблении
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/grid-01.png"
   - value: Автоматизирует расчёты на смарт-контрактах
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/grid-02.png"
   - value: Снижает дебиторскую задолженность
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/grid-03.png"
 ---

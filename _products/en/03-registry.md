@@ -13,11 +13,11 @@ paragraphs:
   - value: 'Разработали совместно со <a href="https://startblock.online/" target="_blank">StartBlock</a> на примере реестра зеленых сертификатов.'
 advantages:
   - value: Ведёт выпуск, учёт и погашение сертификатов
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/registry-01.png"
   - value: Отображает статистику использования сертификатов
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/registry-02.png"
   - value: Снижает затраты, безопасность, надежность реестра при любом числе пользователей
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/registry-03.png"
   - value: Возможность вывода сертификатов на мировые торговые площадки
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/registry-04.png"
 ---

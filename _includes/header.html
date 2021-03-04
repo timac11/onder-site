@@ -31,7 +31,7 @@
         <div class="header__navigation">
             <nav id="navbar" class="navigation">
                 {% for item in navigation %}
-                <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                <a class="navigation__item" href="{{ main }}#{{ item.anchor }}">{{ item.name }}</a>
                 {% endfor %}
             </nav>
             <div class="navigation">
@@ -58,7 +58,7 @@
                 <ul class="menu__list">
                     {% for item in navigation %}
                     <li class="menu__anchor-wrapper">
-                        <a class="navigation__item" href="#{{ item.anchor }}">{{ item.name }}</a>
+                        <a class="navigation__item" href="{{ main }}#{{ item.anchor }}">{{ item.name }}</a>
                     </li>
                     {% endfor %}
                     <li>
