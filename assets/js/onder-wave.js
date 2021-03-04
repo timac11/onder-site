@@ -1,32 +1,36 @@
 var mouse = {x: 0, y: 0, xPrev: 0, yPrev: 0, dist: 0}
-var canvas = document.querySelector('canvas#wave-top');
+//var canvas = document.querySelector('canvas#wave-top');
 
 const updateCanvasSize = function () {
-  document.querySelectorAll('canvas.wave').forEach(c => {
-    canvas.width = devicePixelRatio * c.getBoundingClientRect().width
-    canvas.height = devicePixelRatio * c.getBoundingClientRect().height
-  });
+  //document.querySelectorAll('canvas.wave').forEach(c => {
+    //canvas.width = devicePixelRatio * c.getBoundingClientRect().width
+    //canvas.height = devicePixelRatio * c.getBoundingClientRect().height
+  //});
 }
 
 const initCanvas = function () {
   let pointsPerLine = 200
   let linesNumber = 32
+  const width = document.body.getBoundingClientRect().width
+  //var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
 
   updateCanvasSize();
 
-  const width = canvas.getBoundingClientRect().width
-  //var pixelRatio = devicePixelRatio;//4.;//Math.min(devicePixelRatio, .5);
-
   let regl = createREGL({
-    extensions: [],
-    optionalExtensions: ['OES_texture_float'],
-    canvas,
+    container: document.querySelector('#wave-top'),
     pixelRatio: 1,
-    attributes: {
-      antialias: false,
-      preserveDrawingBuffer: true
-    }
   });
+
+  let regl2 = createREGL({
+    container: document.querySelector('#wave-bottom'),
+    pixelRatio: 1,
+  });
+  regl2.frame(({tick, drawingBufferWidth, drawingBufferHeight, pixelRatio}) => {
+    regl2.clear({
+      color: [1, 1, 1, 1],
+      depth: 1
+    })
+  })
 
 
   drawSprites = regl({
