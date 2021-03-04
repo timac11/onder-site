@@ -58,10 +58,6 @@
 
     .header__navigation {
       justify-content: space-between;
-
-      @include m-tablet {
-        justify-content: center;
-      }
     }
 
     nav {
@@ -108,6 +104,12 @@
       div.menu {
         display: block;
       }
+
+      .menu {
+        &__anchor-wrapper {
+          display: none;
+        }
+      }
     }
   }
 
@@ -120,6 +122,12 @@
   @include s-tablet {
     .navigation {
       display: none;
+    }
+
+    .menu {
+      &__anchor-wrapper {
+        display: block;
+      }
     }
   }
 
@@ -195,18 +203,6 @@
         color: var(--main-font-color);
         padding: 0.5em 1.5em;
       }
-    }
-  }
-
-  @include desktop-s-and-less {
-    &__anchor-wrapper {
-      display: none;
-    }
-  }
-
-  @include s-tablet {
-    &__anchor-wrapper {
-      display: block;
     }
   }
 
