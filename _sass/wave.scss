@@ -1,7 +1,13 @@
 .wave {
   &-top {
+    width: 70vw;
+    height: 70vw;
     position: absolute;
     top: 0;
     z-index: -1;
+    @include m-tablet-and-smaller {
+      width: 100vw;
+      height: 100vw;
+    }
   }
 }

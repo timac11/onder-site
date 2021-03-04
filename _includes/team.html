@@ -17,8 +17,8 @@
         {% for item in team %}
         <div class="team__item">
             <img class="team__img" src="{{ item.img }}" alt="Placeholder image">
-            <div class="team__item-name">{{ item.name }}</div>
-            <div class="team__item-name">{{ item.lastName }}</div>
+            <div class="team__item-name">{{ item.name }} <!--/div>
+            <div class="team__item-name"-->{{ item.lastName }}</div>
             <div class="team__item-description">{{ item.position }}</div>
             <div class="team__item-messengers">
                 {% for contact in item.contacts %}

@@ -13,11 +13,11 @@ paragraphs:
   - value: Разработали совместно с <a href="https://www.info-pro.ru" target="_blank">ИНФОПРО.</a>
 advantages:
   - value: Ведёт справочники типовых работ, дефектов, сметных расценок
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/control-01.png"
   - value: Хранит информацию об объектах в единой базе
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/control-02.png"
   - value: Формирует графики работ и отслеживает их выполнение
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/control-03.png"
   - value: Уведомляет об отклонениях от плана
-    img: "assets/img/turtle.jpg"
+    img: "assets/img/products/control-04.png"
 ---
