@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 .news {
+
+  &__section {
+    margin-top: 70px;
+  }
+
   &__sep {
     &:before {
       font: var(--paragraph-font);
