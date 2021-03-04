@@ -1,8 +1,6 @@
-{% assign products = site.products | where: "lang", page.lang  %}
-
 {% assign title = "Products" %}
 
-{% if lang == "ru" %}
+{% if page.lang == "ru" %}
 {% assign title = "Продукты" %}
 {% endif %}
 

@@ -1,13 +1,8 @@
-{% assign lang = page.lang %}
-
 {% assign title = "Clients" %}
-
-{% if lang == "ru" %}
+{% if page.lang == "ru" %}
 {% assign title = "Клиенты" %}
 {% endif %}
-
-{% assign clients = site.clients | where: "lang", lang  %}
-
+{% assign clients = site.clients | where: "lang", page.lang  %}
 
 <div class="main-content__block clients">
     <h2 class="block-heading">Клиенты</h2>

@@ -1,14 +1,12 @@
-{% assign lang = page.lang %}
-
 {% assign title = "Partners" %}
 {% assign subtitle = "When implementing complex projects, we work with experts from the industry, we attract highly specialized developers and conduct tests at institutes' proving grounds."%}
 
-{% if lang == "ru" %}
+{% if page.lang == "ru" %}
 {% assign title = "Партнёры" %}
 {% assign subtitle = "При реализации сложных проектов мы работаем с экспертами из отрасли, привлекаем узкоспециализированных разработчиков и проводим испытания на полигонах институтов." %}
 {% endif %}
 
-{% assign partners = site.partners | where: "lang", lang  %}
+{% assign partners = site.partners | where: "lang", page.lang  %}
 
 <section class="main-content__block _margin partners">
     <a id="partners" class="anchor"></a>

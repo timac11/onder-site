@@ -1,14 +1,12 @@
-{% assign lang = page.lang %}
-
 {% assign title = "Innovative products" %}
 {% assign subtitle = "We are developing products for agility and microgrid markets - new decentralized energy markets."%}
 
-{% if lang == "ru" %}
+{% if page.lang == "ru" %}
 {% assign title = "Инновационные продукты" %}
 {% assign subtitle = "Мы развиваем продукты для рынков гибкости и микрогридов — новых децентрализованных энергетических рынков." %}
 {% endif %}
 
-{% assign innovations = site.innovations | where: "lang", lang  %}
+{% assign innovations = site.innovations | where: "lang", page.lang  %}
 
 <section class="main-content__block _margin innovations">
     <a id="innovations" class="anchor"></a>

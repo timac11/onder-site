@@ -1,11 +1,7 @@
-{% assign lang = page.lang %}
-
 {% assign title = "We develop and implement digital solutions, accompany transformations in the energy industry" %}
-
-{% if lang == "ru" %}
+{% if page.lang == "ru" %}
 {% assign title = "Разрабатываем и внедряем цифровые решения, сопровождаем преобразования в энергетике промышленности" %}
 {% endif %}
-
 {% assign teamitems = site.teamitems | where: "lang", page.lang  %}
 
 <section class="hero main-content__block _margin">
