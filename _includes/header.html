@@ -3,12 +3,12 @@
 {% assign lang = page.lang %}
 {% assign redirect = "/" %}
 {% assign redirectName = "Ru" %}
-{% assign main = "/en.html" %}
+{% assign main = "/en" %}
 
 {% if lang == "ru" %}
 {% assign news = "Новости" %}
 {% assign blog = "Блог" %}
-{% assign redirect = "/en.html" %}
+{% assign redirect = "/en" %}
 {% assign main = "/" %}
 {% assign redirectName = "En" %}
 {% endif %}
@@ -35,14 +35,18 @@
                 {% endfor %}
             </nav>
             <div class="navigation">
-                <a class="navigation__item">{{news}}</a>
+                {% if lang == "ru" %}
+                <a class="navigation__item" href="/news">{{news}}</a>
+                {% else %}
+                <a class="navigation__item" href="/en-news">{{news}}</a>
+                {% endif %}
                 <a href="{{ site.blog }}" target="_blank" class="navigation__item">{{blog}}</a>
                 <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
                 <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
                 {% if lang == "ru" %}
-                    <a href="/en.html" class="navigation__item">En</a>
+                    <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
                 {% else %}
-                    <a href="/" class="navigation__item">Ru</a>
+                    <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
                 {% endif %}
             </div>
         </div>
@@ -58,7 +62,11 @@
                     </li>
                     {% endfor %}
                     <li>
-                        <a href="#" class="navigation__item">{{news}}</a>
+                        {% if lang == "ru" %}
+                        <a class="navigation__item" href="/news">{{news}}</a>
+                        {% else %}
+                        <a class="navigation__item" href="/en-news">{{news}}</a>
+                        {% endif %}
                     </li>
                     <li>
                         <a href="{{ site.blog }}" target="_blank" class="navigation__item">{{blog}}</a>
@@ -70,7 +78,13 @@
                         <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
                     </li>
                     <li>
-                        <a href="{{redirect}}" class="navigation__item">{{redirectName}}</a>
+                    <li>
+                        {% if lang == "ru" %}
+                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
+                        {% else %}
+                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
+                        {% endif %}
+                    </li>
                     </li>
                 </ul>
                 <button class="menu__close-button">

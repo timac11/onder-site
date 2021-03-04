@@ -87,6 +87,7 @@
     --block-margin-top: 16px;
     --block-margin-bottom: 16px;
     --floor-margin: 128px;
+    --header-paddings: 0 16px 16px 16px;
 
     // colors
     --grid-border: 7px solid var(--grid-color-opacity);
@@ -96,7 +97,6 @@
   }
 
   @include s-tablet {
-    --header-paddings: 0 16px 16px 16px;
     --paragraph-font-size: 16px;
     --paragraph-font: normal var(--paragraph-font-size) Open Sans;
     --paragraph-line-height: 20px;

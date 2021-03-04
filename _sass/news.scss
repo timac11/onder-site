@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.news {
+  &__sep {
+    &:before {
+      font: var(--paragraph-font);
+      line-height: calc(var(--paragraph-line-height) - 4px);
+      content: "—";
+      position: relative;
+      margin-right: 0.5em;
+    }
+  }
+
+  &__new {
+    margin-bottom: 4em;
+  }
+
+  &__item {
+    margin-top: 2em;
+    display: flex;
+  }
+}
