@@ -205,7 +205,20 @@
   @include m-tablet {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 0;
+
+    &__text {
+      padding: 0 16px 16px;
+    }
+
+    &__image {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+      &-wrapper {
+        padding: 2px;
+        margin-bottom: 16px;
+      }
+    }
 
     &__button {
       font: var(--paragraph-font);
