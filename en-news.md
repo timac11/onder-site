@@ -4,6 +4,7 @@
    title: FIXME
    footerText: We will be glad to tell you more about our products!
    newsTitle: News
+   changeLangRedirect: "/news"
    posts: 
      - year: 2021
        items:

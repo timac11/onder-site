@@ -44,9 +44,9 @@
                 <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
                 <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
                 {% if lang == "ru" %}
-                    <a href="/en" class="navigation__item">En</a>
+                    <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
                 {% else %}
-                    <a href="/" class="navigation__item">Ru</a>
+                    <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
                 {% endif %}
             </div>
         </div>
@@ -63,9 +63,9 @@
                     {% endfor %}
                     <li>
                         {% if lang == "ru" %}
-                        <a class="navigation__item" href="/news">{{news}}</a>
+                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
                         {% else %}
-                        <a class="navigation__item" href="/en-news">{{news}}</a>
+                        <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
                         {% endif %}
                     </li>
                     <li>
