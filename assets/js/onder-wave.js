@@ -26,11 +26,6 @@ function makeReglEverything(containerSelector, vertexMainFooter) {
   });
 
   regl.frame(({tick, drawingBufferWidth, drawingBufferHeight, pixelRatio}) => {
-    let movement = Math.hypot(mouse.x - mouse.xPrev, mouse.y - mouse.yPrev)
-    movement = Math.min(Math.hypot(mouse.x - mouse.xPrev, mouse.y - mouse.yPrev), 100.)
-    mouse.dist += movement * .01;
-    mouse.xPrev = mouse.x
-    mouse.yPrev = mouse.y
 
     regl.clear({
       color: [1, 1, 1, 1],
@@ -172,7 +167,7 @@ let vertexMainHero = `
     return;
   }
 
-  float angle = mod(i, pointsPerLine) / (pointsPerLine-1.) * .5 * 3.1415 + .5*3.1415;
+  float angle = mod(floor(i/2.)*2., pointsPerLine) / (pointsPerLine-1.) * .5 * 3.1415 + .5*3.1415;
   float ringIndex = floor(i/pointsPerLine);
   float ringIndexNorm = ringIndex / linesNumber;
   float lineWidth = mix(.008, .001, ringIndexNorm);
@@ -206,13 +201,8 @@ let vertexMainHero = `
 let vertexMainFooter = `
   void main () {
   float i = id;
-  float x = mod(i, pointsPerLine) / (pointsPerLine-1.) * 2.2 - 1.1;
+  float x = mod(floor(i/2.)*2., pointsPerLine) / (pointsPerLine-1.) * 2.2 - 1.1;
 
-
-  //if (x != fract(x)) {
-    //gl_Position=vec4(x, 0, 0, 1);
-    //return;
-  //}
   float m = mod(i, pointsPerLine);
   if (m<=1. || m >= pointsPerLine-2.) {
     gl_Position=vec4(x, 1, 0, 1);
@@ -240,6 +230,7 @@ let vertexMainFooter = `
   bool isBottomPoint = mod(i, 2.) == 0.;
   if(isBottomPoint) {
     y-=lineWidth;
+    //x = mod(i-1., pointsPerLine) / (pointsPerLine-1.) * 2.2 - 1.1;
   }
   vec2 uv = vec2(x, y);
   //if(mod(i, 3.) == 0.) uv = vec2(0, 0);
@@ -259,8 +250,12 @@ document.addEventListener("DOMContentLoaded", initCanvas);
 
 
 document.addEventListener('mousemove', e => {
-  mouse.x = e.offsetX;
-  mouse.y = e.offsetY;
+  let movement = Math.hypot(mouse.x - mouse.xPrev, mouse.y - mouse.yPrev)
+  mouse.xPrev = mouse.x
+  mouse.yPrev = mouse.y
+  mouse.dist += movement * .01;
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
 });
 
 window.addEventListener('resize', updateCanvasSize);
