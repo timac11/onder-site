@@ -1,11 +1,11 @@
 {% assign lang = page.lang %}
 
 {% assign title = "Tech Consulting" %}
-{% assign subtitle = "We work with companies in the energy, oil, gas and construction industries"%}
+{% assign subtitle = "We work with companies in the energy, oil, gas and construction industries."%}
 
 {% if lang == "ru" %}
 {% assign title = "Технологический консалтинг" %}
-{% assign subtitle = "Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли" %}
+{% assign subtitle = "Работаем с компаниями энергетической, нефтяной, газовой и строительной отрасли." %}
 {% endif %}
 
 {% assign consulting = site.consulting | where: "lang", lang  %}

@@ -1,7 +1,7 @@
 ---
 name: Татьяна
 lastName: Щинова
-position: бизнес-аналитика
+position: Бизнес-аналитика
 img: "assets/img/team/tatiana.jpg"
 contacts:
   - messenger: ""
