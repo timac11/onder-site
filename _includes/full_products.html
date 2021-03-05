@@ -9,7 +9,8 @@
                 <img class="full-product__image" src="{{ product.img }}">
             </div>
             <div class="full-product__text">
-                <h2 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span></h2>
+                <h2 class="full-product__title">Onder.<span class="full-product__name{{ product.modifier }}">{{ product.name }}</span>
+                </h2>
                 <h3 class="full-product__description">{% include typograph.html content=product.subtitle %}</h3>
                 <div class="full-product__paragraphs">
                     {% for paragraph in product.paragraphs %}
@@ -19,19 +20,17 @@
             </div>
         </div>
     </div>
-    <div class="full-product__advantages">
-        <div class="full-product__advantages-wrapper">
-            {% for advantage in product.advantages %}
-            <div class="full-product__advantages-item">
-                <figure class="full-product__image-container">
-                    <img src="{{ advantage.img }}">
-                </figure>
-                <p class="full-product__advantage-info">
-                    {% include typograph.html content=advantage.value %}
-                </p>
-            </div>
-            {% endfor %}
+    <div class="full-product__advantages-wrapper">
+        {% for advantage in product.advantages %}
+        <div class="full-product__advantages-item">
+            <figure class="full-product__image-container">
+                <img src="{{ advantage.img }}">
+            </figure>
+            <p class="full-product__advantage-info">
+                {% include typograph.html content=advantage.value %}
+            </p>
         </div>
+        {% endfor %}
     </div>
     <h3 class="full-product__button {{ product.modifier }}">{{ product.buttonText }}</h3>
 </section>
