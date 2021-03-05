@@ -83,11 +83,6 @@
       .menu {
         display: block;
       }
-      .short-logo {
-        display: none;
-        width: auto;
-        height: auto;
-      }
     }
 
     @include desktop-s-and-less {
