@@ -73,17 +73,18 @@
   }
 
   &__image {
-    float: right;
-    max-width: 50%;
-    padding-left: 2em;
+    width: 100%;
+    object-fit: scale-down;
 
-    @include m-tablet-and-smaller {
-      max-width: 100%;
-    }
+    &-wrapper {
+      padding-bottom: 1.25em;
+      width: 50%;
+      float: right;
+      box-sizing: border-box;
 
-    @include m-tablet-temp-wide-header {
-      padding-left: 0;
-      max-width: 40%;
+      @include m-tablet-and-smaller {
+        width: 100%;
+      }
     }
   }
 
