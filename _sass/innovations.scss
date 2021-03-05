@@ -16,6 +16,7 @@
     float: right;
     width: 50%;
     padding-left: 55px;
+    margin-top: 8px;
     object-fit: scale-down;
 
     @include m-tablet-temp-wide-header {
@@ -40,7 +41,7 @@
     &-wrapper {
       display: flex;
       margin-bottom: calc(var(--floor-margin) / 2);
-      align-items: center;
+      align-items: flex-start;
 
       &:first-child {
         margin-top: 80px;

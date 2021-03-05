@@ -3,7 +3,7 @@
 @import "mixins";
 
 .full-product {
-  padding: 2em 3em;
+  padding: 0 0 6em;
   flex-wrap: wrap;
   font-family: var(--base-font);
   width: 100%;
@@ -15,6 +15,7 @@
     align-items: center;
     margin: 32px 8px calc(var(--floor-margin) / 2);
     position: relative;
+    padding: 2em 3em;
 
     &._grid {
       border: var(--grid-border);
@@ -35,6 +36,7 @@
 
   &__image-container {
     height: 3.5em;
+
     > img {
       width: 2.67em;
       height: 2.67em;
@@ -96,15 +98,15 @@
   }
 
   &__advantages {
-    width: 100%;
 
     &-wrapper {
+      width: 100%;
       font: var(--paragraph-font);
       line-height: var(--paragraph-line-height);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 0 3em 4em;
+      box-sizing: border-box;
     }
 
     &-item {
@@ -189,9 +191,11 @@
 
     &__advantages {
       box-sizing: border-box;
+
       &-wrapper {
         flex-direction: column;
       }
+
       &-item {
         padding-bottom: 1em;
       }
@@ -205,14 +209,18 @@
   @include m-tablet {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 0 0 1em;
+
+    &__wrapper {
+      padding: 0 0 16px;
+    }
 
     &__text {
       padding: 0 16px 16px;
     }
 
     &__image {
-			box-shadow: 0 4px 18px -9px #00000055;
+      box-shadow: 0 4px 18px -9px #00000055;
 
       &-wrapper {
         padding: 0;
@@ -226,12 +234,9 @@
       bottom: -24px;
     }
 
-    &__advantages {
+    &__advantages-wrapper {
       padding-left: 16px;
-      &-wrapper {
-        padding-left: 0;
-        padding-bottom: 30px;
-      }
+      padding-bottom: 30px;
     }
   }
 
