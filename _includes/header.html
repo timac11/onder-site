@@ -17,26 +17,28 @@
 
 <header id="header" class="header" role="banner">
     <div class="header__container">
-        <div>
-            <a href="{{main}}">
-                <img class="short-logo" src="assets/img/logo/black-onder-logo.svg">
-            </a>
-            <a href="{{main}}">
-                <img class="full-logo" src="assets/img/logo/onder-logo.svg"
-                     height="40px"
-                     width="180px"/>
-            </a>
-
-        </div>
+        <a href="{{main}}">
+            <img class="full-logo" src="assets/img/logo/onder-logo.svg"
+                 height="40px"
+                 width="180px"/>
+        </a>
         <div class="header__navigation">
+            <div class="navigation _short-logo">
+                <a href="{{main}}">
+                    <img class="short-logo" src="assets/img/logo/black-onder-logo.svg">
+                </a>
+            </div>
             <nav id="navbar" class="navigation">
+                <a href="{{main}}">
+                    <img class="short-logo" src="assets/img/logo/black-onder-logo.svg">
+                </a>
                 {% for item in navigation %}
                 <a class="navigation__item" href="{{ main }}#{{ item.anchor }}">{{ item.name }}</a>
                 {% endfor %}
             </nav>
             <div class="navigation">
                 {% if lang == "ru" %}
-                <a class="navigation__item" href="/news">{{news}}</a>
+                <a class="navigation__item _margin-left" href="/news">{{news}}</a>
                 {% else %}
                 <a class="navigation__item" href="/en-news">{{news}}</a>
                 {% endif %}
@@ -44,9 +46,9 @@
                 <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
                 <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
                 {% if lang == "ru" %}
-                    <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
+                <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
                 {% else %}
-                    <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
+                <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
                 {% endif %}
             </div>
         </div>
@@ -72,10 +74,12 @@
                         <a href="{{ site.blog }}" target="_blank" class="navigation__item">{{blog}}</a>
                     </li>
                     <li>
-                        <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
+                        <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email
+                            }}</a>
                     </li>
                     <li>
-                        <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
+                        <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone
+                            }}</a>
                     </li>
                     <li>
                     <li>
@@ -91,7 +95,7 @@
                     <img src="assets/img/close-icon.svg">
                 </button>
             </div>
-            
+
         </div>
     </div>
 

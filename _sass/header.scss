@@ -83,6 +83,10 @@
       .menu {
         display: block;
       }
+
+      .navigation._short-logo {
+        display: block;
+      }
     }
 
     @include desktop-s-and-less {
@@ -209,14 +213,28 @@
 .navigation {
   display: flex;
   background: var(--main-white-color);
-  height: 28px;
   border-radius: 40px;
+  height: 50px;
   padding: 0 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  align-items: center;
+
+  &._short-logo {
+    display: none;
+    background: var(--main-white-color);
+    height: 40px;
+    padding: 0;
+    align-items: center;
+  }
 
   > a {
-    padding: 3px 8px;
+    margin-right: 16px;
     color: var(--main-font-color);
     font: var(--navigation-font);
+
+    &._margin-left {
+      margin-left: 16px;
+    }
   }
 
   &__item {
