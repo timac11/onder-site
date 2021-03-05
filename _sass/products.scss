@@ -33,7 +33,7 @@
       font: var(--h2-font);
       flex-grow: 1;
       box-sizing: border-box;
-      margin-right: 2em;
+      margin-right: 0;
 
       &._grid:hover {
         background: var(--grid-color-opacity);
