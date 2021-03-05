@@ -16,6 +16,7 @@
     float: right;
     width: 50%;
     padding-left: 55px;
+    margin-top: 8px;
     object-fit: scale-down;
 
     @include m-tablet-temp-wide-header {
