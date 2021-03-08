@@ -206,6 +206,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
   align-items: center;
 
+  &._margin {
+    margin-left: -8px;
+  }
+
   &._short-logo {
     display: none;
     background: var(--main-white-color);
