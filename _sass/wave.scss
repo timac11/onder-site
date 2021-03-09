@@ -5,7 +5,7 @@
     width: 70vw;
     height: 70vw;
     top: 0;
-    @include m-tablet-and-smaller {
+    @include m-tablet {
       width: 100vw;
       height: 100vw;
     }

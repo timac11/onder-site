@@ -18,7 +18,7 @@
   &__wrapper {
     display: flex;
 
-    @include m-tablet-and-smaller {
+    @include m-tablet {
       flex-direction: column;
     }
 

@@ -6,7 +6,7 @@
   display: flex;
   margin-top: 70px;
 
-  @include m-tablet-and-smaller {
+  @include m-tablet {
     flex-direction: column;
 
     &__items {

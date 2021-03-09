@@ -82,7 +82,7 @@
       float: right;
       box-sizing: border-box;
 
-      @include m-tablet-and-smaller {
+      @include m-tablet {
         width: 100%;
       }
     }
@@ -177,7 +177,7 @@
     }
   }
 
-  @include m-tablet-and-smaller {
+  @include m-tablet {
     &__block {
       display: flex;
       flex-direction: column;

@@ -55,6 +55,10 @@
 
     .full-logo {
       display: none;
+
+      &-link {
+        display: none;
+      }
     }
 
     .header__navigation {
