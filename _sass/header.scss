@@ -93,7 +93,8 @@
       }
 
       div.menu {
-        display: block;
+        display: flex;
+        align-items: center;
       }
 
       .menu {
@@ -199,6 +200,7 @@
 
   button {
     background: transparent;
+    padding-top: 6px;
   }
 }
 
