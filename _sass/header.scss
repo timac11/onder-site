@@ -21,6 +21,7 @@
     max-width: 1440px;
     margin: auto;
     box-sizing: border-box;
+    justify-content: flex-start;
   }
 
   &__navigation {
@@ -216,6 +217,7 @@
     height: 40px;
     padding: 0;
     align-items: center;
+    box-shadow: none;
   }
 
   > a {
