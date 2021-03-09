@@ -2,7 +2,7 @@
 name: Разработчики
 lang: ru
 items:
-  - text: ПО для управления энергопотреблением
+  - text: ПО для управления энергооборудованием
     img: "assets/img/partners/rtsoft.svg"
     href: "https://www.rtsoft.ru/"
   - text: Разработка инструментов визуальной аналитики
