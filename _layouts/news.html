@@ -10,22 +10,9 @@
     <section class="main-content__block _margin news__section">
         <h2 class="block-heading block-heading_large-margin">{{page.newsTitle}}</h2>
         <div class="news">
-            {% for postItem in page.posts %}
-            <div class="news__new">
-                <h2>{{ postItem.year }}</h2>
-                <ul>
-                    {% for new in postItem.items %}
-                    <li class="news__item">
-                        <div class="news__sep"></div>
-                        <p>{{ new.value }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
+            {{ content }}
         </div>
     </section>
-
     {% include company_info.html %}
 </main>
 
