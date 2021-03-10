@@ -1,6 +1,6 @@
 ---
 name: REGISTRY
-description: Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр
+description: Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость
 subtitle: ""
 modifier: _registry
 img: assets/img/products/registry.png
