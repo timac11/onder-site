@@ -27,10 +27,14 @@
     }
   }
 
+  ul li::marker {
+    font: var(--paragraph-font);
+    content: " — ";
+  }
+
   li {
     font: var(--paragraph-font);
-    list-style-type:" — ";
-    list-style-position: outside;
+    list-style: outside;
 
     &:not(:last-child) {
       margin-bottom: 2em;
