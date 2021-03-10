@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang }}">
-{% include head.html %}
-<body>
+---
+    layout: default
+---
 
-{% include header.html %}
-
+{% assign news = site.news | where: "lang", page.lang  %}
 
 <main class="main-content" aria-label="Content">
     <section class="main-content__block _margin news__section">
         <h2 class="block-heading block-heading_large-margin">{{page.newsTitle}}</h2>
         <div class="news">
-            {% for postItem in page.posts %}
+            {% for item in news %}
+            <h1>{{ item }}</h1>
             <div class="news__new">
-                <h2>{{ postItem.year }}</h2>
+                <h2>{{ item.year }}</h2>
                 <ul>
-                    {% for new in postItem.items %}
+                    {% for new in item.items %}
                     <li class="news__item">
                         <div class="news__sep"></div>
                         <p>{{ new.value }}</p>
@@ -27,16 +26,5 @@
     </section>
 
     {% include company_info.html %}
+
 </main>
-
-{% include footer.html %}
-
-<div id='wave-bottom' class="wave wave-bottom"></div>
-
-<script src="assets/js/scroller.js"></script>
-<script src="assets/js/menu.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/regl.min.js"></script>
-<script src="assets/js/onder-wave.js"></script>
-</body>
-</html>
