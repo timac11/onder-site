@@ -6,12 +6,12 @@
     height: 70vw;
     top: 0;
     @include m-tablet {
-      width: 100vw;
+      width: 100%;
       height: 100vw;
     }
   }
   &-bottom {
-    width: 100vw;
+    width: 100%;
     height: 30vw;
     bottom: 100px;
   }
