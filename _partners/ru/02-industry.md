@@ -8,7 +8,7 @@ items:
   - text: Развитие интеллектуальной энергетики
     img: "assets/img/partners/energynet.svg"
     href: "https://energynet.ru/"
-  - text: Производство электрооборудования
+  - text: Инжиниринг в электроэнергетике
     img: "assets/img/partners/moselektro.svg"
     href: "http://moselectro.ru/"
   - text: Проект Интернет энергии
