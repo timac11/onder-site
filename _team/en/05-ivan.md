@@ -1,7 +1,7 @@
 ---
-name: Иван
-lastName: Дианов
-position: Дизайн
+name: Ivan
+lastName: Dianov
+position: Design
 img: "assets/img/team/ivan.jpg"
 contacts:
   - messenger: "telegram"

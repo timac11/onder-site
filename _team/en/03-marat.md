@@ -1,7 +1,7 @@
 ---
-name: Марат
-lastName: Муфлиханов
-position: Продажи и коммерция
+name: Marat
+lastName: Muflikhanov
+position: Sales and commerce
 img: "assets/img/team/marat.jpg"
 contacts:
   - messenger: "facebook"

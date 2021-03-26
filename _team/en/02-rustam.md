@@ -1,7 +1,7 @@
 ---
-name: Рустам
-lastName: Габитов
-position: Финансы и организация
+name: Rustam
+lastName: Gabitov
+position: Finance and operational management
 img: "assets/img/team/rustam.jpg"
 contacts:
   - messenger: "facebook"

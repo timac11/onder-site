@@ -1,7 +1,7 @@
 ---
-name: Диана
-lastName: Исламова
-position: Маркетинг и развитие
+name: Diana
+lastName: Islamova
+position: Marketing and development
 img: "assets/img/team/diana.jpg"
 contacts:
   - messenger: "facebook"

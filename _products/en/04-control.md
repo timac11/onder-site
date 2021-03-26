@@ -1,23 +1,23 @@
 ---
 name: CONTROL
-description: Автоматизированная система контроля строительных работ
-subtitle: для инвесторов, заказчиков, застройщиков, генеральных подрядчиков
+description: Automated system of construction control
+subtitle: for investors, developers, general contractors
 modifier: _control
 img: assets/img/products/control.png
-buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Запросить демо</a>
+buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Request Demo</a>
 anchor: control
 lang: en
 paragraphs:
-  - value: Автоматизированная система контроля строительных и других работ.
-  - value: Упрощает планирование и контроль выполнения строительных и пуско-наладочных работ, снижает затраты из-за срыва сроков и некачественного выполнения работ. Повышает прозрачность расходов
-  - value: Разработали совместно с <a href="https://www.info-pro.ru" target="_blank">ИНФОПРО</a>.
+  - value: Automated system of construction control.
+  - value: Streamlines planning, facilitates construction and commissioning works control, reduces costs caused by missed deadlines and poor-quality work performance. Increases cost transparency.
+  - value: Developed in partnership with <a href="https://www.info-pro.ru" target="_blank">INFOPRO</a>.
 advantages:
-  - value: Ведёт справочники типовых работ, дефектов, сметных расценок
+  - value: Maintains directories of standard workplans, defects and estimated prices
     img: "assets/img/products/control-01.png"
-  - value: Хранит информацию об объектах в единой базе
+  - value: Stores information on construction objects in a single database
     img: "assets/img/products/control-02.png"
-  - value: Формирует графики работ и отслеживает их выполнение
+  - value: Schedules works and monitors their implementation
     img: "assets/img/products/control-03.png"
-  - value: Уведомляет об отклонениях от плана
+  - value: Notifies about deviations from the plan
     img: "assets/img/products/control-04.png"
 ---

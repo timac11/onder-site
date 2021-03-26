@@ -2,10 +2,10 @@
 name: Institutes
 lang: en
 items:
-  - text: Московский физико-технический институт
-    img: "assets/img/institutes/mipt.svg"
-    href: "https://mipt.ru/english/"
-  - text: Наньянский технологический университет
-    img: "assets/img/institutes/nanyang.svg"
+  - text: Moscow Institute of Physics and Technology
+    img: "assets/img/partners/mipt.png"
+    href: "https://mipt.ru"
+  - text: Nanyang Technological University
+    img: "assets/img/partners/nanyang.svg"
     href: "http://erian.ntu.edu.sg/REIDS/Pages/Partners.aspx"
 ---

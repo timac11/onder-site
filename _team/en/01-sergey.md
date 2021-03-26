@@ -1,7 +1,7 @@
 ---
-name: Сергей
-lastName: Укустов
-position: Техническая экспертиза
+name: Sergey
+lastName: Ukustov
+position: Technical expertise
 img: "assets/img/team/sergey.jpg"
 contacts:
   - messenger: "twitter"

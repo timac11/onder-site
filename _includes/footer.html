@@ -1,16 +1,18 @@
 {% assign vacancies = "Vacancies" %}
 {% assign docs = "Documents"%}
+{% assign footerText = "Site developed by Kompany" %}
 
 {% if page.lang == "ru" %}
 {% assign vacancies = "Вакансии" %}
 {% assign docs = "Документы" %}
+{% assign footerText = "Сайт разработан в Kompany" %}
 {% endif %}
 
 <footer class="footer">
     <div class="footer__content">
         <ul class="footer__items">
             <li class="footer__item">
-               <a href="https://kompany.site" target="_blank">Сайт разработан в Kompany</a>
+               <a href="https://kompany.site" target="_blank">{{ footerText }}</a>
                 <!--<a href="https://docs.google.com/document/d/13DiA98V-bFgGxNJMtdyeSm3g_p0NLGaHDNfmdj6bxEY/" target="_blank">-->
                     <!--{{ vacancies }}-->
                 <!--</a>-->

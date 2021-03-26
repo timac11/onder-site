@@ -1,23 +1,22 @@
 ---
 name: REGISTRY
-description: Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр
+description: Electricity, securities, real estate ownership registry
 subtitle: ""
 modifier: _registry
 img: assets/img/products/registry.png
-buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Запросить демо</a>
+buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Request Demo</a>
 anchor: registry
 lang: en
 paragraphs:
-  - value: Реестр прав собственности на электроэнергию, ценные бумаги, недвижимость и пр.
-  - value: Реализован на базе технологии распределенных реестров. Служит для выдачи и обращения цифровых активов, которые хранят право на собственность.
-  - value: 'Разработали совместно со <a href="https://startblock.online/" target="_blank">StartBlock</a> на примере реестра зеленых сертификатов.'
+  - value: Electricity, securities, real estate ownership registry.
+  - value: Based on distributed ledger technology. Green certificate registry developed in partnership with <a href="https://startblock.online/" target="_blank">StartBlock</a> validates, creates and manages digital assets that certify ownership of green energy.
 advantages:
-  - value: Ведёт выпуск, учёт и погашение сертификатов
+  - value: Issues, keeps records and redeems certificates
     img: "assets/img/products/registry-01.png"
-  - value: Отображает статистику использования сертификатов
+  - value: Displays statistics on the certificates use
     img: "assets/img/products/registry-02.png"
-  - value: Снижает затраты, безопасность, надежность реестра при любом числе пользователей
+  - value: Reduces costs. Safe and reliable for any number of users.
     img: "assets/img/products/registry-03.png"
-  - value: Возможность вывода сертификатов на мировые торговые площадки
+  - value: Access to the world marketplaces
     img: "assets/img/products/registry-04.png"
 ---

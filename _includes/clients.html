@@ -5,7 +5,7 @@
 {% assign clients = site.clients | where: "lang", page.lang  %}
 
 <div class="main-content__block clients">
-    <h2 class="block-heading">Клиенты</h2>
+    <h2 class="block-heading">{{ title }}</h2>
     <div class="clients__container">
         {% for client in clients %}
         <a href="{{ client.href }}" class="clients__item" target="_blank">

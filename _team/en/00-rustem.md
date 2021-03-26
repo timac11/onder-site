@@ -1,7 +1,7 @@
 ---
 name: Rustem
-lastName: Хуснутдинов
-position: Разработка продуктов
+lastName: Khusnutdinov
+position: Product development
 img: "assets/img/team/rustem.jpg"
 contacts:
   - messenger: "facebook"
