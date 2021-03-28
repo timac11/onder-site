@@ -27,14 +27,28 @@
     }
   }
 
-  ul li::marker {
+  ul li::before {
     font: var(--paragraph-font);
     content: " — ";
+    margin-right: -1em;
+    position: absolute;
+    left: -1.5em;
+  }
+
+  img {
+    float: right;
+    width: 256px;
+    margin-left: 0.5em;
+
+    @include mobile {
+      width: 44%;
+    }
   }
 
   li {
     font: var(--paragraph-font);
-    list-style: outside;
+    display: inline-block;
+    position: relative;
 
     &:not(:last-child) {
       margin-bottom: 2em;
