@@ -5,7 +5,6 @@
 .team {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 8em;
   grid-row-gap: 6em;
 
@@ -48,7 +47,7 @@
     }
 
     &-messenger {
-			margin-top: .3em;
+      margin-top: .3em;
       width: 28px;
       margin-right: 6px;
 
@@ -72,14 +71,12 @@
 
   @include l-tablet-and-less {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-column-gap: 4em;
     grid-row-gap: 3em;
   }
 
   @include s-tablet {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
     margin-right: 2em;
