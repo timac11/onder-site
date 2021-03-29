@@ -4,7 +4,7 @@ subtitle: for grid companies and energy retailers
 description: A system for splitting payments from consumers of resources to suppliers based on smart contracts
 modifier: _grid
 img: assets/img/products/grid.png
-buttonText: <a href="#" class="_white" target="_blank">Request Demo</a>
+buttonText: <a href="#" class="_white" target="_blank">Request a demo</a>
 anchor: grid
 lang: en
 paragraphs:

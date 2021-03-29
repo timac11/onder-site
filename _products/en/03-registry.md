@@ -4,7 +4,7 @@ description: Electricity, securities, real estate ownership registry
 subtitle: ""
 modifier: _registry
 img: assets/img/products/registry.png
-buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Request Demo</a>
+buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Request a demo</a>
 anchor: registry
 lang: en
 paragraphs:
