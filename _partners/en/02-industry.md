@@ -1,5 +1,5 @@
 ---
-name: Industry and finances
+name: Industry and finance
 lang: en
 items:
   - text: Innovative project financing

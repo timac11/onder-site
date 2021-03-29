@@ -1,5 +1,5 @@
 ---
-name: Institutes
+name: Universities
 lang: en
 items:
   - text: Moscow Institute of Physics and Technology

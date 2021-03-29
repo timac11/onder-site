@@ -1,5 +1,5 @@
 ---
-name: Developers
+name: Software developers
 lang: en
 items:
   - text: Energy Management Software
