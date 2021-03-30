@@ -9,7 +9,7 @@ items:
     img: "assets/img/partners/energynet.svg"
     href: "https://energynet.ru/home-eng"
   - text: Power Engineering
-    img: "assets/img/partners/moselektro.svg"
+    img: "assets/img/partners/moselektro-en.png"
     href: "http://moselectro.ru/eng/"
   - text: Internet of Energy Project
     img: "assets/img/partners/idea.svg"
