@@ -1,8 +1,8 @@
 ---
    layout: news
-   lang: ru
+   lang: en
    title: ONDER — We develop and implement digital solutions, supervise transformations in the energy, oil, gas and construction industries
-   footerText: Будем рады рассказать про наши продукты подробнее!
+   footerText: Get in Touch!
    newsTitle: News
    changeLangRedirect: "/en-news"
 ---
