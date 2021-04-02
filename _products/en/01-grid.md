@@ -12,9 +12,9 @@ paragraphs:
   - value: Being developed for the energy industry together with power engineering company <a href="http://moselectro.ru/" target="_blank">Moselectro</a>.
 advantages:
   - value: Ensures the reliability of consumption data
-    img: "assets/img/products/grid-01.png"
+    img: "assets/img/products/grid-01.svg"
   - value: Automates settlements and billing through blockchain-enabled smart contracts
-    img: "assets/img/products/grid-02.png"
+    img: "assets/img/products/grid-02.svg"
   - value: Reduces accounts receivable
-    img: "assets/img/products/grid-03.png"
+    img: "assets/img/products/grid-03.svg"
 ---

@@ -2,9 +2,6 @@
 name: Industry and finance
 lang: en
 items:
-  - text: Innovative project financing
-    img: "assets/img/partners/fond-sodeystviya-innovatsiyam.svg"
-    href: "https://fasie.ru/"
   - text: Intellectual energy development
     img: "assets/img/partners/energynet.svg"
     href: "https://energynet.ru/home-eng"

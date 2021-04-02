@@ -13,11 +13,11 @@ paragraphs:
   - value: Developed in partnership with <a href="https://www.info-pro.ru" target="_blank">INFOPRO</a>.
 advantages:
   - value: Maintains directories of standard workplans, defects and estimated prices
-    img: "assets/img/products/control-01.png"
+    img: "assets/img/products/control-01.svg"
   - value: Stores information on construction objects in a single database
-    img: "assets/img/products/control-02.png"
+    img: "assets/img/products/control-02.svg"
   - value: Schedules works and monitors their implementation
-    img: "assets/img/products/control-03.png"
+    img: "assets/img/products/control-03.svg"
   - value: Notifies about deviations from the plan
-    img: "assets/img/products/control-04.png"
+    img: "assets/img/products/control-04.svg"
 ---
