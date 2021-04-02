@@ -45,11 +45,11 @@
                 <a href="{{ site.blog }}" target="_blank" class="navigation__item">{{blog}}</a>
                 <a href="mailto:{{ site.email }}" class="navigation__item_email" target='_blank'>{{ site.email }}</a>
                 <a href="tel:{{ site.phone }}" target="_blank" class="navigation__item_phone">{{ site.phone }}</a>
-<!--                {% if lang == "ru" %}-->
-<!--                <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>-->
-<!--                {% else %}-->
-<!--                <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>-->
-<!--                {% endif %}-->
+               {% if lang == "ru" %}
+               <a href="{{ page.changeLangRedirect }}" class="navigation__item">En</a>
+               {% else %}
+               <a href="{{ page.changeLangRedirect }}" class="navigation__item">Ru</a>
+               {% endif %}
             </div>
         </div>
         <div class="menu">
