@@ -3,7 +3,7 @@ name: REGISTRY
 description: Electricity, securities, real estate ownership registry
 subtitle: ""
 modifier: _registry
-img: assets/img/products/registry.png
+img: assets/img/products/registry-en.png
 buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Request a demo</a>
 anchor: registry
 lang: en

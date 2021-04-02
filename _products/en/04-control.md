@@ -3,7 +3,7 @@ name: CONTROL
 description: Automated system of construction control
 subtitle: for investors, developers, general contractors
 modifier: _control
-img: assets/img/products/control.png
+img: assets/img/products/control-en.png
 buttonText: <a href="mailto:hello@onder.tech" class="_white" target="_blank">Request a demo</a>
 anchor: control
 lang: en
