@@ -15,7 +15,7 @@ advantages:
     img: "assets/img/products/registry-01.svg"
   - value: Displays statistics on the certificates use
     img: "assets/img/products/registry-02.svg"
-  - value: Reduces costs. Safe and reliable for any number of users.
+  - value: Reduces costs. Safe and reliable for any number of users
     img: "assets/img/products/registry-03.svg"
   - value: Access to the world marketplaces
     img: "assets/img/products/registry-04.svg"
