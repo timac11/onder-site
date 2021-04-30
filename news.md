@@ -7,6 +7,11 @@
    changeLangRedirect: "/en-news"
 ---
 
+# 2021
+- ![No Photo](https://imgur.com/Iwe1nyJ.jpg) Апрель. Представители компании ONDER приняли участие в круглом столе "Интеллектуальный учет и информационная безопасность в электросетевом комплексе" на [Российском международном энергетическом форуме](https://energyforum.ru/main).
+
+
+
 # 2020
 - ![No Photo](https://i.imgur.com/ORi3ucMm.jpg) Декабрь. Российский проект ONDER [победил в совместной акселерационной программе](https://rb.ru/news/onder-pulsar/) ИВФ РТ и Pulsar VC. 
 - ![No Photo](https://i.imgur.com/w7cPphMm.jpg) Ноябрь. Представители компании ONDER выступили на конференции [Energynet.CON-2020.](https://energynet.ru/con2020)  
