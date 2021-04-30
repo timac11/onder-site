@@ -7,6 +7,11 @@
    changeLangRedirect: "/news"
 ---
 
+# 2021
+- ![No Photo](https://imgur.com/Iwe1nyJ.jpg) April. ONDER team took part in a round table discussion "Smart Metering systems and data privacy protection for electrical power distribution" at [Russian International Energy Forum](https://energyforum.ru/en/about). 
+
+
+
 # 2020
 - ![No Photo](https://i.imgur.com/ORi3ucMm.jpg) December. ONDER project won the [joint acceleration program](https://rb.ru/news/onder-pulsar/) of the Investment Venture Fund IVF RT and Pulsar VC. 
 - ![No Photo](https://i.imgur.com/w7cPphMm.jpg) November. ONDER team presented digital solutions at the [Energynet.CON-2020](https://energynet.ru/con2020)  conference. One of them is the first green certificates registry based on distributed ledger technology.
