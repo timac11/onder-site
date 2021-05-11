@@ -8,7 +8,7 @@
 ---
 
 # 2021
-- ![No Photo](https://imgur.com/Iwe1nyJ.jpg) April. ONDER team took part in a round table discussion "Smart Metering systems and data privacy protection for electrical power distribution" at [Russian International Energy Forum](https://energyforum.ru/en/about). 
+- ![No Photo](https://imgur.com/Iwe1nyJ.jpg) April. ONDER team took part in a round table discussion "Smart Metering systems and data privacy protection for electrical power distribution" at the [Russian International Energy Forum](https://energyforum.ru/en/about). 
 
 
 
